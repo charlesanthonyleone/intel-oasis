@@ -1,0 +1,435 @@
+[
+ {
+  "id": "sw-001",
+  "title": "Confluence",
+  "tagline": "The Language-Learning Social Platform with Mirror View",
+  "summary": "A community chat platform where anyone can create their own rooms and channels — and every conversation is rendered in two languages simultaneously via the Mirror View: left panel in your native language, right panel in the language you're learning. The AI learns from every user correction, every highlighted slang term, every regional variation. The goal is fluency through immersion — with anyone, in any language, forever.",
+  "status": "in-progress",
+  "category": "Communication",
+  "tags": [
+   "Language Learning",
+   "AI",
+   "Real-Time",
+   "Mirror View",
+   "Community",
+   "Fluency",
+   "Voice",
+   "Culture"
+  ],
+  "vision": "Every language is a different world. Confluence lets you live in two at once — until one day you don't need the mirror anymore.",
+  "sections": [
+   {
+    "heading": "The Core Mechanic — One Conversation, Every Language",
+    "content": "You set your language. Everyone else sets theirs. When you type 'I love this idea,' the French speaker sees 'J'adore cette idée,' the Japanese speaker sees '素晴らしいアイデアですね,' and the Spanish speaker sees 'Me encanta esta idea' — all simultaneously, in real time, with no delay visible to any participant.\n\nThe message exists once. It is received in every language simultaneously. The conversation flows as if everyone speaks the same language — because, in the environment this platform creates, they do."
+   },
+   {
+    "heading": "Mirror View — The 2.0 Feature That Changes Everything",
+    "content": "Mirror View is the evolution of the core mechanic into a language learning environment.\n\nThe screen splits into two panels, both fully minimizable:\n\nLeft Mirror — Your Language: every message in the conversation appears in your native tongue. You understand everything that's happening. You never feel lost.\n\nRight Mirror — Your Target Language: the same conversation, in real time, in the language you're trying to learn. Not a separate feed — the same conversation. The same person said both things. You see them simultaneously.\n\nThe effect is immersive and unlike anything else in language learning. You feel the rhythm of the target language — how it flows, where it rushes, where it pauses — because you're reading it against the conversation you already understand. You're not studying. You're living in two languages at once.\n\nBoth panels are independently minimizable. Want to test yourself? Minimize the native panel and try reading only the target language. Want to catch up on something you missed? Expand the native panel. You control the training wheels."
+   },
+   {
+    "heading": "Community Rooms — Build Your Own",
+    "content": "Anyone can create a room. A room is a persistent, themed community space with channels — like a topic-based social server. Cooking, philosophy, sports, music, gaming, local neighborhoods, academic subjects, professional fields.\n\nThe power of the room model: you find communities you actually care about, and then you learn the language in the context of topics that already interest you. You're not translating practice sentences. You're arguing about football tactics in French with actual French people who care as much about the game as you do.\n\nRooms can be public or invite-only. They can be monolingual (everyone speaks English, and the Mirror shows your target language) or multilingual (the original Confluence model — everyone speaks their own language, and every mirror shows each user their personal target language)."
+   },
+   {
+    "heading": "The Highlight & Correction Layer — How the AI Gets Smarter",
+    "content": "Every translation is a first draft. The AI's first draft is often technically correct but culturally incomplete — because language is not a code. It is a living thing, full of slang, regional variation, generational shift, and meaning that no algorithm has been formally trained to catch.\n\nConfluence gives every user two superpowers:\n\nHighlight & Label: when you see a word or phrase that the mirror has rendered inadequately — or that has no real equivalent in the target language — you can highlight it and add a label. 'Bruh' in English might be rendered literally in Arabic, but a native speaker knows it doesn't land that way. You mark it. You suggest the cultural equivalent — or you mark it as untranslatable and explain why.\n\nCorrect & Vote: other users see your label. They can upvote it, modify it, or suggest a better rendering. The AI watches. Over time, it learns not just the standard dictionary mapping but the living usage — the way a word is actually used by the people who speak it, in the context it was spoken.\n\nThe result over time: a crowdsourced, AI-integrated dialect map of every language on earth, built from real conversations in real time. Not a dictionary. A living record of how humans actually talk."
+   },
+   {
+    "heading": "Regional Variation — The Map of How Language Actually Lives",
+    "content": "Every language has dialects, and every dialect has slang, and every slang has a generation and a geography. Spanish spoken in Buenos Aires is not the same as Spanish spoken in Madrid or Mexico City or Havana. Arabic in Cairo is not Arabic in Riyadh or Beirut or Casablanca.\n\nAs the correction layer accumulates contributions from users around the world, Confluence builds something no linguist has ever had access to at this scale: a real-time map of regional language variation, crowdsourced from native speakers in context.\n\nThe mirror view becomes a language atlas. You can set your target language to Cairene Arabic or Rioplatense Spanish or Haitian Creole — and the mirror will show you what those communities actually say, corrected and refined by the people who grew up saying it.\n\nThis is not a feature. It is a civilizational linguistics project that happens to also be a chat app."
+   },
+   {
+    "heading": "Voice Mode — The AI That Teaches You How It Actually Sounds",
+    "content": "Reading a language and speaking it are different skills. Confluence's Voice Mode bridges them.\n\nWhen you're ready to move beyond text, Voice Mode lets you speak in any room. Your voice is transcribed, rendered in the mirror, and — critically — fed to the AI pronunciation layer.\n\nThe AI doesn't just transcribe what you said. It plays back the native pronunciation of what you meant to say, highlights where your version differed, and lets you record and compare. It can slow down difficult phonemes. It can show you where in the mouth or throat a sound is produced. It can play you audio from actual native speakers who used the same phrase — pulled from the community's voice history, with permission.\n\nOver time, the voice AI builds a model of your specific accent — not to correct it toward some imaginary standard, but to help you understand how a native speaker of your target language will hear you, and what adjustments get you closer to being understood naturally."
+   },
+   {
+    "heading": "The Fluency Path — From Mirror to Immersion",
+    "content": "Confluence is not a passive tool. It is a progression system.\n\nThe Mirror View is the beginning: you use both panels, you build comprehension, you feel the rhythm of the language. The community is the middle: you find rooms, you make connections, you move from reading to writing in the target language. Voice mode is the frontier: you stop reading and start speaking — with AI feedback and real community response.\n\nThe end goal is not to produce language learners. It is to produce speakers. People who can step into any room, in any language, and hold a conversation — because they spent enough time in the mirror that eventually they stopped needing it."
+   }
+  ]
+ },
+ {
+  "id": "sw-002",
+  "title": "GuardianNet",
+  "tagline": "AI-Monitored Child Safety Platform",
+  "summary": "A subscription-funded, AI-monitored communication environment for minors. All conversations recorded for safety purposes. Flags routed in real time to parents and law enforcement by severity. The AI re-reads history on every update to catch jailbreaks. Goal: connection without exposure.",
+  "status": "concept",
+  "category": "Child Safety",
+  "tags": [
+   "Child Safety",
+   "AI Moderation",
+   "Platform",
+   "Privacy",
+   "Law"
+  ],
+  "vision": "Every child deserves a digital space as safe as the playground used to be — watched without being controlled, protected without being imprisoned.",
+  "sections": [
+   {
+    "heading": "The Club Penguin Problem",
+    "content": "Club Penguin proved the concept: a monitored digital environment for children can catch real predators. Then it shut down. Roblox is doing, imperfectly and under commercial pressure, what Disney should have been doing at the highest possible standard.\n\nGuardianNet is the platform that Club Penguin's legal environment should have looked like. Permanently. With teeth."
+   },
+   {
+    "heading": "Architecture",
+    "content": "All communications on the platform are recorded and retained — not for advertising, not for data sale, exclusively for child safety. A $15/month subscription fee funds the AI moderation infrastructure, legally ring-fenced from general revenue.\n\nThe AI flags communications by severity tier:\n— Tier 1 (grooming language, isolation patterns): parents notified\n— Tier 2 (explicit content, escalating risk): platform moderators\n— Tier 3 (solicitation, immediate threat): local law enforcement child safety units\n\nOn every major AI update, the system re-reads historical conversations to catch jailbreaks and behavioral drift that bypassed earlier detection."
+   },
+   {
+    "heading": "Connection, Not Restriction",
+    "content": "The goal is not silence — it is safety through structure. Standard servers with full moderation. Silent servers (no voice, limited text) for highest-risk age groups. AI companion servers for children showing isolation behavior patterns.\n\nData governance: parents see only their child's data. No advertiser access. No third-party sale. Rolling deletion every three years, except for open investigations. The AI model is federal property — not the platform's."
+   }
+  ]
+ },
+ {
+  "id": "sw-003",
+  "title": "CorporateForge",
+  "tagline": "AI That Forces Big Companies to Innovate",
+  "summary": "An AI system purpose-built for large corporations operating in high-influence consumer spaces — generating genuine frontier innovation mandates, tracking safety and cultural obligations, and identifying where institutional size is being used to coast rather than lead.",
+  "status": "concept",
+  "category": "Enterprise AI",
+  "tags": [
+   "Corporate",
+   "AI",
+   "Innovation",
+   "Consumer Protection",
+   "Policy"
+  ],
+  "vision": "You built the room. You filled it with millions of people. Now build the room worthy of what's happening inside it.",
+  "sections": [
+   {
+    "heading": "The Obligation Gap",
+    "content": "Companies that reach Disney-scale influence in children's lives — or Roblox-scale in digital social environments — are operating with an unprecedented responsibility that current law doesn't name and current AI can't monitor.\n\nCorporateForge names it. It is an AI consultant and audit system for high-influence corporations, built specifically to surface where institutional resources are being used to maintain access rather than push frontiers."
+   },
+   {
+    "heading": "What It Does",
+    "content": "Input: the company's product surface, user demographics, revenue data, and existing safety/innovation infrastructure. Output: a frontier gap analysis — a ranked list of areas where the company's influence creates a specific obligation to lead that it is currently not meeting.\n\nFor a children's platform: where is the predator detection architecture relative to what's technically possible? For a social media company: where is the mental health protection infrastructure relative to the documented harm of the product?\n\nThe AI doesn't write press releases. It writes action plans."
+   },
+   {
+    "heading": "The Reward Architecture",
+    "content": "Companies that implement CorporateForge recommendations and demonstrate measurable improvement receive what the Consumer Obligation Act calls Category A Safety Leader status: regulatory fast-track, reduced compliance overhead, and a federal certification that is genuinely valuable to parents and institutional buyers.\n\nThe AI tracks progress quarterly. It audits claims. It distinguishes between doing the work and saying you did the work."
+   }
+  ]
+ },
+ {
+  "id": "sw-004",
+  "title": "RegionOS",
+  "tagline": "Regional Marketplace Intelligence Platform",
+  "summary": "A data platform that maps what grows, produces, and thrives best in specific regions — food, cultural production, human talent, ecological systems — and builds a marketplace infrastructure that routes the right products and services to the right regional demand rather than flattening everything toward a global median.",
+  "status": "concept",
+  "category": "Commerce",
+  "tags": [
+   "Regional",
+   "Marketplace",
+   "Agriculture",
+   "Culture",
+   "AI",
+   "Logistics"
+  ],
+  "vision": "The best version of everything comes from somewhere specific. RegionOS makes sure the world can find it.",
+  "sections": [
+   {
+    "heading": "The Terroir Principle",
+    "content": "Italian volcanic soil produces tomatoes that no industrial greenhouse can replicate. Ethiopian highland altitude produces coffee complexity that lowland farms cannot achieve. The same principle applies to everything that grows, is made, or is created — place shapes product in ways that matter, and the market currently has no infrastructure to honor that.\n\nRegionOS is the infrastructure."
+   },
+   {
+    "heading": "The Data Layer",
+    "content": "Agricultural yield databases cross-referenced with soil, climate, and microclimate data. Cultural production indices by region — what types of music, art, craftsmanship, cuisine have deep historical roots in specific geographies. Human talent mapping: where specific types of problem-solvers, artisans, and innovators are concentrated.\n\nThe platform connects buyers to regional sources of genuine excellence, and gives regional producers a market signal strong enough to justify staying regional rather than scaling into mediocrity."
+   },
+   {
+    "heading": "The Anti-Homogenization Engine",
+    "content": "When Kraft owns everything, everything tastes the same. RegionOS is the counterforce: an active marketplace signal that makes regional distinctiveness economically valuable.\n\nFor food: connecting restaurants and retailers to the specific small producers whose region produces something genuinely irreplaceable. For cultural products: connecting global buyers to the craft traditions and artistic communities that exist in specific places and cannot be replicated elsewhere. For talent: connecting organizations to the specific regional talent ecosystems that produce unusual capabilities."
+   }
+  ]
+ },
+ {
+  "id": "sw-005",
+  "title": "SafetyTransfer",
+  "tagline": "Child Safety Infrastructure Continuity System",
+  "summary": "A federally mandated infrastructure layer requiring that when a company exits a digital space where it has built child safety systems, those systems — the moderation AI, incident databases, behavioral pattern libraries — transfer to a public registry rather than disappearing with the company.",
+  "status": "concept",
+  "category": "Child Safety",
+  "tags": [
+   "Child Safety",
+   "Government",
+   "AI",
+   "Platform Law",
+   "Infrastructure"
+  ],
+  "vision": "Knowledge about how predators operate in digital spaces is a public safety asset. It should not be allowed to die with a company's quarterly earnings.",
+  "sections": [
+   {
+    "heading": "The Roanoke Problem",
+    "content": "When Club Penguin shut down, years of moderation data, behavioral pattern libraries, and safety AI training disappeared. The next platform building in children's digital spaces had to start from zero — which means children were exposed to the same harms while the new platform learned what the old one already knew.\n\nThis is not an accident. It is a structural failure. SafetyTransfer fixes it."
+   },
+   {
+    "heading": "How It Works",
+    "content": "Any platform above the influence threshold that shuts down, is acquired, or exits a consumer space must transfer its safety systems and anonymized incident data to the Child Digital Safety Registry before the transaction closes.\n\nThe registry is publicly accessible to any new platform entering the space. The behavioral pattern library. The jailbreak history. The severity classification models. The incident taxonomy. Everything that was learned at children's expense becomes available to every successor platform for free.\n\nAcquisitions that include safety infrastructure must maintain that infrastructure at or above prior performance for five years."
+   }
+  ]
+ },
+ {
+  "id": "sw-006",
+  "title": "ToxicRouter",
+  "tagline": "Behavioral Segmentation for Online Communities",
+  "summary": "Instead of muting and banning toxic users — which simply moves the problem — route them to purpose-built environments where their behavior is contained, monitored, and potentially rehabilitated, while protecting general community spaces.",
+  "status": "concept",
+  "category": "Platform Safety",
+  "tags": [
+   "Moderation",
+   "Community",
+   "AI",
+   "Behavioral Design",
+   "Safety"
+  ],
+  "vision": "Banning toxic behavior doesn't remove it from the internet. Routing it does.",
+  "sections": [
+   {
+    "heading": "The Problem With Bans",
+    "content": "Voice moderation systems like Call of Duty's mute function and most platform ban systems share the same failure: they protect the individual from a specific bad actor but do nothing about the bad actor. The toxic user creates a new account. The harassment continues elsewhere. The platform has clean metrics and the problem is invisible.\n\nToxicRouter proposes a different architecture: behavioral segmentation."
+   },
+   {
+    "heading": "The Three-Server Model",
+    "content": "Standard servers: full community access for users within behavioral baseline.\n\nMonitored servers: users with flagged behavioral patterns are routed here — full communication capability, but every interaction recorded and AI-analyzed. The environment is explicitly disclosed as monitored. Users know. The purpose is rehabilitation through accountability, not punishment.\n\nSilent servers: for age groups or users where communication risk is highest — text-only, heavily restricted, with AI companion interaction available. Not punitive. Protective.\n\nThe routing is dynamic. Behavioral improvement moves users back toward standard access. Behavioral escalation moves them toward higher monitoring."
+   },
+   {
+    "heading": "The AI Rehabilitation Layer",
+    "content": "Monitored server users receive AI-mediated feedback on their communication patterns: 'This phrase is flagged for harassment patterns. Here is why. Here is what different phrasing would have conveyed.'\n\nThe goal is explicit: not exclusion, but behavioral education. The system tracks improvement and adjusts routing accordingly. Users who genuinely change their patterns get their standard access back with a documented record that they earned it."
+   }
+  ]
+ },
+ {
+  "id": "sw-007",
+  "title": "FlowState OS",
+  "tagline": "AI-Powered Corporate Innovation Operating System",
+  "summary": "An internal operating system for large organizations that identifies where institutional momentum has replaced genuine innovation — surfacing which product lines, teams, and roadmaps are coasting on brand rather than building toward frontiers — and generates specific, actionable mandates to change that.",
+  "status": "concept",
+  "category": "Enterprise AI",
+  "tags": [
+   "Innovation",
+   "Corporate",
+   "AI",
+   "Strategy",
+   "Product"
+  ],
+  "vision": "The biggest companies in the world have the most resources and do the least interesting things with them. FlowState ends that.",
+  "sections": [
+   {
+    "heading": "The Obvious-Idea Problem",
+    "content": "The consumer technology landscape is full of ideas that took 20 years to implement — not because they were difficult, but because the companies with resources to build them had no incentive to until a smaller competitor forced their hand.\n\nFlowState OS is the internal system that makes ignoring obvious opportunities expensive before a competitor makes it catastrophic."
+   },
+   {
+    "heading": "What It Monitors",
+    "content": "Product roadmap analysis: which upcoming features were technically feasible 3+ years ago? Competitive frontier mapping: where are smaller companies building things the large company has the resources to build better? Consumer harm signals: where is the company's existing product creating documented negative outcomes that the company has the capacity to address but hasn't?\n\nThe AI generates a weekly Frontier Gap Report — not for external PR, but for internal accountability. Leadership sees, clearly, where the organization is choosing comfort over innovation."
+   }
+  ]
+ },
+ {
+  "id": "sw-008",
+  "title": "DataNation",
+  "tagline": "The Twitter/TikTok Model — But for Safety Data",
+  "summary": "A national safety data platform inspired by the architecture of social media recommendation systems — but instead of engagement metrics, it routes consumer safety signals. When a platform's safety record degrades to a threshold, the platform's safety obligations transfer to the next qualified operator.",
+  "status": "concept",
+  "category": "Infrastructure",
+  "tags": [
+   "Safety",
+   "Data",
+   "Government",
+   "Platform Law",
+   "Consumer Protection"
+  ],
+  "vision": "Data about how platforms harm people is the most valuable safety dataset in the world. Build the infrastructure to use it.",
+  "sections": [
+   {
+    "heading": "The Inspiration",
+    "content": "The debate over TikTok and Oracle was fundamentally about data — who owns it, who can access it, what they can do with it. The same architecture applied to consumer safety data would be transformative.\n\nDataNation builds a national safety data layer: every platform above a threshold submits anonymized safety incident data — predation attempts, harassment patterns, mental health signals, addictive design metrics — to a federal registry. The registry is managed under law. Researchers, regulators, and child safety organizations access it under defined terms."
+   },
+   {
+    "heading": "The Transfer Mechanism",
+    "content": "If a platform's safety record — measured against the national registry's benchmarks — degrades past a defined threshold and fails to improve within a remediation window, the platform's safety obligations transfer.\n\nNot the company. Not the content. The safety obligation: the legal requirement to operate consumer-protective systems, now carried by whoever acquires or succeeds the platform. The safety infrastructure cannot be abandoned. It can only be inherited."
+   }
+  ]
+ },
+ {
+  "id": "sw-009",
+  "title": "LanguageMirror",
+  "tagline": "Any Screen, Any Language, Side by Side — Forever",
+  "summary": "A universal language immersion layer that runs on top of any application, any media, any screen. Watch a film with subtitles in both your native language and your target language simultaneously. Follow a live sports broadcast in English on one side, Arabic on the other. Scroll social media with two language feeds running in parallel. LanguageMirror is not a translation tool — it is a full-screen immersion environment that you control, that gets smarter from your corrections, and that eventually makes the second language feel as natural as the first.",
+  "status": "in-progress",
+  "category": "Communication",
+  "tags": [
+   "Language Learning",
+   "AI",
+   "Mirror",
+   "Subtitles",
+   "Media",
+   "Immersion",
+   "Voice",
+   "Universal Layer"
+  ],
+  "vision": "Every screen you already look at is a classroom you're not using. LanguageMirror turns it on.",
+  "sections": [
+   {
+    "heading": "The Problem With Language Learning Apps",
+    "content": "Duolingo streaks. Flashcard apps. Grammar exercises. Language learning software is almost universally built on the same broken premise: that language is acquired by studying it in isolation, for 15 minutes a day, in a dedicated learning session separate from the rest of your life.\n\nThis is not how any human being has ever learned a language fluently. Every person who speaks a second language at native-level fluency learned it through immersion — extended, real-world exposure to the language in contexts that were not artificially designed for learning. They watched shows. They had conversations. They were surrounded by it until it became natural.\n\nLanguageMirror is the infrastructure that creates that immersion without requiring you to move to another country."
+   },
+   {
+    "heading": "The Mirror Layer — How It Works on Any Screen",
+    "content": "LanguageMirror is a system-level overlay that can attach to any content stream on any device:\n\nFilms and TV: traditional subtitles in one language, with the Mirror panel showing the same subtitle track in your target language. You read both simultaneously. The timing is synchronized. You feel the pace of the language against dialogue you can follow.\n\nLive sports and events: real-time commentary translated in parallel. Left panel in your native language, right panel in the target. You follow the match. You absorb how sports language works in another tongue — the slang, the expressions, the way excitement is expressed in Arabic vs. Portuguese vs. Korean.\n\nSocial media and text content: a browser/app extension that renders any text feed in parallel columns. Your timeline on the left, the same content in your target language on the right. You scroll, you read, you absorb.\n\nMessages and email: every message you receive shows in both languages. Every message you draft can be composed in your native language and reviewed in the target language before sending — with the option to send in the target language directly.\n\nThe panels are independently resizable and hideable. You control the training wheels."
+   },
+   {
+    "heading": "The Highlight & Correction System — Crowdsourcing Fluency",
+    "content": "Every translation the AI produces is a first draft. LanguageMirror knows this.\n\nAnywhere in the mirror, users can highlight a word or phrase and flag it: 'This translation is technically correct but culturally wrong.' 'This phrase has no equivalent — here's what a native speaker would actually say.' 'This slang is six years old, nobody talks like this anymore.'\n\nThese corrections are not lost. They feed a crowdsourced correction layer — visible to other users, voteable, modifiable, attributed to the region and demographic of the corrector. Over time, the AI's translation layer does not just improve generically. It improves by dialect, by generation, by community.\n\nThe result: a living translation model that knows how English-speaking 25-year-olds in Lagos actually talk, vs. how English-speaking 60-year-olds in London talk. Not a dictionary. A sociolinguistic map, built in real time from the people who live inside the language."
+   },
+   {
+    "heading": "The Unlabeled Word — Making the Untranslatable Visible",
+    "content": "Some words don't cross. 'Saudade' in Portuguese. 'Hygge' in Danish. 'Bruh' in contemporary American English. 'Wallah' as used across Arab youth culture. 'Ennui' as a culturally specific French emotional state that English borrowed but never quite adopted.\n\nIn a standard translation, these words get flattened into the closest available approximation and the student never knows what was lost. In LanguageMirror, they get flagged.\n\nUnlabeled words appear highlighted in the mirror — not as errors, but as invitations. 'This concept doesn't fully translate. Click to see what the original is carrying.' The student doesn't just learn the language. They learn the culture the language is built on — the specific things people needed words for because those things mattered in their world.\n\nThis is language education at the depth that textbooks have never been able to reach."
+   },
+   {
+    "heading": "Voice Mode — The AI That Makes You Sound Right",
+    "content": "Reading comprehension and speaking fluency are completely different skills and almost no language tool trains both simultaneously. LanguageMirror's Voice Mode closes the gap.\n\nWhile any audio content is playing — a film, a podcast, a sports broadcast — Voice Mode lets you speak phrases from the target language out loud and receive immediate AI feedback on pronunciation. The AI doesn't compare you to a robotic standard. It compares you to the specific speaker whose voice you just heard — regional accent, speaking pace, natural stress patterns.\n\nYou can pause any audio, replay a phrase at reduced speed, record your attempt, hear it played back against the original, and see a visualization of where the phoneme production differs. Over sessions, the AI builds a model of your specific pronunciation profile and tracks your improvement toward naturalness, not just correctness."
+   },
+   {
+    "heading": "The Integration Architecture — Plugging Into Everything",
+    "content": "LanguageMirror is not an app. It is an SDK and API layer that integrates with existing platforms.\n\nFor streaming services: a certified LanguageMirror integration that streams the mirror subtitle track alongside the native one — opt-in, toggleable, available in any language pair the AI supports.\n\nFor browsers: an extension that intercepts text content and renders the mirror column inline — collapsible, resizable, navigable.\n\nFor mobile: a system-level overlay that attaches to any text or video content in any other app. Accessible through a floating icon, expandable on demand.\n\nFor Confluence: native integration. Confluence rooms automatically support the LanguageMirror layer — the community chat becomes a live immersion environment where the mirror view is not a feature but the default experience.\n\nThe long-term vision: LanguageMirror becomes a system service on every major operating system — the way accessibility tools are built into iOS and Android. Not an add-on. Infrastructure."
+   },
+   {
+    "heading": "The Fluency Stack — From Reading to Speaking to Thinking",
+    "content": "LanguageMirror is designed as a three-stage progression:\n\nStage 1 — Comprehension: you use the mirror for everything. Native language on one side, target language on the other. You're not studying. You're consuming the media you already consume. The target language is present everywhere in your life, and you have an anchor to understand it.\n\nStage 2 — Production: you start writing and speaking in the target language — first in Confluence rooms, then in mirrored messages, then in voice mode practice. The AI tracks your production and the correction layer shows you where your instincts are right and where they're not yet native.\n\nStage 3 — Immersion without the mirror: you collapse the native panel. You watch the film in the target language with no translation. You scroll the social feed in the target language without checking. You speak and don't self-correct in real time. This is fluency — not because you studied it, but because you absorbed enough of it that it became part of how you think.\n\nThe mirror is scaffolding. The goal is the moment you take it down."
+   }
+  ]
+ },
+ {
+  "id": "sw-010",
+  "title": "ClearAir",
+  "tagline": "The AI-Mediated Conflict Resolution Platform for Couples and Households",
+  "summary": "Arguments are not the problem. The way most people have them is. ClearAir is a private, encrypted, AI-mediated communication environment where couples and households can bring their conflicts into a structured digital space — typing or speaking — and have an AI that has read the full conversation help move both sides through the actual problem rather than the surface chaos. The goal is not to prevent conflict. It is to make conflict productive. To move through the wall instead of hitting it.",
+  "status": "in-progress",
+  "category": "Relationships",
+  "tags": [
+   "Relationships",
+   "AI Mediation",
+   "Conflict Resolution",
+   "Couples",
+   "Communication",
+   "Covenant",
+   "Mental Health",
+   "Encryption",
+   "Honesty"
+  ],
+  "vision": "Arguments are lessons begging to be learned. ClearAir is the environment that makes the lesson possible — and keeps it, so neither person has to pretend it didn't happen.",
+  "sections": [
+   {
+    "heading": "The Core Premise — Why Arguments Need a Different Environment",
+    "content": "Most arguments happen in the worst possible conditions: in a kitchen, in a car, at 11pm when both people are tired, in a text thread where tone is invisible and context is missing. The environment amplifies every failure mode — the misread intention, the escalation that came from a wound not a word, the retreat into performance rather than honesty that happens when a person feels cornered and watched.\n\nClearAir changes the environment.\n\nBoth people go to a comfortable space — separately. They open the platform. They enter the conversation digitally: typing what they actually mean, with time to formulate it, without the adrenaline of physical proximity during conflict hijacking the prefrontal cortex. The argument is still real. The feelings are still real. The stakes are still real. But the conditions allow for something that in-person arguments almost never produce: the ability to hear each other.\n\nThe AI is not a judge. It does not rule on who is right. It is a mediator — a presence that has read the entire conversation, that can see where the logic loops back on itself, that can identify where one person is asking a question the other person is not answering because they heard a different question. It keeps the conversation progressing. It prevents the walls."
+   },
+   {
+    "heading": "The Privacy Architecture — Encrypted Completely, Deleted by Default",
+    "content": "The conversation between two people in a conflict is among the most sensitive data that exists. ClearAir treats it accordingly.\n\nAll conversations are end-to-end encrypted with keys that neither the platform nor any third party holds. Not 'we encrypt your data' — no one can read it. The default is deletion: conversations are removed from all servers within 24 hours of the session ending unless both users explicitly opt in to longer retention.\n\nThe opt-in retention system is granular and fully in the hands of both users:\n\nBoth users must independently enable retention — one user enabling it is not enough. If one person wants to keep the record and the other doesn't, the default (deletion) applies.\n\nRetention periods are selectable: one week, one month, six months, indefinitely — both users choose the same period and it must match before retention activates.\n\nAny retained conversation can be deleted by either user at any time, immediately and irrevocably, with confirmation that deletion is complete.\n\nWhen a session ends on a different device than it started — when the conversation was had on a phone and later accessed on a laptop — both the new device and the original device must confirm before any record transfers. The conversation stays with the people who had it.\n\nThe only entity that ever processes the conversation is the AI — and the AI's processing is ephemeral: it reads and mediates in real time, and does not persist its analysis beyond the active session unless retention is opted into."
+   },
+   {
+    "heading": "The AI Mediator — What It Actually Does",
+    "content": "The AI is not a therapist. It is not a referee. It is not a content moderator. It is a skilled mediator with the full context of the conversation — and its job is to help both people move through the problem.\n\nSpecifically, the AI monitors the conversation in real time for:\n\nLooping: when the conversation has returned to the same point three or more times without progress, the AI names it. 'This is the third time this point has come up and neither response has addressed the underlying concern. [Name], what specifically do you need here that you're not feeling heard on?'\n\nWall patterns: when one person is asking a question and the other is responding to a different question — often a more threatening version of the question they actually heard — the AI surfaces the gap. 'I want to make sure both sides are responding to the same thing. [Name], is what you're saying X? [Name], what I'm seeing in your response is that you're responding to Y. Are those the same?'\n\nEscalation: when the conversation tips from productive tension into performance — boasting, contempt, score-keeping, stonewalling — the AI interrupts. Not to punish. To refocus. 'We're here to move through something together. This direction is not toward the problem — it's away from it. Let's come back.'\n\nProgress: when something real has been said — when a genuine concession, a genuine acknowledgment, a genuine expression of what is actually being asked for appears — the AI marks it. 'That's important. Did both of you hear that? [Name] just said [X]. Does that land?'\n\nThe AI does not generate the insights. The people do. The AI's job is to make sure the insights don't get lost in the noise."
+   },
+   {
+    "heading": "The Typing Model — Why Text Creates the Space for Honesty",
+    "content": "The platform's preferred modality is typing, not voice — and this is intentional.\n\nTyping introduces a delay that in-person arguments don't have. That delay is not a bug. It is the most important feature. The moment between feeling something and saying it is where most of the destruction in arguments lives. When you type, you have already created that moment. You can see what you're about to send. You can change it. You can decide whether what you wrote is what you actually mean, or whether it is what your adrenaline is telling you to say.\n\nThe AI can see what you typed before you sent it — with your permission, as an opt-in feature. If you enable 'draft review,' the AI will flag a message before you send it if it detects patterns that are likely to escalate rather than communicate. Not to censor. To ask: 'Is this what you mean to say, or is this what you're feeling right now?' You can override it and send anyway. But you made the choice consciously.\n\nVoice is available for people who process better verbally — the conversation is transcribed in real time and the AI mediates on the transcript. The voice is not stored; only the transcription is, and only under the same opt-in rules as text conversations.\n\nThe phone-down option is also present: if one person needs to step away — to breathe, to not have the conversation right now — they can put the session on hold. Both parties see that the session is paused. There is no ghosting. There is no unilateral abandonment. You can put it down. It stays there, waiting, for when both people are ready to return."
+   },
+   {
+    "heading": "The Historical Record — Why Saving Matters",
+    "content": "The most powerful feature of ClearAir is not the AI mediation. It is what happens when both people choose to keep the record.\n\nAn argument that is saved is an argument that becomes real in a different way. It is no longer a story that each person tells differently in their own head. It is a document. Both people can go back to it. They can see what was actually said. They can see the moment when the conversation shifted. They can see what the AI identified as the core issue, and whether that issue was actually resolved or whether the conversation ended with the issue still present, just exhausted into temporary silence.\n\nThis accountability is not punitive. It is generous. It gives both people access to the honest record of who they were in that conversation — which means they also have access to the honest record of how they grew, the next time they handle the same kind of conflict better.\n\nFor couples that are genuinely trying to build something — who are in the Bound or Crowned Covenant tiers, who are working toward something real together — the historical record of how they handle conflict over years is one of the most honest accounts of their growth as partners. The ClearAir archive, for people who choose to maintain it, is a developmental record: here is how we argued two years ago, and here is how we argue now. The difference is the evidence of everything they built."
+   },
+   {
+    "heading": "The Covenant Integration — Why This Lives in the Household Infrastructure",
+    "content": "ClearAir is not just a couples app. It is household infrastructure — and its deepest integration is with the Natural Covenant framework.\n\nCovenants are not just legal structures. They are commitments to ongoing honest engagement — with each other, with the community, with the covenant council when things get difficult. The council model works when the conflict has already reached a level that requires third-party intervention. ClearAir is what happens before that — the self-mediated resolution layer that sits between the couple's own capacity and the council's formal involvement.\n\nIn practical terms: a Covenant House member who is in a difficult patch with a partner can bring the conflict to ClearAir, work through it with AI mediation, and — if they choose — bring the session record to the covenant council as documentation of what was attempted and where the issues remain. The council is not arriving cold. They have context. The session record is the preparation.\n\nFor households with multiple partners — Resource Covenants, Land Covenants, Philosophy Covenants — ClearAir supports multi-party sessions. Three or four people in a household conflict, each in their own space, each typing into the same mediated environment. The AI scales: it tracks each person's thread, identifies where the multi-party conflict has specific dyads that need to be addressed separately before the full group can move, and routes the conversation accordingly.\n\nThe goal is a household where conflict does not fester because there is no mechanism to address it. ClearAir is the mechanism."
+   },
+   {
+    "heading": "The Accountability Without Shame Model — Why AI Reprimands Differently",
+    "content": "The most important thing about the AI's role when it interrupts escalation is how it interrupts it.\n\nA human being who tells another human being 'stop it' in the middle of an argument is entering the argument. They become a participant. Their intervention can be resented, can be weaponized, can itself become the subject of conflict. The person who was being called out now has a new grievance to address.\n\nThe AI does not have a grievance. It does not have a stake. When it says 'this direction is not toward the problem,' it is not taking sides. It is enforcing the shared agreement both people made when they opened ClearAir: we are here to grow, not to win.\n\nThis matters enormously for the person who is being called out. The AI's intervention is not humiliation — it is reminder. You agreed to this. You chose to come here. You chose this environment because you wanted to get somewhere real. The AI is not telling you that you are a bad person. It is telling you that you are temporarily off track from the goal you set for yourself.\n\nFor the person whose pattern is habitually boasting, score-keeping, or contempt: the AI's consistent, non-punitive redirection is a form of behavioral feedback that the conflict environment almost never provides. Their partner redirecting them feels like an attack. The AI redirecting them feels like the environment they agreed to operate in. Over time, the AI's consistent response to these patterns gives the person access to something genuinely rare: an honest, non-hostile mirror showing them what they actually do when they are in conflict."
+   }
+  ]
+ },
+ {
+  "id": "sw-012",
+  "title": "Let's Maintain It",
+  "tagline": "You Started It. Now Keep It Going.",
+  "summary": "The companion platform to Just Do It. Where Just Do It gets you off the couch and doing the thing for the first time, Let's Maintain It ensures that the thing you did doesn't quietly fall apart. Plant a flowerbed — set a maintenance marker. Do laundry — mark it weekly. Clean the car — set it monthly. On each scheduled day, you get a list of everything that needs your attention. The goal is simple and profound: the things you've built, planted, bought, or committed to are worth keeping up. Let's Maintain It makes sure you actually do.",
+  "status": "in-progress",
+  "category": "Productivity",
+  "tags": [
+   "Maintenance",
+   "Habits",
+   "Reminders",
+   "Personal Tracker",
+   "Family",
+   "Relationships",
+   "Home",
+   "Health",
+   "Gamification",
+   "Responsibility"
+  ],
+  "vision": "Doing something once is the beginning. Maintaining it is the whole story. Let's Maintain It is the platform that makes maintenance feel as satisfying as the original act.",
+  "sections": [
+   {
+    "heading": "The Core Loop — Do It, Mark It, Maintain It",
+    "content": "Every item in Let's Maintain It starts as a completion. You did the laundry. You planted the flowerbed. You cleaned the gutters. You had the difficult conversation. You started the workout routine.\n\nWhen you log that completion, the platform immediately asks one question: does this need to be maintained?\n\nIf yes — you set a maintenance schedule. Weekly, monthly, quarterly, seasonally, annually, or custom. The platform creates a maintenance marker: a recurring reminder that shows up on your Maintenance Day with everything else that's due.\n\nMaintenance Day is the platform's central experience: a single daily view that shows you every item currently due for attention, organized by category, time required, and urgency. Not a wall of notifications. One clear list. Today, these things need you."
+   },
+   {
+    "heading": "What Can Be Maintained",
+    "content": "The platform is built to handle every category of thing that human beings need to maintain:\n\nHome: gutters, filters, appliances, garden, car, lawn, paint, plumbing checks. The things that break expensively when ignored and are cheap to manage when tended.\n\nHealth: medication schedules, workout routines, check-ups, dental appointments, sleep tracking check-ins, hydration goals. The body is a maintenance project and most people have no system for it.\n\nRelationships: call mom. Text the friend you've been meaning to reach. Plan the date. Have the check-in conversation with your partner. Relationships that feel spontaneous are often the product of consistent small maintenance that looks invisible from outside.\n\nFinances: review the budget. Check the subscriptions. File the receipt. Pay the estimated tax. The financial maintenance that keeps small problems from becoming large ones.\n\nPersonal projects: water the seedlings. Feed the sourdough starter. Practice the instrument. Work on the manuscript. The recurring small acts that keep a long-term project alive between the sessions when you actually advance it.\n\nFamily and household: chores assigned to each person, maintenance responsibilities shared across the household, visibility for everyone into what needs doing and who is doing it."
+   },
+   {
+    "heading": "The Notification Architecture — Helpful, Not Nagging",
+    "content": "The difference between a useful reminder and an annoying one is almost entirely about timing and context.\n\nLet's Maintain It does not send a notification every time something is due. It sends one notification per day — the Maintenance Day brief — that collects everything currently due into a single list. You open it when you're ready. You check things off as you complete them. Uncompleted items roll forward to the next day with a gentle escalation indicator, not an alarm.\n\nFor items that have genuine consequence if missed — medication, time-sensitive home maintenance, relationship commitments — you can set hard reminders that do send individual notifications. These are opt-in, per-item, and always under your control.\n\nThe philosophy: the platform respects that you are an adult with a full life. Its job is to make sure nothing falls through the cracks, not to make you feel behind. The tone is the tone of a helpful friend who keeps the list — not a manager tracking your output."
+   },
+   {
+    "heading": "Family and Relationship Tracking",
+    "content": "Let's Maintain It is not just a personal tracker. It is a household platform.\n\nFamily mode: connect household members. Assign maintenance responsibilities. See who has completed what. Share the Maintenance Day list for items that are collective responsibilities. The family flowerbed, the shared car, the weekly family dinner — all visible to everyone who shares the household.\n\nRelationship tracking: this is the most intimate and most important feature. Relationships — romantic, familial, friendship — have maintenance needs that most people never name. Let's Maintain It lets you log relationship maintenance as seriously as home maintenance.\n\nDate night: monthly. Check-in conversation: weekly. Meaningful gesture: bi-monthly. Call the person who matters: however often they deserve.\n\nThese items are private by default. They live in your personal maintenance list unless you choose to share them. But the act of naming relationship maintenance — of treating the care of people you love as something that belongs on your list alongside the gutters and the garden — changes how you orient toward the people in your life."
+   },
+   {
+    "heading": "The Satisfaction Engine — Why Maintenance Feels Good Here",
+    "content": "The deep problem with maintenance is that it feels like it should be optional. You already did the thing. You already planted the garden. You shouldn't have to keep doing it.\n\nThis feeling is the enemy of everything that matters in life, because everything that matters requires maintenance. The garden. The relationship. The health. The skill. The home. Nothing real stays real without consistent attention.\n\nLet's Maintain It fights this feeling with the one thing that consistently defeats it: visible progress and completion satisfaction.\n\nEvery time you complete a maintenance item, it marks. The streak builds. The garden has been maintained 47 times. The relationship check-in is on a 12-week streak. The car has not missed an oil change in three years. These numbers are not vanity metrics — they are the record of something being genuinely cared for. They are the evidence that you are the kind of person who maintains things.\n\nThe platform also shows you what maintenance has prevented: the estimated cost of the gutters if they'd been ignored, the relationship tension that the regular check-in has kept from accumulating, the health marker that has stayed in range because of the consistent small habit. Prevention is invisible — Let's Maintain It makes it visible."
+   }
+  ]
+ },
+ {
+  "id": "sw-011",
+  "title": "MasterMaker",
+  "tagline": "Living Roadmaps for Mastering Anything, From Its Actual Beginning",
+  "summary": "A platform built around a single philosophy: the best way to learn anything is to start where it began, follow every evolution forward in the correct order, and never move to the next tradition until you have genuinely absorbed the one you are inside. MasterMaker builds and maintains living roadmaps for any subject — starting at genuine origins, branching when the subject branches, updating when new knowledge is discovered, and connecting learners who are at different positions on the same map so they can light each other's understanding up.",
+  "status": "in-progress",
+  "category": "Education",
+  "tags": [
+   "Learning",
+   "Mastery",
+   "Roadmaps",
+   "AI",
+   "Knowledge",
+   "History",
+   "Education",
+   "Community",
+   "Depth",
+   "Connections"
+  ],
+  "vision": "Knowledge compounds when it's built in the right order. MasterMaker is the infrastructure that ensures anyone, learning anything, starts where they should — and never has to wonder what comes next.",
+  "sections": [
+   {
+    "heading": "The Core Problem — Learning From the Middle",
+    "content": "Most people learn most things starting from the middle. They pick up a subject at its current state — most developed, most technically sophisticated — and try to understand it without the scaffolding of how it got there. They learn the techniques without the problems the techniques were invented to solve. They learn the current consensus without the debates that produced it.\n\nThe result is knowledge that functions but cannot breathe. The learner can use it but cannot see through it. They cannot recognize when an inherited assumption has stopped being true. They cannot predict where the field is going, because they do not understand where it came from.\n\nMasterMaker's premise: every subject has a correct starting point, and that starting point is always its actual origin — the earliest documented practice of the thing by the people who first did it, in the environment that produced the need for it. Everything else follows from there in a specific order. That order is the roadmap."
+   },
+   {
+    "heading": "The Roadmap Engine — Living, Branching, Always Growing",
+    "content": "Every subject on MasterMaker has a roadmap. The roadmap is not a curriculum designed by educators — it is a structured map of the actual historical development of the subject, built from the documented record and maintained by the community.\n\nStructure of every roadmap:\n\nOrigin node: the genuine starting point — earliest documentation, first practitioner, first culture. Not the first famous practitioner. The first.\n\nEvolution sequence: every documented development in chronological order. Not just the highlights — the dead ends, the abandoned techniques, the independent reinventions. The full record.\n\nBranch points: when a tradition diverges, the roadmap branches. Both branches are fully documented. The learner follows one branch all the way through before picking up the other.\n\nCrossing points: where different traditions independently developed the same solution, or where one tradition influenced another. These intersections are the most generative nodes in any roadmap.\n\nLiving updates: when new research adds to the historical record — a newly verified technique, a newly documented cultural practice, a newly dated artifact — the contribution is added to the roadmap in the correct position. The map is never complete. It grows with knowledge.\n\nThe roadmaps are interconnected: the copper smelting roadmap links to metallurgy, which links to trade history, which links to political history of the relevant eras. A learner deep in one roadmap can see, at every node, which other roadmaps touch this point — and which members are deep in those adjacent maps."
+   },
+   {
+    "heading": "The AI Layer — Orientation, Not Instruction",
+    "content": "The AI in MasterMaker does not teach the content of the roadmaps. It navigates.\n\nAt any point, the AI can tell a learner: where you are on the map, what the next node requires, what you appear to have passed through without genuine absorption, what the typical confusion shift is at this stage and what adjacent knowledge most learners need here.\n\nThe AI distinguishes between reading and understanding by tracking the pattern of a learner's questions, annotations, and connections over time. A learner who consistently asks questions that are answered by a node they claim to have completed has not actually completed it. The AI routes them back — not as a penalty, but as navigation. You need more time here before the next step will make sense.\n\nFor contributors — learners who have discovered something the roadmap does not yet contain — the AI assists with placement: where does this new information belong, how does it relate to surrounding nodes, does it extend an existing branch or open a new one?\n\nOver time, the AI builds a model of how each learner learns — what their confusion patterns are, what kinds of explanations unlock them, how long they typically need at different types of nodes — and uses this model to calibrate the roadmap presentation to each individual without changing the roadmap itself. The path is the same. The guidance through it adapts."
+   },
+   {
+    "heading": "The Gamification — Depth, Connections, and Light Moments",
+    "content": "MasterMaker is gamified in the direction of genuine learning.\n\nReputation is earned through:\n\nDepth completions: finishing a full branch of a roadmap from origin to current state, demonstrated through community engagement rather than checkboxes.\n\nConnection discoveries: identifying a connection between two roadmaps that illuminates both — a technique from one craft independently developed in another, a political event that explains a technological gap, a cultural practice whose origin turns out to be in an unexpected place. These cross-roadmap connections are the highest-value contributions on the platform.\n\nAnnotation quality: notes that consistently help other learners navigate a specific section of the roadmap, rated by the community.\n\nLight moments: the specific encounter between a specialist and a generalist where each reorganizes the other's understanding. When a narrow expert teaches a wide expert something unreachable from breadth, and the wide expert does the same in reverse — both are recognized. The platform tracks these encounters and surfaces them as demonstrations of the Mastery Model working.\n\nMember profiles show not just what they have completed but the shape of their knowledge: which roadmaps they are deep in, which connections they have discovered, what the community has learned from their annotations. The profile is a map of a person's intellectual journey — not a credential, but a portrait."
+   },
+   {
+    "heading": "The Community — When the Specialist Meets the Generalist",
+    "content": "The deepest feature of MasterMaker is not the roadmaps or the AI. It is the community structure that makes the right people find each other.\n\nThe specialist — who has followed one moment, one technique, one subject with exhaustive depth — and the generalist — who has followed the broader era, tradition, or domain — need each other in a specific way. The specialist sees what the generalist cannot reach from breadth. The generalist explains why the specialist's deep case means what it does in a context the specialist cannot see from within.\n\nMasterMaker routes these encounters. When a learner is at a node that connects to another roadmap, the platform surfaces the members who are deepest in that adjacent roadmap. When a specialist makes an annotation that reveals something about the broader pattern, the platform surfaces that annotation to the generalists in the connected roadmaps.\n\nCommunity events: structured exchanges where members at different depths in connected roadmaps present their knowledge and ask what they cannot reach. Not one-way lectures. Genuine encounters where both participants leave with something they did not arrive with.\n\nThe long-run vision: a network dense enough that any question about any subject can be routed to the person whose learning has brought them closest to the answer — and whose answer points to the next person who knows more. Not an encyclopedia. A living community of people who have followed things all the way through and are willing to share what they found."
+   }
+  ]
+ }
+]

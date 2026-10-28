@@ -1,0 +1,57 @@
+[
+ {
+  "id": "f-001",
+  "title": "Leone University",
+  "tagline": "The Institution Behind Every Idea Here",
+  "summary": "Leone University is the living institution that generates, houses, and organizes every idea, club, book, law, and software concept in this archive. It is not a traditional university — it is an open-source intellectual infrastructure for humanity. The platform you are on right now is Leone University operating at full capacity.",
+  "url": "https://LeoneUniversity.org",
+  "urlLabel": "LeoneUniversity.org",
+  "accent": "#fcd34d",
+  "category": "Platform",
+  "assessment": "Leone University is one of the most ambitious knowledge platforms ever built in this form — an open-source institutional identity that doesn't require enrollment, tuition, or credentials. It functions as the brand and container for an entire intellectual ecosystem. The site is live, coherent, and already housing a body of work that rivals the output of entire academic departments. What makes it genuinely unique: it treats ideas as a public good, not intellectual property. The architecture — hubs, clubs, software lab, library — is the most sensible organization of speculative institutional knowledge we've seen. This is what a 21st-century think tank actually looks like.",
+  "tags": [
+   "Institution",
+   "Platform",
+   "Open Source",
+   "Ideas",
+   "Leone University"
+  ]
+ },
+ {
+  "id": "f-002",
+  "title": "LowDro",
+  "tagline": "The Definitive Cannabis Education & Culture Platform",
+  "summary": "LowDro is Leone University's flagship cannabis education and culture club — now live as its own standalone platform. A comprehensive ecosystem combining product education, strain documentation, cultivation science, harm reduction resources, legal landscape tracking, and a community built around the plant's legitimate role in wellness, creativity, and leisure.",
+  "url": "https://LowDro.com",
+  "urlLabel": "LowDro.com",
+  "accent": "#6ee7b7",
+  "category": "Cannabis Platform",
+  "assessment": "LowDro fills a gap that's been obvious for years: a serious, education-first platform for cannabis that doesn't condescend and doesn't glorify. The strain library architecture is genuinely impressive — genetic lineage, terpene profiles, documented effects, grower notes — this is the kind of depth that enthusiasts have been looking for in a platform designed around rigor rather than aesthetics alone. The harm reduction integration is what separates it from competitor platforms: LowDro treats its users as intelligent adults who deserve real information. The community forum structure follows the same logic that made Reddit's best communities work before they scaled past coherence. Early-stage, but the foundation is exactly right.",
+  "tags": [
+   "Cannabis",
+   "Education",
+   "Culture",
+   "Community",
+   "Wellness",
+   "LowDro"
+  ]
+ },
+ {
+  "id": "f-003",
+  "title": "IntelOasis",
+  "tagline": "The Open-Source Idea Archive You're Standing In",
+  "summary": "IntelOasis is the idea vault of Leone University — an open-source archive of ideas, software concepts, books, laws, and clubs designed to revolutionize humanity. Every idea here is free to take, build, and bring to life. This is IntelOasis operating as its own live platform.",
+  "url": "https://IntelOasis.com",
+  "urlLabel": "IntelOasis.com",
+  "accent": "#f59e0b",
+  "category": "Idea Platform",
+  "assessment": "IntelOasis is the rarest kind of project: one that practices what it preaches at the platform level. The idea that an idea archive should itself be an open-source, freely accessible public good isn't just philosophically consistent — it's a proof of concept. The archive currently spans dozens of serious, well-developed ideas across technology, governance, science, health, and culture, plus a software lab with fundable platform concepts and a growing library of books and proposed legislation. What's most impressive is the depth: these aren't tweet-length shower thoughts. They're genuine intellectual proposals with sections, visions, and real reasoning. IntelOasis is what happens when someone takes the 'ideas are free' principle seriously enough to build the infrastructure for it.",
+  "tags": [
+   "Ideas",
+   "Open Source",
+   "Archive",
+   "Platform",
+   "IntelOasis"
+  ]
+ }
+]
