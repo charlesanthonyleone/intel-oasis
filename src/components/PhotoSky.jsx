@@ -32,8 +32,8 @@ function milkyWay(W, H, mob) { // static plate: dense star field + nebulous glow
     const warm = r() < .35; const gr = lg.createRadialGradient(x, y, 0, x, y, rad * 3); gr.addColorStop(0, warm ? 'rgba(235,215,200,.07)' : 'rgba(190,200,240,.07)'); gr.addColorStop(1, 'rgba(0,0,0,0)'); lg.fillStyle = gr; lg.fillRect(x - rad * 3, y - rad * 3, rad * 6, rad * 6); }
   // dust lane
   lg.globalCompositeOperation = 'destination-out';
-  for (let i = 0; i < 260; i++) { const s = r() * L, o = (gauss(r) * .18 + Math.sin(s / L * 9) * .12) * bw, x = (ax + ux * s + nx * o) / 6, y = (ay + uy * s + ny * o) / 6, rad = (4 + r() * 10) / 6 * (W / 1440 + .5);
-    const gr = lg.createRadialGradient(x, y, 0, x, y, rad * 2.5); gr.addColorStop(0, 'rgba(0,0,0,.35)'); gr.addColorStop(1, 'rgba(0,0,0,0)'); lg.fillStyle = gr; lg.fillRect(x - rad * 3, y - rad * 3, rad * 6, rad * 6); }
+  for (let i = 0; i < 700; i++) { const s = r() * L, o = (gauss(r) * .14 + (i % 3 ? 0 : .35) + Math.sin(s / L * 9) * .14) * bw, x = (ax + ux * s + nx * o) / 6, y = (ay + uy * s + ny * o) / 6, rad = (4 + r() * 10) / 6 * (W / 1440 + .5);
+    const gr = lg.createRadialGradient(x, y, 0, x, y, rad * 2.5); gr.addColorStop(0, 'rgba(0,0,0,.5)'); gr.addColorStop(1, 'rgba(0,0,0,0)'); lg.fillStyle = gr; lg.fillRect(x - rad * 3, y - rad * 3, rad * 6, rad * 6); }
   g.filter = 'blur(6px)'; g.drawImage(lo, 0, 0, W, H); g.filter = 'none';
   const n = mob ? 4500 : 11000;
   for (let i = 0; i < n; i++) { const s = r() * L, o = gauss(r) * bw * (r() < .3 ? 1.6 : .7), x = ax + ux * s + nx * o, y = ay + uy * s + ny * o; const b = Math.pow(r(), 3);
@@ -59,7 +59,7 @@ export default function PhotoSky({ variant = 'hero' }) {
       mw = milkyWay(W, H, mob);
       const rnd = rng(9), n = mob ? 70 : 140;
       stars = Array.from({ length: n }, (_, i) => { const m = Math.pow(rnd(), 2.2); return { x: rnd() * W, y: rnd() * H * (hero ? .75 : 1), m, sz: 7 + m * 30, spike: m > .72, k: rnd() < .2 ? 'y' : rnd() < .3 ? 'b' : 'w', f1: 3 + rnd() * 7, f2: 7 + rnd() * 13, p: rnd() * TAU }; });
-      au = mk(W / 8, H / 8); ag = au.getContext('2d');
+      au = mk(W / 3, H / 6); ag = au.getContext('2d');
       refl = mk(W, H); rg = refl.getContext('2d');
       const L = imgs[mob ? 'landm' : 'land'], M = imgs[mob ? 'landmLake' : 'landLake'];
       if (hero && L) { place = fit(L); land = L; lake = M; } else land = null;
@@ -67,21 +67,25 @@ export default function PhotoSky({ variant = 'hero' }) {
     const sky = (c, t, a = 1) => {
       const gr = c.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, '#03040f'); gr.addColorStop(.55, '#0a1030'); gr.addColorStop(1, '#16204a');
       c.fillStyle = gr; c.fillRect(0, 0, W, H);
-      c.globalCompositeOperation = 'lighter'; c.globalAlpha = a; c.drawImage(mw, 0, 0, W, H);
-      // soft volumetric aurora: low-res curtains, heavily blurred, slow
+      c.globalCompositeOperation = 'lighter';
+      // smoky volumetric aurora (behind the Milky Way): low-res ray curtains, additive, blurred, visibly flowing
       const AW = au.width, AH = au.height; ag.clearRect(0, 0, AW, AH); ag.globalCompositeOperation = 'lighter';
       for (let L = 0; L < 3; L++) for (let x = 0; x < AW; x++) { const u = x / AW;
-        const base = AH * (.36 + L * .07 + .07 * Math.sin(u * 4.2 + t * .09 + L * 2) + .035 * Math.sin(u * 9.5 - t * .14 + L));
-        let I = .5 + .5 * Math.sin(u * 6.3 + t * .12 + L * 1.7); I *= .6 + .4 * Math.sin(u * 23 + t * .25 + L * 3); I *= Math.sin(Math.PI * u) * (L === 0 ? 1 : .7);
-        const h = AH * (.22 + .1 * Math.sin(u * 5 + t * .1 + L));
-        const gr2 = ag.createLinearGradient(0, base - h, 0, base + 2);
-        const col = L === 1 ? '170,150,225' : L === 2 ? '150,205,200' : '205,200,230';
-        gr2.addColorStop(0, `rgba(${col},0)`); gr2.addColorStop(.75, `rgba(${col},${.26 * I})`); gr2.addColorStop(.95, `rgba(${col},${.45 * I})`); gr2.addColorStop(1, `rgba(${col},0)`);
-        ag.fillStyle = gr2; ag.fillRect(x, base - h, 1, h + 2); }
-      c.filter = `blur(${mob ? 10 : 18}px)`; c.globalAlpha = (hero ? .9 : .7) * a; c.drawImage(au, 0, 0, W, H); c.filter = 'none';
+        const base = AH * ((mob ? .74 : .54) + L * .04 + .08 * Math.sin(u * 3.1 + t * .32 + L * 2) + .03 * Math.sin(u * 8.5 - t * .55 + L));
+        let I = .55 + .45 * Math.sin(u * 5.3 - t * .4 + L * 1.7);
+        I *= .55 + .45 * Math.sin(u * 37 + t * 1.1 + L * 3 + Math.sin(u * 7 + t * .6) * 2); // drifting rays
+        I *= Math.pow(Math.sin(Math.PI * Math.min(1, Math.max(0, u * 1.1 - .05))), .7) * (L === 0 ? 1 : .75);
+        const h = AH * ((mob ? .2 : .32) + .1 * Math.sin(u * 4 + t * .35 + L));
+        const gr2 = ag.createLinearGradient(0, base - h, 0, base + 3);
+        const col = L === 1 ? '165,150,205' : L === 2 ? '185,180,215' : '210,198,240';
+        gr2.addColorStop(0, `rgba(${col},0)`); gr2.addColorStop(.5, `rgba(${col},${.26 * I})`); gr2.addColorStop(.86, `rgba(${col},${.68 * I})`);
+        gr2.addColorStop(.95, `rgba(170,215,195,${.45 * I})`); gr2.addColorStop(1, 'rgba(170,215,195,0)');
+        ag.fillStyle = gr2; ag.fillRect(x, base - h, 1, h + 3); }
+      c.filter = `blur(${mob ? 9 : 14}px)`; c.globalAlpha = (hero ? .9 : .7) * a; c.drawImage(au, 0, 0, W, H); c.filter = 'none';
+      c.globalAlpha = a; c.drawImage(mw, 0, 0, W, H);
       // stars: glow core, scintillation, spikes on brightest
-      for (const s of stars) { const sc = reduce ? .8 : .55 + .3 * Math.sin(t * s.f1 + s.p) + .15 * Math.sin(t * s.f2 + s.p * 2.3) ** 3;
-        const k = Math.max(.15, sc), sz = s.sz * (.75 + .35 * k); c.globalAlpha = Math.min(1, (.35 + s.m * .9) * k) * a;
+      for (const s of stars) { const sc = reduce ? .8 : .5 + .38 * Math.sin(t * s.f1 + s.p) + .3 * Math.sin(t * s.f2 + s.p * 2.3) ** 3;
+        const k = Math.max(.08, sc), sz = s.sz * (.65 + .5 * k); c.globalAlpha = Math.min(1, (.35 + s.m * .9) * k) * a;
         c.drawImage(sprites[s.k], s.x - sz / 2, s.y - sz / 2, sz, sz);
         if (s.spike) { const sl = sz * 2.4 * (.7 + .3 * k); c.globalAlpha = .55 * k * a; c.drawImage(sprites.s, s.x - sl / 2, s.y - sl / 2, sl, sl); } }
       c.globalAlpha = a;
