@@ -361,7 +361,10 @@ body { background: #0c0a1a; }
 .hero-veil { background: linear-gradient(180deg, rgba(7,6,26,.35) 0%, rgba(7,6,26,0) 18%, rgba(7,6,26,0) 82%, #0c0a1a 100%), radial-gradient(ellipse 55% 45% at 18% 72%, rgba(7,6,20,.62), transparent 70%); }
 @media (max-width: 767px) {
   .hero { height: auto; min-height: 100svh; }
-  .hero-inner { height: auto; justify-content: flex-start; padding-top: 26vh; padding-bottom: 330px; }
+  .hero-inner { height: auto; justify-content: flex-start; padding-top: 14vh; padding-bottom: 400px; }
   .hero-veil { background: linear-gradient(180deg, rgba(7,6,26,.3) 0%, rgba(7,6,26,0) 20%, rgba(7,6,26,0) 85%, #0c0a1a 100%); }
 }
 @media (max-width: 767px) { .hero-veil { background: linear-gradient(180deg, rgba(7,6,26,.3) 0%, rgba(7,6,26,0) 18%, rgba(7,6,26,.45) 38%, rgba(7,6,26,.45) 68%, rgba(7,6,26,0) 78%, rgba(7,6,26,0) 92%, #0c0a1a 100%); } }
+/* v9 photo sky */
+.hero-veil { background: linear-gradient(180deg, rgba(3,4,15,.35) 0%, rgba(3,4,15,0) 16%, rgba(3,4,15,0) 80%, #0c0a1a 100%), linear-gradient(90deg, rgba(3,4,15,.7) 0%, rgba(3,4,15,.45) 35%, rgba(3,4,15,0) 60%); }
+@media (max-width: 767px) { .hero-veil { background: linear-gradient(180deg, rgba(3,4,15,.3) 0%, rgba(3,4,15,0) 15%, rgba(3,4,15,.35) 35%, rgba(3,4,15,.35) 68%, rgba(3,4,15,0) 76%, rgba(3,4,15,0) 93%, #0c0a1a 100%); } }
