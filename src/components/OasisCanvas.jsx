@@ -78,7 +78,7 @@ export default function OasisCanvas({ variant = 'hero' }) {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let W, H, dpr, mob, stars, moonImg, sky, sg, au, ag, sprites, raf, vis = true, mx = 0, my = 0, tmx = 0, tmy = 0, shoots = [], nextShoot = 1.5;
     const resize = () => {
-      const r = cv.getBoundingClientRect(); W = r.width; H = r.height; mob = W < 760;
+      const r = cv.getBoundingClientRect(); W = r.width; H = r.height; mob = W < 768;
       dpr = Math.min(window.devicePixelRatio || 1, mob ? 1.5 : 2);
       cv.width = W * dpr; cv.height = H * dpr;
       sky = document.createElement('canvas'); sky.width = cv.width; sky.height = cv.height; sg = sky.getContext('2d');
@@ -89,7 +89,7 @@ export default function OasisCanvas({ variant = 'hero' }) {
       moonImg = makeMoon(mob ? 26 : 38);
       sprites = [strip('rgba(225,222,240,', 'rgba(170,150,230,'), strip('rgba(190,165,245,', 'rgba(140,110,210,'), strip('rgba(185,225,225,', 'rgba(150,140,220,')];
     };
-    const geo = () => ({ hz: H * (mob ? .7 : .66), mX: W * (mob ? .78 : .72), mY: H * (mob ? .16 : .2), lx0: W * (mob ? .05 : .3), lx1: W * (mob ? 1.05 : 1.02), ly0: H * (mob ? .74 : .705), ly1: H * (mob ? .9 : .9) });
+    const geo = () => mob ? { hz: H - 230, mX: W * .78, mY: 150, lx0: -W * .1, lx1: W * 1.1, ly0: H - 170, ly1: H - 40 } : { hz: H * .66, mX: W * .72, mY: H * .2, lx0: W * .3, lx1: W * 1.02, ly0: H * .705, ly1: H * .9 };
     const drawSky = (t) => {
       const { mX, mY } = geo(), c = sg; c.setTransform(dpr, 0, 0, dpr, 0, 0);
       const gr = c.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, '#07061a'); gr.addColorStop(.45, '#17123a'); gr.addColorStop(.7, '#2f2650'); gr.addColorStop(1, '#4a3e5a');
@@ -147,7 +147,7 @@ export default function OasisCanvas({ variant = 'hero' }) {
       const rows = Math.ceil(ly1 - ly0); g.setTransform(1, 0, 0, 1, 0, 0);
       for (let j = 0; j < rows; j += 1) { const d = j / rows; const y = ly0 + j; const sy = Math.max(0, ly0 - H * .1 - j * 3.2);
         const off = (Math.sin(j * .55 - t * 2.4) * 3 + Math.sin(j * .19 + t * 1.3) * 4) * (.4 + d * 1.4);
-        g.globalAlpha = .78 - d * .35; g.drawImage(sky, 0, sy * dpr, sky.width, dpr, off * dpr, y * dpr, sky.width, dpr * 1.05); }
+        g.globalAlpha = .78 - d * .35; g.drawImage(sky, 0, sy * dpr, sky.width, dpr, (off - 14) * dpr, y * dpr, sky.width + 28 * dpr, dpr * 1.6); }
       g.globalAlpha = 1; g.setTransform(dpr, 0, 0, dpr, 0, 0);
       g.fillStyle = 'rgba(14,10,30,.12)'; g.fillRect(lx0, ly0, lx1 - lx0, ly1 - ly0);
       // moon path: shimmering vertical glitter
@@ -159,7 +159,7 @@ export default function OasisCanvas({ variant = 'hero' }) {
       for (let k = 0; k < 9; k++) { const y = ly0 + (ly1 - ly0) * ((k + .5) / 9) ** 1.4; const ph = t * .6 + k * 1.7; const x0 = lx0 + ((Math.sin(ph) * .5 + .5) * (lx1 - lx0) * .7); g.beginPath(); g.moveTo(x0, y); g.quadraticCurveTo(x0 + 30, y - 1.2, x0 + 60 + k * 8, y); g.stroke(); }
       g.globalCompositeOperation = 'source-over'; g.restore();
       // palms + reeds at lake edges
-      const ph = mob ? H * .2 : H * .34, px = mob ? W * .86 : W * .86 + mx * 30;
+      const ph = mob ? 150 : H * .34, px = mob ? W * .9 : W * .86 + mx * 30;
       const P = mob ? [[px, ly0 + 12, ph, -.25, 1], [px + ph * .22, ly0 + 18, ph * .78, .18, 2], [px - ph * .55, ly0 + 22, ph * .55, -.35, 3]]
         : [[px, ly0 + 14, ph, -.22, 1], [px + ph * .2, ly0 + 22, ph * .82, .2, 2], [px - ph * .3, ly0 + 24, ph * .62, -.4, 3]];
       for (const [x, y, h, l, s] of P) { g.save(); g.translate(1.6, -1.2); palm(g, x + 0, y, h, l, reduce ? 0 : t, s, true); g.restore(); palm(g, x, y, h, l, reduce ? 0 : t, s, false); }
