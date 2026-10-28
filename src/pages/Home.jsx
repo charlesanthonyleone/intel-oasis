@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Nightscape from "@/components/Nightscape";
+import OasisCanvas from "@/components/OasisCanvas";
 import Reveal from '@/components/Reveal';
 import { SeriesIndex } from '@/components/SeriesCover';
 import ALL_SERIES from '@/data/series.json';
@@ -121,7 +121,7 @@ export default function Home() {
   return (
     <div>
       <section className="hero">
-        <Nightscape variant="hero" />
+        <OasisCanvas variant="hero" />
         <div className="hero-veil" />
         <div className="hero-inner">
           <h1 className="h-hero">IntelOasis</h1>
