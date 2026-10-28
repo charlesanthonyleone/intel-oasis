@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react';
 const BASE = import.meta.env.BASE_URL + 'oasis/';
 const VS = `attribute vec2 p;varying vec2 v;void main(){v=p*.5+.5;v.y=1.-v.y;gl_Position=vec4(p,0,1);}`;
 const FS = `precision highp float;varying vec2 v;
-uniform sampler2D uP,uS,uL;uniform vec2 uRes,uOff,uSize;uniform float uT,uMob,uHz,uLakeOn,uA,uRot,uDpr;uniform vec2 uPole;uniform vec4 uM[7],uMD[7],uR;
+uniform sampler2D uP,uS,uL,uWd;uniform vec4 uG;uniform vec2 uRes,uOff,uSize;uniform float uT,uMob,uHz,uLakeOn,uA,uRot,uDpr;uniform vec2 uPole;uniform vec4 uM[7],uMD[7],uR;
 float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
 float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}
 float n1(float x){return n(vec2(x,.5));}
@@ -41,6 +41,11 @@ void main(){vec2 px=v*uRes;vec2 u=(px-uOff)/uSize;
     float w=sin((dr-R)*.55/max(uR.w*.35,.6))*env;uu+=normalize(dd+1e-4)*vec2(1.,1./3.2)*w*uR.w*1.6/uSize;}
   if(lake>.01){ vec2 q=u*vec2(60.,140.); float a1=n(q+vec2(t*.35,t*.9)),a2=n(q*1.9-vec2(t*.5,t*1.3)),a3=n(q*.5+vec2(-t*.2,t*.5));
     vec2 nrm=vec2(a1-a2,(a2+a3-1.))*.0045*(.4+.6*(u.y-uHz)/(1.-uHz)*2.); uu+=nrm*lake; }
+  if(uG.y>.001){float wv=texture2D(uWd,u).r;
+    if(wv>.003){float fl=.55+.45*sin(t*2.3+u.x*23.+u.y*17.)+.35*(n(u*vec2(40.,30.)+vec2(t*3.*uG.x,t))-.5);
+      float bend=uG.y*wv*wv*(.7+.5*fl);uu+=vec2(uG.x*bend*6.,bend*1.8+uG.y*wv*sin(t*5.+u.x*61.)*.6)/uSize;}
+    if(lake>.01){float band=exp(-pow((u.x-uG.z)/.09,2.))*uG.y;
+      vec2 q2=u*vec2(260.,520.)+vec2(-t*6.*uG.x,t*.8);vec2 wn=vec2(n(q2)-n(q2+vec2(3.1,7.7)),n(q2*1.7)-.5);uu+=wn*band*.0024*lake;}}
   col=texture2D(uP,uu).rgb;
   if(sky>.01&&uRot!=0.){vec2 ru=rot(u,uRot);float sk2=texture2D(uS,ru).r;float k=smoothstep(.85,1.,sky)*smoothstep(.85,1.,sk2)*smoothstep(uHz-.02,uHz-.12,u.y);col=mix(col,texture2D(uP,ru).rgb,k);}
   col+=aur(u,t)*sky*uA;
@@ -64,6 +69,7 @@ export default function OasisGL({ variant = 'hero' }) {
     const gl = cv.getContext('webgl', { antialias: false, premultipliedAlpha: false }); const o2 = ov.getContext('2d');
     if (!gl) return;
     let alive = true, raf, io, set = {}, mob, W, H, dpr, off, size, img, stars, G, S, lakePts = [], BW = 2560, pole = [.3, 1.9];
+    const gust = { t0: -99, d: 4, s: 0, dir: 1, next: 6 };
     const sim = { obj: [], next: 1.5, imp: null, impNext: 2, rip: [0, 0, -99, 0] };
     const sh = (t, s) => { const x = gl.createShader(t); gl.shaderSource(x, s); gl.compileShader(x); return x; };
     const pr = gl.createProgram(); gl.attachShader(pr, sh(gl.VERTEX_SHADER, VS)); gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, FS)); gl.linkProgram(pr); gl.useProgram(pr);
@@ -79,8 +85,8 @@ export default function OasisGL({ variant = 'hero' }) {
       if (m !== mob || !set.p) { mob = m; const k = mob ? 'landm' : 'land';
         const want = Math.min(window.devicePixelRatio || 1, 2) * (hero ? r.width : window.innerWidth) * (mob ? 2.4 : 1.25);
         const res = mob ? (want > 1500 ? 3840 : 2560) : (want > 2700 ? 3840 : 2560);
-        const [p, s, l, st] = await Promise.all([load(BASE + k + '-photo-' + res + '.webp'), load(BASE + k + '-sky.png'), load(BASE + k + '-lake.png'), fetch(BASE + k + '-stars.json').then(x => x.json())]);
-        if (!alive) return false; img = p; stars = st; tex(0, p); tex(1, s); tex(2, l); set.p = 1; BW = mob ? 1440 : 2560; pole = mob ? [.2, 1.5] : [.3, 1.9];
+        const [p, s, l, st, wd] = await Promise.all([load(BASE + k + '-photo-' + res + '.webp'), load(BASE + k + '-sky.png'), load(BASE + k + '-lake.png'), fetch(BASE + k + '-stars.json').then(x => x.json()), load(BASE + k + '-wind.png')]);
+        if (!alive) return false; img = p; stars = st; tex(0, p); tex(1, s); tex(2, l); tex(3, wd); set.p = 1; BW = mob ? 1440 : 2560; pole = mob ? [.2, 1.5] : [.3, 1.9];
           const c = document.createElement('canvas'); c.width = l.width; c.height = l.height; const g = c.getContext('2d'); g.drawImage(l, 0, 0);
           const dd = g.getImageData(0, 0, c.width, c.height).data; lakePts = [];
           for (let y = 0; y < c.height; y += 4) for (let x = 0; x < c.width; x += 4) if (dd[(y * c.width + x) * 4] > 200) lakePts.push([x / c.width, y / c.height]); }
@@ -90,7 +96,7 @@ export default function OasisGL({ variant = 'hero' }) {
       const iw = img.width, ih = img.height;
       let s; if (hero) { s = Math.max(W / iw, H / ih); size = [iw * s, ih * s]; off = [(W - size[0]) * (mob ? .85 : .7), H - size[1]]; }
       else { s = Math.max(W / (iw * (mob ? .42 : .5)), H / (ih * .58)); size = [iw * s, ih * s]; off = [0, 0]; }
-      gl.uniform1i(U('uP'), 0); gl.uniform1i(U('uS'), 1); gl.uniform1i(U('uL'), 2);
+      gl.uniform1i(U('uP'), 0); gl.uniform1i(U('uS'), 1); gl.uniform1i(U('uL'), 2); gl.uniform1i(U('uWd'), 3);
       gl.uniform2f(U('uRes'), W, H); gl.uniform2f(U('uOff'), off[0], off[1]); gl.uniform2f(U('uSize'), size[0], size[1]);
       gl.uniform1f(U('uMob'), mob ? 1 : 0); gl.uniform1f(U('uHz'), mob ? .675 : .695); gl.uniform1f(U('uLakeOn'), hero ? 1 : 0); gl.uniform1f(U('uA'), hero ? 1 : 1.7); gl.uniform1f(U('uDpr'), dpr); gl.uniform2f(U('uPole'), pole[0], pole[1]);
       G = G || glow(); S = S || spike(); return true; };
@@ -124,7 +130,11 @@ export default function OasisGL({ variant = 'hero' }) {
     const frame = (ms) => {
       if (!alive) return; const t = reduce ? 30 : ms / 1000 + 40;
       gl.uniform1f(U('uT'), t); const rot = reduce ? 0 : Math.sin(t * .021) * .022; gl.uniform1f(U('uRot'), rot);
-      if (!reduce) step(t); upload(t); gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+      if (!reduce) step(t); upload(t);
+      if (!reduce && t > gust.next + 40 && t - gust.t0 > gust.d) { gust.t0 = t; gust.d = 3 + R() * 3; gust.s = .6 + R() * .4; gust.dir = R() < .5 ? -1 : 1; gust.next = t + gust.d + 10 + R() * 10 - 40; }
+      { const p = (t - gust.t0) / gust.d, on = p > 0 && p < 1; const [x0, x1] = vis(); const e = on ? Math.pow(Math.sin(Math.PI * p), 1.5) * gust.s * (.85 + .15 * Math.sin(t * 7.3)) : 0;
+        gl.uniform4f(U('uG'), gust.dir, e, gust.dir > 0 ? x0 + (x1 - x0) * (p * 1.3 - .15) : x1 - (x1 - x0) * (p * 1.3 - .15), 0); }
+      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
       o2.setTransform(dpr, 0, 0, dpr, 0, 0); o2.clearRect(0, 0, W, H); o2.globalCompositeOperation = 'lighter';
       for (let i = 0; i < stars.length; i++) { const [x, y, m, d] = stars[i]; const asp = size[0] / size[1], dx = (x - pole[0]) * asp, dy = y - pole[1], cr = Math.cos(rot), sr = Math.sin(rot);
         const rx = pole[0] + (cr * dx + sr * dy) / asp, ry = pole[1] + (-sr * dx + cr * dy); const sx = off[0] + rx * size[0], sy = off[1] + ry * size[1];
