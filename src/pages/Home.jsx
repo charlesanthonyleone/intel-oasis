@@ -59,23 +59,28 @@ const FEATURES = [
 const S = k => ALL_SERIES.find(s => s.key === k);
 const T = id => (LIB.find(i => i.id === id) || {}).title;
 
-function Section({ label, intro, children, id }) {
+function Band({ tone = 'a', eyebrow, title, intro, children, id, split = true }) {
   return (
-    <section id={id} className="sec">
-      <Reveal>
-        <div className="sec-head">
-          <h2 className="h-label">{label}</h2>
-          {intro && <p className="sec-intro">{intro}</p>}
+    <section id={id} className={`band band-${tone}`}>
+      <div className="band-wrap">
+        <div className={split ? 'band-grid' : ''}>
+          <Reveal>
+            <header className={split ? 'band-head band-head-side' : 'band-head'}>
+              <p className="eyebrow-lg">{eyebrow}</p>
+              <h2 className="band-title">{title}</h2>
+              {intro && <p className="band-intro">{intro}</p>}
+            </header>
+          </Reveal>
+          <div className="band-body">{children}</div>
         </div>
-      </Reveal>
-      {children}
+      </div>
     </section>
   );
 }
 
 function Rows({ items, num }) {
   return (
-    <ol className="rows">
+    <ol className="rows rows-boxed">
       {items.map((p, i) => (
         <li key={p.id}>
           <Link to={`/IdeaDetail?id=${p.id}`} className="row group">
@@ -92,21 +97,22 @@ function Featured({ k, papers, bookId, lead, quote }) {
   const s = S(k);
   return (
     <Reveal>
-      <div className="feature">
-        <div>
-          <Link to={`/series/${k}`} className="h-feature link">{s.label}</Link>
+      <article className="panel feat-panel">
+        <div className="feat-text">
+          <Link to={`/series/${k}`} className="h-feature">{s.label}</Link>
           <p className="lede-sm">{s.tagline}</p>
           {lead && <p className="body-text mt-5">{lead}</p>}
           {quote && <blockquote className="pull">{quote}</blockquote>}
+          <Link to={`/series/${k}`} className="btn-read">Open the series <span aria-hidden>→</span></Link>
         </div>
         <div>
           <Rows items={papers} num />
-          <Link to={`/IdeaDetail?id=${bookId}`} className="row group">
+          <Link to={`/IdeaDetail?id=${bookId}`} className="row group book-row">
             <span className="row-num">Book</span>
             <span className="row-body"><span className="row-title">{T(bookId)}</span></span>
           </Link>
         </div>
-      </div>
+      </article>
     </Reveal>
   );
 }
@@ -127,55 +133,79 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-6 md:px-10">
-        <Section label="The Institute" intro="Five rooms. One argument about what a civilization is for.">
-          <dl className="index">
-            {PORTALS.map(p => (
-              <Link key={p.label} to={p.path} className="index-row group">
-                <dt className="index-term">{p.label}</dt><dd className="index-def">{p.description}</dd>
-              </Link>
-            ))}
-          </dl>
-        </Section>
+      <Band tone="a" eyebrow="The Institute" title="Five rooms." intro="One argument about what a civilization is for.">
+        <div className="portal-grid">
+          {PORTALS.map(p => (
+            <Link key={p.label} to={p.path} className="portal">
+              <span className="portal-num">{p.number}</span>
+              <span className="portal-title">{p.label}</span>
+              <span className="portal-desc">{p.description}</span>
+              <span className="more">Enter <span aria-hidden>→</span></span>
+            </Link>
+          ))}
+        </div>
+      </Band>
 
-        <Section id="series" label="The Series" intro="Fifteen inquiries. Each begins with a question no one is asking and follows it to the root.">
-          <SeriesIndex list={ALL_SERIES} />
-        </Section>
+      <Band tone="b" id="series" eyebrow="The Series" title="Fifteen inquiries." intro="Each begins with a question no one is asking and follows it to the root.">
+        <SeriesIndex list={ALL_SERIES} />
+      </Band>
 
-        <Section label="Read First" intro="Three series to start with: the mind, the self, and the world after money.">
-          <div className="space-y-24">
-            <Featured k="brain" papers={BRAIN_PAPERS} bookId="brain-6" lead={S('brain').desc} quote={`"The symptom is the message. The illness is what the message is about. The medicine of the future will hear what the body is actually saying — and address the source rather than silence the alarm."`} />
+      <Band tone="a" split={false} eyebrow="Read First" title="Where to begin." intro="Three series to start with: the mind, the self, and the world after money.">
+        <div className="stack">
+<Featured k="brain" papers={BRAIN_PAPERS} bookId="brain-6" lead={S('brain').desc} quote={`"The symptom is the message. The illness is what the message is about. The medicine of the future will hear what the body is actually saying — and address the source rather than silence the alarm."`} />
             <Featured k="consciousness" papers={CONSCIOUSNESS_PAPERS} bookId="consciousness-6" lead={S('consciousness').desc} />
             <Featured k="global-commons" papers={GLOBAL_COMMONS_PAPERS} bookId="global-commons-6" quote={`"Money doesn't become a score. It stops existing as a concept. Side systems give you the house, the baseline. The only thing that matters is what you produce — and AI will find a use for everything."`} />
-          </div>
-        </Section>
+        </div>
+      </Band>
 
-        <Section label="The Resolution">
-          <Link to="/TheResolution" className="row group"><span className="row-body"><span className="row-title">The Gnostic Resolution</span><span className="row-sub">A proposed resolution to the two central problems of Gnostic cosmology — the nature of Yaldabaoth, the destiny of the sparks — resolved not by esoteric doctrine but by love, as taught by Christ. Realistic theological speculation.</span></span></Link>
-        </Section>
-
-        <Section label="The Warning">
-          <Link to="/Warning" className="row group"><span className="row-body"><span className="row-title">The world has begun unifying through conquest.</span><span className="row-sub">Read the Supreme Warning</span></span></Link>
-        </Section>
-
-        <Section label="The Open Library" intro="Every public-domain book, free forever, and yours to remake down to the atom.">
-          <div className="feature">
+      <section className="band band-b">
+        <div className="band-wrap">
+          <article className="panel feature-block">
             <div>
-              <p className="body-text">Imagine if the golden age of total personal expression on the internet — where your profile was your canvas, and everything about your space was you — was applied to the greatest library ever assembled.</p>
+              <p className="eyebrow-lg">The Resolution</p>
+              <h2 className="band-title">The Gnostic Resolution</h2>
+              <p className="lede-sm" style={{ marginTop: '.75rem' }}>Not escape. Not overthrow. Completion.</p>
+            </div>
+            <div>
+              <p className="body-text">A proposed resolution to the two central problems of Gnostic cosmology — the nature of Yaldabaoth, the destiny of the sparks — resolved not by esoteric doctrine but by love, as taught by Christ. Realistic theological speculation.</p>
+              <Link to="/TheResolution" className="btn-read">Read The Resolution <span aria-hidden>→</span></Link>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section className="band band-warn">
+        <div className="band-wrap">
+          <article className="feature-block warn-block">
+            <div>
+              <p className="eyebrow-lg">The Warning</p>
+              <h2 className="band-title">The world has begun unifying through conquest.</h2>
+            </div>
+            <div>
+              <p className="body-text">What is chosen next determines which category each nation — and each soul — falls into.</p>
+              <Link to="/Warning" className="btn-read">Read the Supreme Warning <span aria-hidden>→</span></Link>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <Band tone="a" split={false} eyebrow="The Open Library" title="Every book, yours to remake." intro="Every public-domain book, free forever, and yours to remake down to the atom.">
+        <div className="lib-grid">
+          <div>
+            <p className="body-text">Imagine if the golden age of total personal expression on the internet — where your profile was your canvas, and everything about your space was you — was applied to the greatest library ever assembled.</p>
               <p className="body-text mt-5">Every classic ever written, free forever, and completely editable down to the atom. Change the font. Redesign the cover. Build a 3D animated bookshelf with glowing spines. If CSS or HTML can do it, you can do it to any book in the library. Your</p>
               <blockquote className="pull">"Every copy of every great book that ever existed looked exactly the same. For the first time in history, that changes. Your library is yours — in every sense of the word."</blockquote>
             </div>
-            <dl className="index">
-              {FEATURES.map(([t, b]) => <div key={t} className="index-row"><dt className="index-term sm">{t}</dt><dd className="index-def">{b}</dd></div>)}
-            </dl>
-          </div>
-        </Section>
+          <dl className="feature-grid">
+            {FEATURES.map(([t, b]) => <div key={t} className="feature-cell"><dt>{t}</dt><dd>{b}</dd></div>)}
+          </dl>
+        </div>
+      </Band>
 
-        <Section label="On the Shelves">
-          <Rows items={LIBRARY_HIGHLIGHTS} />
-          <p className="mt-8"><Link to="/Books" className="link-cta">The full library</Link></p>
-        </Section>
-      </div>
+      <Band tone="b" eyebrow="On the Shelves" title="From the library." intro="Six works to open first.">
+        <Rows items={LIBRARY_HIGHLIGHTS} />
+        <Link to="/Books" className="btn-read">The full library <span aria-hidden>→</span></Link>
+      </Band>
     </div>
   );
 }
