@@ -483,3 +483,4 @@ body { background: #0c0a1a; }
 .oc-grid { align-items: stretch; }
 @media (max-width: 1080px) { .oc-feat .oc-img { aspect-ratio: 16 / 6.2; } }
 @media (max-width: 640px) { .oc-feat .oc-img { aspect-ratio: 16 / 10; } .oc-feat .oc-d { white-space: normal; } }
+@media (max-width: 640px) { .oc-t { min-height: 0; } }
