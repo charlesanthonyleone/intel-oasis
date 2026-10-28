@@ -107,7 +107,7 @@ export default function Books() {
   const isListView = activeSection !== null || activeSeries !== null || searchQuery;
 
   return (
-    <div className="min-h-screen" style={{ background: '#060608' }}>
+    <div className="min-h-screen" style={{ background: 'transparent' }}>
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px]"
           style={{ background: 'radial-gradient(ellipse, rgba(251,113,133,0.06) 0%, transparent 70%)', filter: 'blur(40px)' }} />

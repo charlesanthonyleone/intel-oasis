@@ -11,7 +11,7 @@ export default function PublicDomain() {
   const [expanded, setExpanded] = useState(null);
 
   return (
-    <div className="min-h-screen" style={{ background: '#060608' }}>
+    <div className="min-h-screen" style={{ background: 'transparent' }}>
       {/* Ambient */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px]"

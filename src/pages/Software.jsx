@@ -11,7 +11,7 @@ const CATEGORY_COLORS = {
   'Commerce':        '#fcd34d',
   'Platform Safety': '#fb923c',
   'Infrastructure':  '#6ee7b7',
-  'Productivity':    '#a78bfa',
+  'Productivity':    '#5eead4',
   'Relationships':   '#f9a8d4',
   'Education':       '#67e8f9',
 };
@@ -43,7 +43,7 @@ export default function Software() {
   }, [activeCategory, searchQuery]);
 
   return (
-    <div className="min-h-screen" style={{ background: '#060608' }}>
+    <div className="min-h-screen" style={{ background: 'transparent' }}>
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px]"
           style={{ background: 'radial-gradient(ellipse, rgba(34,211,238,0.06) 0%, transparent 70%)', filter: 'blur(40px)' }} />

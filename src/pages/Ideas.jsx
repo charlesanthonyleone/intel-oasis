@@ -8,7 +8,7 @@ import ideas from '@/components/ideasData';
 const CATEGORIES = [
   { key: 'all',         label: 'All',             icon: Globe,         accent: '#f59e0b', tags: [] },
   { key: 'ai',          label: 'AI & Tech',        icon: Cpu,           accent: '#22d3ee', tags: ['AI','LLM','Technology','Automation','Wearables'] },
-  { key: 'gaming',      label: 'Gaming',           icon: Gamepad2,      accent: '#a78bfa', tags: ['Gaming','Simulation','ARG','Game','MMORPG','Gamification'] },
+  { key: 'gaming',      label: 'Gaming',           icon: Gamepad2,      accent: '#5eead4', tags: ['Gaming','Simulation','ARG','Game','MMORPG','Gamification'] },
   { key: 'health',      label: 'Health',           icon: HeartPulse,    accent: '#6ee7b7', tags: ['Health','Neuroscience','Mental Health','Sleep','Medicine'] },
   { key: 'environment', label: 'Environment',      icon: Leaf,          accent: '#34d399', tags: ['Climate','Environment','Ecology','Sustainability','Biodiversity'] },
   { key: 'governance',  label: 'Governance',       icon: Scale,         accent: '#fb923c', tags: ['Governance','Policy','Democracy','Law','Justice'] },
@@ -48,7 +48,7 @@ export default function IdeasPage() {
   );
 
   return (
-    <div className="min-h-screen" style={{ background: '#060608' }}>
+    <div className="min-h-screen" style={{ background: 'transparent' }}>
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px]"
           style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.06) 0%, transparent 70%)', filter: 'blur(40px)' }} />

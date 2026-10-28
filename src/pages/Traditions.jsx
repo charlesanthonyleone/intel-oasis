@@ -125,7 +125,7 @@ function TraditionDetail({ item, index }) {
 
 export default function Traditions() {
   return (
-    <div className="min-h-screen" style={{ background: '#060608' }}>
+    <div className="min-h-screen" style={{ background: 'transparent' }}>
 
       {/* Ambient */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">

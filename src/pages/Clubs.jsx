@@ -4,14 +4,14 @@ import { Search, X, ChevronDown, Users, ArrowUpRight, Flame, ChevronLeft } from 
 import clubs, { traditions } from '@/components/clubsData';
 import { Link } from 'react-router-dom';
 
-const CLUB_ACCENTS = ['#f59e0b','#22d3ee','#fb7185','#c084fc','#6ee7b7','#fb923c','#a78bfa','#67e8f9','#f9a8d4','#86efac'];
+const CLUB_ACCENTS = ['#f59e0b','#22d3ee','#fb7185','#c084fc','#6ee7b7','#fb923c','#5eead4','#67e8f9','#f9a8d4','#86efac'];
 
 // Theme groups using tag-based matching
 const THEMES = [
   { key: 'media',     label: 'Media & Culture',     accent: '#fb7185', tags: ['News','Film','Music','Sports','Entertainment','Cinema','Television','Wrestling'] },
   { key: 'knowledge', label: 'Knowledge & Learning', accent: '#67e8f9', tags: ['Law','History','Learning','Mastery','Knowledge','Archive','Archaeology','Education'] },
   { key: 'community', label: 'Community & Safety',   accent: '#6ee7b7', tags: ['Community Safety','Child Safety','Accountability','Protection','Guardian'] },
-  { key: 'wellness',  label: 'Health & Wellness',    accent: '#a78bfa', tags: ['Health','Fitness','Biohacking','Cannabis','Wellness','Performance'] },
+  { key: 'wellness',  label: 'Health & Wellness',    accent: '#5eead4', tags: ['Health','Fitness','Biohacking','Cannabis','Wellness','Performance'] },
   { key: 'tech',      label: 'Tech & Code',          accent: '#22d3ee', tags: ['Code','Development','AI','Open Source','Bots','Automation','Games','Simulation'] },
   { key: 'lifestyle', label: 'Lifestyle & Home',     accent: '#fcd34d', tags: ['Food','Cooking','Farming','Household','Maintenance','Habits','Productivity','Covenant'] },
   { key: 'society',   label: 'Society & Philosophy', accent: '#c084fc', tags: ['Philosophy','Ethics','Leadership','Economics','Consciousness','Metaphysics','Psychology'] },
@@ -158,7 +158,7 @@ export default function Clubs() {
   }, []);
 
   return (
-    <div className="min-h-screen" style={{ background: '#060608' }}>
+    <div className="min-h-screen" style={{ background: 'transparent' }}>
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px]"
           style={{ background: 'radial-gradient(ellipse, rgba(192,132,252,0.06) 0%, transparent 70%)', filter: 'blur(40px)' }} />
@@ -193,7 +193,7 @@ export default function Clubs() {
         <div className="absolute bottom-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(192,132,252,0.2), transparent)' }} />
       </header>
 
-      <div className="sticky top-11 z-30 backdrop-blur-xl" style={{ background: 'rgba(6,6,8,0.92)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+      <div className="sticky top-16 z-30 backdrop-blur-xl" style={{ background: 'rgba(6,6,8,0.92)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
         <div className="max-w-4xl mx-auto px-4 py-2.5 flex items-center justify-between">
           <div className="flex items-center gap-2">
             {activeTheme && (
