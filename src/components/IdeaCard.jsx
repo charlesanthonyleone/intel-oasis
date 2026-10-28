@@ -6,8 +6,8 @@ import { createPageUrl } from '@/utils';
 
 const statusConfig = {
   'in-progress': { label: 'In Progress', dot: '#e8cc8a',   color: '#e8cc8a' },
-  'open':        { label: 'Open',        dot: '#7ab494',   color: '#7ab494' },
-  'claimed':     { label: 'Claimed',     dot: '#9a8fb8',   color: '#9a8fb8' },
+  'open':        { label: 'Open',        dot: '#c8a45a',   color: '#c8a45a' },
+  'claimed':     { label: 'Claimed',     dot: '#c8a45a',   color: '#c8a45a' },
 };
 
 export default function IdeaCard({ idea, index }) {
@@ -22,8 +22,8 @@ export default function IdeaCard({ idea, index }) {
     >
       <div className="rounded-2xl overflow-hidden transition-all duration-300"
         style={{
-          background: expanded ? 'rgba(245,158,11,0.04)' : 'rgba(255,255,255,0.02)',
-          border: `1px solid ${expanded ? 'rgba(245,158,11,0.2)' : 'rgba(255,255,255,0.06)'}`,
+          background: expanded ? 'rgba(200,164,90,0.04)' : 'rgba(255,255,255,0.02)',
+          border: `1px solid ${expanded ? 'rgba(200,164,90,0.2)' : 'rgba(255,255,255,0.06)'}`,
         }}>
 
         <button onClick={() => setExpanded(!expanded)} className="w-full text-left px-5 py-4 flex items-start gap-3">
@@ -88,8 +88,8 @@ export default function IdeaCard({ idea, index }) {
                     </div>
                   ))}
                   {idea.vision && (
-                    <div className="px-4 py-3 rounded-xl" style={{ background: 'rgba(245,158,11,0.06)', border: '1px solid rgba(245,158,11,0.15)' }}>
-                      <p className="text-[12px] italic font-light leading-relaxed" style={{ color: 'rgba(252,211,77,0.75)' }}>"{idea.vision}"</p>
+                    <div className="px-4 py-3 rounded-xl" style={{ background: 'rgba(200,164,90,0.06)', border: '1px solid rgba(200,164,90,0.15)' }}>
+                      <p className="text-[12px] italic font-light leading-relaxed" style={{ color: 'rgba(200,164,90,0.75)' }}>"{idea.vision}"</p>
                     </div>
                   )}
                   <Link to={createPageUrl(`IdeaDetail?id=${idea.id}`)} onClick={e => e.stopPropagation()}

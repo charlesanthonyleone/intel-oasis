@@ -110,7 +110,7 @@ export default function IdeaDetail() {
             </div>
             <h1 className="font-display font-semibold text-white leading-[1.02] tracking-[-0.01em] mb-5" style={{ fontSize: 'clamp(38px, 6vw, 72px)' }}>{idea.title}</h1>
             {idea.tagline && <p className="font-display italic text-2xl mb-6" style={{ color: accent }}>{idea.tagline}</p>}
-            <p className="text-[19px] leading-relaxed pl-5" style={{ borderLeft: `2px solid ${accent}`, color: 'rgba(232,238,245,0.72)' }}>{idea.summary}</p>
+            <p className="text-[19px] leading-relaxed pl-5" style={{ borderLeft: "1px solid var(--accent)", color: 'rgba(232,238,245,0.72)' }}>{idea.summary}</p>
             {idea.tags?.length > 0 && (
               <div className="flex flex-wrap gap-2 mt-8">
                 {idea.tags.map((tag) => (
@@ -159,7 +159,7 @@ export default function IdeaDetail() {
             {idea.vision && (
               <div className="mt-14 p-8 rounded-2xl" style={{ background: 'rgba(200,164,90,0.06)', border: '1px solid rgba(200,164,90,0.22)' }}>
                 <Quote className="w-6 h-6 mb-3" style={{ color: 'rgba(200,164,90,0.6)' }} />
-                <p className="font-display italic text-2xl leading-snug" style={{ color: '#f8dca0' }}>{idea.vision}</p>
+                <p className="font-display italic text-2xl leading-snug" style={{ color: '#c8a45a' }}>{idea.vision}</p>
               </div>
             )}
           </div>

@@ -1,16 +1,15 @@
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowUpRight } from 'lucide-react';
+import { PageHead, Section } from '@/components/Editorial';
 
 const RESOLUTION_IDEAS = [
   {
     id: 99,
     num: '99',
     color: '#e8cc8a',
-    bg: 'rgba(252,211,77,0.05)',
-    border: 'rgba(252,211,77,0.16)',
-    hoverBg: 'rgba(252,211,77,0.09)',
-    hoverBorder: 'rgba(252,211,77,0.32)',
+    bg: 'rgba(200,164,90,0.05)',
+    border: 'rgba(200,164,90,0.16)',
+    hoverBg: 'rgba(200,164,90,0.09)',
+    hoverBorder: 'rgba(200,164,90,0.32)',
     title: 'Chinguetti to Timbuktu — The Walk That Has Never Been Done Right',
     tagline: 'Not the man who endured it. The man who nourished it.',
     summary: 'The walk from Chinguetti to Timbuktu has been made many times as a feat of conquest. No man has done it as a road — with hundreds of camels so fully stocked that no one on the line ever knows scarcity. The man who puts the camel before himself, who prepares through God rather than to impress God, is the man who arrives in abundance. And turns around. And goes back.',
@@ -42,11 +41,11 @@ const RESOLUTION_IDEAS = [
   {
     id: 98,
     num: '98',
-    color: '#7ab494',
-    bg: 'rgba(110,231,183,0.06)',
-    border: 'rgba(110,231,183,0.18)',
-    hoverBg: 'rgba(110,231,183,0.1)',
-    hoverBorder: 'rgba(110,231,183,0.35)',
+    color: '#c8a45a',
+    bg: 'rgba(200,164,90,0.06)',
+    border: 'rgba(200,164,90,0.18)',
+    hoverBg: 'rgba(200,164,90,0.1)',
+    hoverBorder: 'rgba(200,164,90,0.35)',
     title: 'Humanity as the Seeds of Earth',
     tagline: 'We are not here to escape Earth. We are here to carry her.',
     summary: 'Earth is the tree. We are the fruit. The seed inside us is every ecosystem, every species, every form of life that Earth spent four billion years developing — and sentience is the mechanism by which she solves the problem of getting life off a planet.',
@@ -88,141 +87,44 @@ const PRINCIPLES = [
 
 export default function TheResolution() {
   return (
-    <div className="min-h-screen" style={{ background: 'transparent' }}>
-      {/* Ambient */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px]"
-          style={{ background: 'radial-gradient(ellipse at center, rgba(200,164,90,0.07) 0%, transparent 65%)', filter: 'blur(50px)' }} />
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px]"
-          style={{ background: 'radial-gradient(ellipse, rgba(110,231,183,0.04) 0%, transparent 70%)', filter: 'blur(40px)' }} />
-      </div>
-
-      <div className="relative max-w-3xl mx-auto px-4 sm:px-6 py-14">
-
-        {/* Back */}
-        <motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-          <Link to="/" className="inline-flex items-center gap-2 text-[12px] mb-10 transition-colors"
-            style={{ color: 'rgba(255,255,255,0.25)' }}
-            onMouseEnter={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
-            onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.25)'}>
-            <ArrowLeft className="w-3.5 h-3.5" />
-            Back to IntelOasis
-          </Link>
-        </motion.div>
-
-        {/* Header */}
-        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-5 text-[10px] font-semibold tracking-[0.15em] uppercase"
-            style={{ background: 'rgba(200,164,90,0.08)', border: '1px solid rgba(200,164,90,0.2)', color: '#c8a45a' }}>
-            ✝️ &nbsp;Resolved Under Christ
-          </div>
-          <h1 className="text-4xl md:text-6xl font-black tracking-[-0.04em] leading-[1.05] mb-4"
-            style={{ color: 'rgba(255,255,255,0.92)' }}>
-            The Gnostic Questions.<br />
-            <span style={{ color: '#c8a45a' }}>The Christian Answers.</span>
-          </h1>
-          <p className="text-[15px] font-light leading-relaxed max-w-xl" style={{ color: 'rgba(255,255,255,0.35)' }}>
-            Gnosticism asks the hardest questions about creation, suffering, and purpose. These two ideas take those questions
-            seriously — and propose that Jesus Christ, not esoteric escape, is the resolution. The mandate is not to flee matter.
-            It is to fill it with love, order, and life.
-          </p>
-
-          <div className="mt-6 p-4 rounded-xl" style={{ background: 'rgba(200,164,90,0.05)', border: '1px solid rgba(200,164,90,0.15)' }}>
-            <p className="text-[13px] italic font-light leading-relaxed text-center" style={{ color: 'rgba(255,255,255,0.45)' }}>
-              "Love the Lord your God with all your heart, soul, and mind. And love your neighbor as yourself."
-            </p>
-            <p className="text-[11px] text-center mt-1" style={{ color: 'rgba(255,255,255,0.2)' }}>Matthew 22:37–39 — the entire mandate in two sentences. Everything else is application.</p>
-          </div>
-        </motion.div>
-
-        {/* Idea Cards */}
-        <div className="space-y-4 mb-14">
-          {RESOLUTION_IDEAS.map((idea, i) => (
-            <motion.div key={idea.id} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}>
-              <div className="rounded-2xl overflow-hidden" style={{ background: idea.bg, border: `1px solid ${idea.border}` }}>
-                <div className="p-5 md:p-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <span className="text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full"
-                      style={{ background: `${idea.color}15`, color: idea.color, border: `1px solid ${idea.color}25` }}>
-                      Idea {idea.num}
-                    </span>
-                    <Link to={`/IdeaDetail?id=${idea.id}`}
-                      className="inline-flex items-center gap-1 text-[11px] font-medium transition-opacity"
-                      style={{ color: idea.color, opacity: 0.7 }}
-                      onMouseEnter={e => e.currentTarget.style.opacity = '1'}
-                      onMouseLeave={e => e.currentTarget.style.opacity = '0.7'}>
-                      Full idea <ArrowUpRight className="w-3 h-3" />
-                    </Link>
-                  </div>
-                  <h2 className="text-[20px] md:text-[24px] font-bold mb-1 leading-tight" style={{ color: 'rgba(255,255,255,0.92)' }}>
-                    {idea.title}
-                  </h2>
-                  <p className="text-[13px] italic mb-3" style={{ color: idea.color, opacity: 0.85 }}>{idea.tagline}</p>
-                  <p className="text-[13px] font-light leading-relaxed mb-5" style={{ color: 'rgba(255,255,255,0.4)' }}>
-                    {idea.summary}
-                  </p>
-                  <div className="space-y-2">
-                    {idea.bullets.map((b, j) => (
-                      <div key={j} className="flex items-start gap-2.5">
-                        <div className="flex-shrink-0 w-1 h-1 rounded-full mt-2" style={{ background: idea.color }} />
-                        <p className="text-[12px] font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.45)' }}>{b}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+    <div className="page">
+      <PageHead kicker="The Resolution" title="The Gnostic Questions. The Christian Answers."
+        lede="Not escape. Not overthrow. Completion.">
+        <p className="ed-body">Gnosticism asks the hardest questions about creation, suffering, and purpose. These two ideas take those questions
+          seriously — and propose that Jesus Christ, not esoteric escape, is the resolution. The mandate is not to flee matter.
+          It is to fill it with love, order, and life.</p>
+      </PageHead>
+      <blockquote className="ed-quote">"Love the Lord your God with all your heart, soul, and mind. And love your neighbor as yourself."
+        <cite>Matthew 22:37–39 — the entire mandate in two sentences. Everything else is application.</cite></blockquote>
+      <Section label="The Three Ideas">
+        <ol className="rows">
+          {RESOLUTION_IDEAS.map(idea => (
+            <li key={idea.id} className="row" style={{ padding: '2.5rem 0' }}>
+              <span className="row-num">{idea.num}</span>
+              <div className="row-body">
+                <Link to={`/IdeaDetail?id=${idea.id}`} className="row-title" style={{ fontSize: 'clamp(24px,2.6vw,32px)' }}>{idea.title}</Link>
+                <span className="ed-tag">{idea.tagline}</span>
+                <p className="row-sub" style={{ marginTop: '.75rem' }}>{idea.summary}</p>
+                <ul className="ed-list">{idea.bullets.map((b, j) => <li key={j}>{b}</li>)}</ul>
+                <Link to={`/IdeaDetail?id=${idea.id}`} className="link" style={{ marginTop: '1rem', fontSize: 14 }}>Read Idea {idea.num}</Link>
               </div>
-            </motion.div>
+            </li>
           ))}
-        </div>
-
-        {/* Divider */}
-        <div className="h-px mb-12" style={{ background: 'linear-gradient(90deg, transparent, rgba(200,164,90,0.25), transparent)' }} />
-
-        {/* Principles */}
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <h2 className="text-[13px] font-bold tracking-[0.15em] uppercase mb-7" style={{ color: 'rgba(255,255,255,0.3)' }}>
-            The Framework — In Plain Language
-          </h2>
-          <div className="space-y-8">
-            {PRINCIPLES.map((p, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }} transition={{ duration: 0.45, delay: i * 0.06 }}>
-                <h3 className="text-[15px] font-semibold mb-2" style={{ color: 'rgba(255,255,255,0.78)' }}>{p.heading}</h3>
-                <p className="text-[13px] font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.35)' }}>{p.body}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Closing */}
-        <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-          transition={{ duration: 0.6 }} className="mt-14 rounded-2xl p-6 text-center"
-          style={{ background: 'rgba(200,164,90,0.04)', border: '1px solid rgba(200,164,90,0.15)' }}>
-          <p className="text-[22px] font-black tracking-tight mb-2" style={{ color: 'rgba(255,255,255,0.88)' }}>
-            The work is not escape.
-          </p>
-          <p className="text-[15px] font-light leading-relaxed max-w-lg mx-auto mb-4" style={{ color: 'rgba(255,255,255,0.35)' }}>
-            It is completion. Love your God in his ignorance as you love yourself in yours. Honor every spark — in every animal,
-            every mountain, every system. Fill this dimension with ordered, conscious, loving life.
-          </p>
-          <p className="text-[12px] italic" style={{ color: 'rgba(200,164,90,0.6)' }}>
-            "Be fruitful and multiply and fill the earth." — Genesis 1:28
-          </p>
-        </motion.div>
-
-        <div className="mt-10 text-center">
-          <Link to="/"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-[12px] font-medium transition-all"
-            style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.35)' }}
-            onMouseEnter={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}
-            onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.35)'}>
-            <ArrowLeft className="w-3 h-3" />
-            Back to IntelOasis
-          </Link>
-        </div>
-
-      </div>
+        </ol>
+      </Section>
+      <Section label="The Framework — In Plain Language">
+        <dl className="index">
+          {PRINCIPLES.map(p => (
+            <div key={p.heading} className="index-row"><dt className="index-term sm">{p.heading}</dt><dd className="index-def">{p.body}</dd></div>
+          ))}
+        </dl>
+      </Section>
+      <section className="ed-sec" style={{ paddingBottom: '3rem' }}>
+        <p className="h-feature">The work is not escape.</p>
+        <p className="ed-body">It is completion. Love your God in his ignorance as you love yourself in yours. Honor every spark — in every animal,
+            every mountain, every system. Fill this dimension with ordered, conscious, loving life.</p>
+        <p className="lede-sm" style={{ marginTop: '1.5rem', fontSize: 18 }}>"Be fruitful and multiply and fill the earth." — Genesis 1:28</p>
+      </section>
     </div>
   );
 }

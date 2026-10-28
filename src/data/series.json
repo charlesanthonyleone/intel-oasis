@@ -4,7 +4,7 @@
   "label": "The Scattering",
   "tagline": "Before Babel, humanity knew. Every faith on earth still carries a fragment of what was lost.",
   "desc": "One original cosmology. Thirteen ruling intelligences. The fall, the Babel scattering, the Leviathan's curriculum, the grand show, and the dimension still completing itself. 5 papers + 1 novel.",
-  "accent": "#9a8fb8",
+  "accent": "#c8a45a",
   "icon": "Sparkles",
   "ids": [
    "religion-1",
@@ -23,7 +23,7 @@
   "label": "The Alarm and the Signal",
   "tagline": "Your brain has many ages. Your symptoms are messages, and medicine has been silencing them.",
   "desc": "Different brain regions develop on completely independent timescales — your amygdala might be 8 while your prefrontal cortex is 45. The depression and anxiety we call mental illness? Those are the body's alarm system firing correctly, pointing to a life not aligned with your function. Modern psychiatry has built sophisticated battery-removal technology. The signal goes quiet. The smoke keeps building.",
-  "accent": "#b48a8a",
+  "accent": "#c8a45a",
   "icon": "HeartPulse",
   "ids": [
    "brain-1",
@@ -42,7 +42,7 @@
   "label": "The Organizing Function",
   "tagline": "Cells, humans, AI: one layered intelligence, repeating at every scale.",
   "desc": "A five-paper series arguing that consciousness is not a property — it is a layered organizational function operating identically at every scale. Cells once occupied our current layer. AI is the brain we are building.",
-  "accent": "#a9c4c0",
+  "accent": "#c8a45a",
   "icon": "Brain",
   "ids": [
    "consciousness-1",
@@ -60,7 +60,7 @@
   "key": "global-commons",
   "label": "After Money",
   "tagline": "Robots open every frontier. The Commons funds every desire. Work becomes wanting.",
-  "accent": "#b4845a",
+  "accent": "#c8a45a",
   "icon": "Globe2",
   "ids": [
    "global-commons-1",
@@ -78,7 +78,7 @@
   "key": "gods-math",
   "label": "The Arithmetic of Wholes",
   "tagline": "Nothing in the universe has ever reached zero. Subtraction is the error in the count.",
-  "accent": "#7ab494",
+  "accent": "#c8a45a",
   "icon": "Brain",
   "ids": [
    "gods-math-1",
@@ -96,7 +96,7 @@
   "key": "two-arithmetics",
   "label": "Formation and Fracture",
   "tagline": "Two mathematics run beneath civilization. One builds wholes; the other breaks them apart.",
-  "accent": "#a9c4c0",
+  "accent": "#c8a45a",
   "icon": "∑",
   "ids": [
    "two-arithmetics-1",
@@ -114,7 +114,7 @@
   "key": "leviathan-math",
   "label": "The Broken Count",
   "tagline": "The arithmetic of division, and how it ruins every system allowed to run it.",
-  "accent": "#b48a8a",
+  "accent": "#c8a45a",
   "icon": "🐉",
   "ids": [
    "leviathan-math-1",
@@ -132,7 +132,7 @@
   "key": "melting-pot",
   "label": "The Crucible",
   "tagline": "The only nation built to receive everyone, and the heat that forges what it receives.",
-  "accent": "#b4845a",
+  "accent": "#c8a45a",
   "icon": "🔥",
   "ids": [
    "melting-pot-1",
@@ -150,7 +150,7 @@
   "key": "masculine-feminine",
   "label": "Two Fields, One Fracture",
   "tagline": "Where complementarity broke in America, the family broke first. How it mends.",
-  "accent": "#b48a8a",
+  "accent": "#c8a45a",
   "icon": "⚖️",
   "ids": [
    "masculine-feminine-1",
@@ -168,7 +168,7 @@
   "key": "grand-unification",
   "label": "The Convergence",
   "tagline": "Every tradition, every series, one path home: love, truth, function, and light.",
-  "accent": "#9a8fb8",
+  "accent": "#c8a45a",
   "icon": "Sparkles",
   "ids": [
    "grand-unification-1",
@@ -186,7 +186,7 @@
   "key": "what-you-were-made-for",
   "label": "The Blueprint",
   "tagline": "Every person carries a readable design. Alignment is the work of living it.",
-  "accent": "#9a8fb8",
+  "accent": "#c8a45a",
   "icon": "🎯",
   "ids": [
    "what-you-were-made-for-1",
@@ -221,7 +221,7 @@
   "key": "true-physics",
   "label": "The Unproven Laws",
   "tagline": "What the universe obeys before any experiment can confirm it.",
-  "accent": "#7ab494",
+  "accent": "#c8a45a",
   "icon": "⚛️",
   "ids": [
    "true-physics-1",
@@ -240,7 +240,7 @@
   "label": "Breaking the Inheritance",
   "tagline": "Why children hurt, what they need, and how a parent ends the cycle.",
   "desc": "A complete framework for understanding why children hurt, what they actually need, and how to parent in a way that breaks generational cycles of trauma instead of perpetuating them. For parents exhausted by punishment and ready for something that actually works.",
-  "accent": "#b48a8a",
+  "accent": "#c8a45a",
   "icon": "👨‍👩‍👧‍👦",
   "ids": [
    "parenting-1",
@@ -258,7 +258,7 @@
   "key": "american-foundational-act",
   "label": "The Foundational Act",
   "tagline": "A legislative vision for a melting pot that keeps its promise.",
-  "accent": "#b4845a",
+  "accent": "#c8a45a",
   "icon": "⚖",
   "ids": [
    "american-foundational-act-1",

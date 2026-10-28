@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { Search as SearchIcon, ArrowUpRight, X } from 'lucide-react';
+import { PageHead, Filters, SearchField, ItemRows } from '@/components/Editorial';
 import library from '@/data/library.json';
 import ideas from '@/data/ideas.json';
 import clubs from '@/data/clubs.json';
@@ -12,12 +12,12 @@ import series from '@/data/series.json';
 const TYPES = [
   { key: 'all', label: 'All' },
   { key: 'series', label: 'Series', accent: '#c8a45a' },
-  { key: 'library', label: 'The Library', accent: '#7ab494' },
+  { key: 'library', label: 'The Library', accent: '#c8a45a' },
   { key: 'ideas', label: 'Ideas', accent: '#c8a45a' },
-  { key: 'software', label: 'Software', accent: '#a9c4c0' },
+  { key: 'software', label: 'Software', accent: '#c8a45a' },
   { key: 'clubs', label: 'Clubs', accent: '#c8a45a' },
-  { key: 'traditions', label: 'Traditions', accent: '#b4845a' },
-  { key: 'publicDomain', label: 'Public Domain', accent: '#9a8fb8' },
+  { key: 'traditions', label: 'Traditions', accent: '#c8a45a' },
+  { key: 'publicDomain', label: 'Public Domain', accent: '#c8a45a' },
 ];
 const ACC = Object.fromEntries(TYPES.map(t => [t.key, t.accent]));
 
@@ -43,40 +43,14 @@ export default function Search() {
   }, [q]);
 
   return (
-    <div className="relative max-w-5xl mx-auto px-4 sm:px-6 pt-16 pb-24">
-      <h1 className="font-display text-5xl md:text-7xl font-semibold text-white mb-8">Search</h1>
-      <label className="relative block mb-6">
-        <span className="sr-only">Search</span>
-        <SearchIcon className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-[#c8a45a]" />
-        <input autoFocus value={q} onChange={e => set('q', e.target.value)} type="search"
-          className="w-full rounded-full pl-14 pr-12 py-4 text-[16px] text-white placeholder-white/30 glass outline-none focus:ring-2 focus:ring-[#c8a45a]/50" placeholder="…" />
-        {q && <button onClick={() => set('q', '')} aria-label="Clear" className="absolute right-5 top-1/2 -translate-y-1/2 text-white/40 hover:text-white"><X className="w-4 h-4" /></button>}
-      </label>
-      <div className="flex gap-2 overflow-x-auto hide-scrollbar pb-2 mb-10">
-        {TYPES.map(t => {
-          const on = type === t.key;
-          return (
-            <button key={t.key} onClick={() => set('type', t.key)}
-              className="flex-shrink-0 px-4 py-2 rounded-full text-[13px] font-medium transition-colors"
-              style={on ? { background: `${t.accent || '#c8a45a'}22`, border: `1px solid ${t.accent || '#c8a45a'}66`, color: t.accent || '#c8a45a' } : { background: 'rgba(255,255,255,0.03)', border: '1px solid var(--line)', color: 'rgba(232,238,245,0.6)' }}>
-              {t.label} <span className="opacity-50 ml-1">{counts[t.key] || 0}</span>
-            </button>
-          );
-        })}
+    <div className="page">
+      <PageHead kicker="Search" title="Ask the archive." lede="Every series, paper, idea, society and rite, in one index." />
+      <div className="ed-tools">
+        <SearchField value={q} onChange={v => set('q', v)} placeholder="What are you looking for?" autoFocus />
+        <Filters items={TYPES.map(t => ({ key: t.key, label: t.label, count: counts[t.key] || 0 }))} active={type} onChange={k => set('type', k)} />
       </div>
-      <div className="grid sm:grid-cols-2 gap-3">
-        {results.slice(0, 200).map(r => {
-          const a = r.accent || ACC[r.type];
-          return (
-            <Link key={r.type + r.id} to={r.to} className="group relative block rounded-2xl p-5 glass glass-hover">
-              <p className="eyebrow mb-2" style={{ color: a }}>{TYPES.find(t => t.key === r.type)?.label}</p>
-              <p className="font-display text-xl font-semibold text-white leading-snug pr-6">{r.title}</p>
-              {(r.sub || r.body) && <p className="text-[13px] mt-1.5 line-clamp-2" style={{ color: 'rgba(232,238,245,0.5)' }}>{r.sub || r.body}</p>}
-              <ArrowUpRight className="absolute top-5 right-5 w-4 h-4 opacity-30 group-hover:opacity-90" style={{ color: a }} />
-            </Link>
-          );
-        })}
-      </div>
+      <ItemRows numbered={false} items={results.slice(0, 200).map(r => ({ id: r.type + r.id, to: r.to, title: r.title, tagline: r.sub, summary: r.sub ? '' : r.body, kind: TYPES.find(t => t.key === r.type)?.label }))} meta={r => r.kind} />
+      <div style={{ height: '4rem' }} />
     </div>
   );
 }

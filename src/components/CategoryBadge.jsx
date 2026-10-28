@@ -15,7 +15,7 @@ const categoryConfig = {
   philosophy: { label: 'Philosophy & Mind', color: 'bg-[#c8a45a]/10 text-[#c8a45a] border-[#c8a45a]/20' },
   food:       { label: 'Food & Agriculture', color: 'bg-[#c8a45a]/10 text-[#c8a45a] border-[#c8a45a]/20' },
   space:      { label: 'Space & Future', color: 'bg-[#c8a45a]/10 text-[#c8a45a] border-[#c8a45a]/20' },
-  justice:    { label: 'Justice & Rights', color: 'bg-red-500/10 text-red-400 border-red-500/20' },
+  justice:    { label: 'Justice & Rights', color: 'bg-[#c8a45a]/10 text-[#c8a45a] border-[#c8a45a]/20' },
   // Type categories
   club:       { label: 'LU Club', color: 'bg-[#c8a45a]/10 text-[#c8a45a] border-[#c8a45a]/20' },
   book:       { label: 'Book Idea', color: 'bg-[#c8a45a]/10 text-[#c8a45a] border-[#c8a45a]/20' },

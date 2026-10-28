@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Shield, ArrowUpRight, Flame, ChevronRight, ExternalLink } from 'lucide-react';
 
 import PUBLIC_DOMAIN_IDEAS from '@/data/publicDomain.json';
-const STATUS_DOT = { 'in-progress': '#e8cc8a', open: '#7ab494', claimed: '#9a8fb8' };
+const STATUS_DOT = { 'in-progress': '#e8cc8a', open: '#c8a45a', claimed: '#c8a45a' };
 const STATUS_LABEL = { 'in-progress': 'Building', open: 'Open', claimed: 'Claimed' };
 
 export default function PublicDomain() {
@@ -15,9 +15,9 @@ export default function PublicDomain() {
       {/* Ambient */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px]"
-          style={{ background: 'radial-gradient(ellipse, rgba(239,68,68,0.07) 0%, transparent 70%)', filter: 'blur(40px)' }} />
+          style={{ background: 'radial-gradient(ellipse, rgba(200,164,90,0.07) 0%, transparent 70%)', filter: 'blur(40px)' }} />
         <div className="absolute bottom-0 right-0 w-[500px] h-[400px]"
-          style={{ background: 'radial-gradient(ellipse, rgba(239,68,68,0.04) 0%, transparent 70%)', filter: 'blur(60px)' }} />
+          style={{ background: 'radial-gradient(ellipse, rgba(200,164,90,0.04) 0%, transparent 70%)', filter: 'blur(60px)' }} />
       </div>
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-12 pb-16">
@@ -25,17 +25,17 @@ export default function PublicDomain() {
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <div className="flex items-center gap-2 mb-3">
-            <Shield className="w-4 h-4" style={{ color: '#b48a8a' }} />
+            <Shield className="w-4 h-4" style={{ color: '#c8a45a' }} />
             <span className="text-[11px] font-bold tracking-[0.18em] uppercase" style={{ color: 'rgba(255,255,255,0.3)' }}>IntelOasis</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-2" style={{ color: 'rgba(255,255,255,0.92)' }}>
-            Public <span style={{ color: '#b48a8a' }}>Domain</span>
+            Public <span style={{ color: '#c8a45a' }}>Domain</span>
           </h1>
 
           {/* Manifesto block */}
           <div className="rounded-2xl px-6 py-5 mb-8 mt-4"
-            style={{ background: 'rgba(239,68,68,0.04)', border: '1px solid rgba(239,68,68,0.14)' }}>
+            style={{ background: 'rgba(200,164,90,0.04)', border: '1px solid rgba(200,164,90,0.14)' }}>
             <p className="text-[13px] font-light leading-relaxed mb-3" style={{ color: 'rgba(255,255,255,0.55)', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
               "There are ideas that cannot exist within the bounds of existing law, jurisdiction, or liability frameworks — not because they are immoral, but because the protective apparatus of civilization has, in protecting against the worst outcomes, also made the best ones impossible."
             </p>
@@ -49,14 +49,14 @@ export default function PublicDomain() {
 
           {/* Warning badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-8 text-[11px] font-bold"
-            style={{ background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.2)', color: '#b48a8a' }}>
+            style={{ background: 'rgba(200,164,90,0.08)', border: '1px solid rgba(200,164,90,0.2)', color: '#c8a45a' }}>
             <Flame className="w-3 h-3" />
             No laws exist here. No liability. No jurisdiction. Enter with full understanding.
           </div>
         </motion.div>
 
         {/* Divider */}
-        <div className="h-px mb-8" style={{ background: 'rgba(239,68,68,0.15)' }} />
+        <div className="h-px mb-8" style={{ background: 'rgba(200,164,90,0.15)' }} />
 
         {/* Ideas */}
         <div className="space-y-4">
@@ -70,7 +70,7 @@ export default function PublicDomain() {
                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}>
                 <div className="rounded-2xl overflow-hidden transition-all"
-                  style={{ background: 'rgba(255,255,255,0.02)', border: `1px solid ${isOpen ? 'rgba(239,68,68,0.25)' : 'rgba(255,255,255,0.06)'}` }}>
+                  style={{ background: 'rgba(255,255,255,0.02)', border: `1px solid ${isOpen ? 'rgba(200,164,90,0.25)' : 'rgba(255,255,255,0.06)'}` }}>
 
                   {/* Card header */}
                   <button
@@ -94,7 +94,7 @@ export default function PublicDomain() {
                         <h2 className="text-[16px] font-black leading-snug mb-1" style={{ color: 'rgba(255,255,255,0.9)' }}>
                           {idea.title}
                         </h2>
-                        <p className="text-[12px] italic mb-2" style={{ color: 'rgba(239,68,68,0.75)', fontFamily: 'Georgia, serif' }}>
+                        <p className="text-[12px] italic mb-2" style={{ color: 'rgba(200,164,90,0.75)', fontFamily: 'Georgia, serif' }}>
                           {idea.tagline}
                         </p>
                         <p className="text-[12px] font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.35)' }}>
@@ -102,7 +102,7 @@ export default function PublicDomain() {
                         </p>
                       </div>
                       <ChevronRight className="w-4 h-4 flex-shrink-0 mt-1 transition-transform"
-                        style={{ color: 'rgba(239,68,68,0.5)', transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)' }} />
+                        style={{ color: 'rgba(200,164,90,0.5)', transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)' }} />
                     </div>
                   </button>
 
@@ -113,12 +113,12 @@ export default function PublicDomain() {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}>
-                      <div className="px-5 pb-6" style={{ borderTop: '1px solid rgba(239,68,68,0.1)' }}>
+                      <div className="px-5 pb-6" style={{ borderTop: '1px solid rgba(200,164,90,0.1)' }}>
                         <div className="pt-5 space-y-5">
                           {idea.sections.map((section, si) => (
                             <div key={si}>
                               <h3 className="text-[12px] font-black tracking-widest uppercase mb-2"
-                                style={{ color: '#b48a8a', opacity: 0.8 }}>
+                                style={{ color: '#c8a45a', opacity: 0.8 }}>
                                 {section.heading}
                               </h3>
                               <p className="text-[13px] font-light leading-relaxed whitespace-pre-line"
@@ -129,7 +129,7 @@ export default function PublicDomain() {
                           ))}
                           {idea.vision && (
                             <div className="rounded-xl px-5 py-4 mt-4"
-                              style={{ background: 'rgba(239,68,68,0.05)', border: '1px solid rgba(239,68,68,0.12)' }}>
+                              style={{ background: 'rgba(200,164,90,0.05)', border: '1px solid rgba(200,164,90,0.12)' }}>
                               <p className="text-[12px] italic font-light leading-relaxed"
                                 style={{ color: 'rgba(255,255,255,0.45)', fontFamily: 'Georgia, serif' }}>
                                 "{idea.vision}"
@@ -139,7 +139,7 @@ export default function PublicDomain() {
                           {idea.seriesLink && (
                             <Link to={idea.seriesLink}
                               className="inline-flex items-center gap-2 mt-4 text-[12px] font-semibold transition-opacity hover:opacity-100 opacity-60"
-                              style={{ color: '#b48a8a' }}>
+                              style={{ color: '#c8a45a' }}>
                               {idea.seriesLabel} <ExternalLink className="w-3 h-3" />
                             </Link>
                           )}

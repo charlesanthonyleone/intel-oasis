@@ -88,9 +88,9 @@ function FinishedCard({ item, index }) {
 
 export default function FinishedSection() {
   return (
-    <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid rgba(134,239,172,0.2)', background: 'rgba(134,239,172,0.02)' }}>
+    <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid rgba(200,164,90,0.2)', background: 'rgba(200,164,90,0.02)' }}>
       {/* Header */}
-      <div className="px-5 py-4 flex items-center gap-4" style={{ borderBottom: '1px solid rgba(134,239,172,0.1)' }}>
+      <div className="px-5 py-4 flex items-center gap-4" style={{ borderBottom: '1px solid rgba(200,164,90,0.1)' }}>
         <div className="flex items-center gap-3 flex-1">
           <div className="w-2 h-2 rounded-full bg-[#c8a45a] animate-pulse" />
           <div>
@@ -99,7 +99,7 @@ export default function FinishedSection() {
           </div>
         </div>
         <span className="text-[12px] font-semibold px-2.5 py-1 rounded-full"
-          style={{ background: 'rgba(134,239,172,0.15)', color: '#7ab494' }}>
+          style={{ background: 'rgba(200,164,90,0.15)', color: '#c8a45a' }}>
           {finished.length}
         </span>
       </div>
