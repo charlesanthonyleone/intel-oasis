@@ -35,10 +35,10 @@ vec3 aur(vec2 u,float t){ vec3 c=vec3(0.);
   return c;}
 void main(){vec2 px=v*uRes;vec2 u=(px-uOff)/uSize;
   vec3 col;float sky=texture2D(uS,u).r;float lake=uLakeOn*texture2D(uL,u).r;float t=uT;
-  vec2 uu=u;
+  vec2 uu=u;float rip=0.;
   if(lake>.01&&uR.w>0.){float age=t-uR.z;vec2 dd=(u-uR.xy)*uSize*vec2(1.,3.2);float dr=length(dd);float R=uR.w*(5.+age*22.);
     float env=exp(-age*.75)*smoothstep(0.,.15,age)*exp(-pow((dr-R)/(uR.w*9.+age*10.),2.));
-    float w=sin((dr-R)*.55/max(uR.w*.35,.6))*env;uu+=normalize(dd+1e-4)*vec2(1.,1./3.2)*w*uR.w*1.6/uSize;}
+    float w=sin((dr-R)*.55/max(uR.w*.35,.6))*env;uu+=normalize(dd+1e-4)*vec2(1.,1./3.2)*w*uR.w*4./uSize;rip=w*lake;}
   if(lake>.01){ vec2 q=u*vec2(60.,140.); float a1=n(q+vec2(t*.35,t*.9)),a2=n(q*1.9-vec2(t*.5,t*1.3)),a3=n(q*.5+vec2(-t*.2,t*.5));
     vec2 nrm=vec2(a1-a2,(a2+a3-1.))*.0045*(.4+.6*(u.y-uHz)/(1.-uHz)*2.); uu+=nrm*lake; }
   if(uG.y>.001){float wv=texture2D(uWd,u).r;
@@ -50,8 +50,9 @@ void main(){vec2 px=v*uRes;vec2 u=(px-uOff)/uSize;
   if(sky>.01&&uRot!=0.){vec2 ru=rot(u,uRot);float sk2=texture2D(uS,ru).r;float k=smoothstep(.85,1.,sky)*smoothstep(.85,1.,sk2)*smoothstep(uHz-.02,uHz-.12,u.y);col=mix(col,texture2D(uP,ru).rgb,k);}
   col+=aur(u,t)*sky*uA;
   if(lake>.01){ vec2 m=vec2(uu.x,2.*uHz-uu.y); col+=aur(m,t)*lake*.38*smoothstep(0.,.02,uu.y-uHz); }
+  col*=1.+rip*.5;col+=vec3(.55,.55,.7)*max(rip,0.)*.06;
   col+=met(px)*max(sky,lake);
-  if(lake>.01&&uR.w>0.){float age=t-uR.z;vec2 dd=(u-uR.xy)*uSize*vec2(1.,3.2);col+=vec3(1.,.93,.85)*exp(-age*5.)*exp(-dot(dd,dd)/(uR.w*uR.w*30.))*1.2*smoothstep(-.01,.03,age);}
+  if(lake>.01&&uR.w>0.){float age=t-uR.z;vec2 dd=(u-uR.xy)*uSize*vec2(1.,3.2);col+=vec3(1.,.93,.85)*exp(-age*3.)*exp(-dot(dd,dd)/(uR.w*uR.w*55.))*1.8*smoothstep(-.01,.03,age);}
   col=pow(col,vec3(1.02,1.02,.98));col*=vec3(.98,.97,1.03);
   float g=h(floor(px*uDpr)+fract(t*24.)*91.)-.5; col+=g*.035;
   gl_FragColor=vec4(col,1.);}`;
@@ -111,7 +112,7 @@ export default function OasisGL({ variant = 'hero' }) {
       if (!sim.imp && t > sim.impNext && hero && lakePts.length) {
         const vp = lakePts.filter(([x, y]) => x > x0 + .04 && x < x1 - .04 && off[1] + y * size[1] < H - 30); const e = vp[Math.floor(R() * vp.length)];
         if (e) { const dir = e[0] > (x0 + x1) / 2 ? 1 : -1; const sx = Math.min(x1 - .03, Math.max(x0 + .03, e[0] - dir * (x1 - x0) * (.55 + R() * .2)));
-          sim.imp = { t0: t, dur: 55 + R() * 8, a: [sx, y0 + (hz - y0) * (.12 + R() * .2)], e, sz: 2.4 + R() * 1.6 }; } }
+          sim.imp = { t0: t, dur: location.search.includes('oasisdemo') ? 8 : 55 + R() * 8, a: [sx, y0 + (hz - y0) * (.12 + R() * .2)], e, sz: 2.4 + R() * 1.6 }; } }
       const im = sim.imp; if (im && t - im.t0 > im.dur) { sim.rip = [im.e[0], im.e[1], t, im.sz]; sim.imp = null; sim.impNext = t + 12 + R() * 14; }
       sim.obj = sim.obj.filter(o => t - o.t0 < o.dur); };
     const M = new Float32Array(28), MD = new Float32Array(28);
