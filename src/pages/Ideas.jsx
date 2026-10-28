@@ -1,5 +1,7 @@
-import { useState, useMemo } from 'react';
-import { PageHead, Filters, SearchField, ItemRows } from '@/components/Editorial';
+import { useMemo } from 'react';
+import { PageHead } from '@/components/Editorial';
+import GroupedIndex from '@/components/GroupedIndex';
+import { groupByTags } from '@/lib/groupBy';
 import SuggestionBox from '@/components/SuggestionBox';
 import ideas from '@/components/ideasData';
 
@@ -19,12 +21,16 @@ const CATEGORIES = [
   { key: 'economy',     label: 'Economy',          accent: '#e8cc8a', tags: ['Economy','Commerce','Finance','Decentralized'] },
 ];
 
+const STATUS = { open: 'Open', 'in-progress': 'In progress', concept: 'Concept' };
+
+// eslint-disable-next-line no-unused-vars
 function matchesCat(item, cat) {
   if (cat.key === 'all' || !cat.tags.length) return true;
   const t = (item.tags || []).map(x => x.toLowerCase());
   return cat.tags.some(ct => t.some(it => it.includes(ct.toLowerCase()) || ct.toLowerCase().includes(it)));
 }
 
+// eslint-disable-next-line no-unused-vars
 function matchesQ(item, q) {
   if (!q) return true;
   const lq = q.toLowerCase();
@@ -32,10 +38,8 @@ function matchesQ(item, q) {
 }
 
 export default function IdeasPage() {
-  const [cat, setCat] = useState('all');
-  const [q, setQ] = useState('');
-  const current = CATEGORIES.find(c => c.key === cat) || CATEGORIES[0];
-  const list = useMemo(() => ideas.filter(i => matchesCat(i, current) && matchesQ(i, q)), [current, q]);
+  const groups = useMemo(() => groupByTags(ideas, CATEGORIES.filter(c => c.key !== 'all'), 'tags', { key: 'other', label: 'Uncharted' })
+    .map(g => ({ ...g, items: [...g.items].sort((a, b) => (b.status === 'in-progress') - (a.status === 'in-progress')) })), []);
   return (
     <div className="page">
       <PageHead kicker="Open Source" title="Take any one. Build it."
@@ -43,11 +47,7 @@ export default function IdeasPage() {
         <p className="ed-body">All ideas are formed via relationship. Jesus said: love God, love people — every idea worth building flows from one of those two.</p>
         <div style={{ marginTop: '2rem' }}><SuggestionBox /></div>
       </PageHead>
-      <div className="ed-tools">
-        <SearchField value={q} onChange={setQ} placeholder="Search the ideas" />
-        <Filters items={CATEGORIES.map(c => ({ key: c.key, label: c.label, count: ideas.filter(i => matchesCat(i, c)).length }))} active={cat} onChange={setCat} />
-      </div>
-      <ItemRows items={list} />
+      <GroupedIndex groups={groups} meta={i => STATUS[i.status]} placeholder="Search the ideas" noun="ideas" />
       <div style={{ height: '4rem' }} />
     </div>
   );

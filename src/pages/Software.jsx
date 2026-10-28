@@ -1,22 +1,25 @@
-import { useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import softwareIdeas from '@/components/softwareData';
-import { PageHead, Filters, SearchField, ItemRows } from '@/components/Editorial';
+import { PageHead } from '@/components/Editorial';
+import GroupedIndex from '@/components/GroupedIndex';
+
+const PURPOSES = [
+  { key: 'protect', label: 'Protection & Trust', cats: ['Child Safety', 'Platform Safety'] },
+  { key: 'connect', label: 'Connection & Learning', cats: ['Communication', 'Relationships', 'Education'] },
+  { key: 'work', label: 'Intelligence & Enterprise', cats: ['Enterprise AI', 'Productivity', 'Infrastructure', 'Commerce'] },
+];
 
 export default function Software() {
-  const [cat, setCat] = useState('all');
-  const [q, setQ] = useState('');
-  const cats = useMemo(() => ['all', ...[...new Set(softwareIdeas.map(i => i.category))].sort()], []);
-  const list = softwareIdeas.filter(i => (cat === 'all' || i.category === cat) &&
-    (!q || [i.title, i.tagline, i.summary, ...(i.tags || [])].join(' ').toLowerCase().includes(q.toLowerCase())));
+  const groups = useMemo(() => {
+    const g = PURPOSES.map(p => ({ ...p, items: softwareIdeas.filter(i => p.cats.includes(i.category)) }));
+    const rest = softwareIdeas.filter(i => !PURPOSES.some(p => p.cats.includes(i.category)));
+    return [...g, { key: 'other', label: 'Further Instruments', items: rest }].filter(x => x.items.length);
+  }, []);
   return (
     <div className="page">
       <PageHead kicker="The Workshop" title="Instruments for the problems that actually matter."
         lede={`${softwareIdeas.length} platforms, specified in full and waiting to be built.`} />
-      <div className="ed-tools">
-        <SearchField value={q} onChange={setQ} placeholder="Search the instruments" />
-        <Filters items={cats.map(c => ({ key: c, label: c === 'all' ? 'All' : c, count: c === 'all' ? softwareIdeas.length : softwareIdeas.filter(i => i.category === c).length }))} active={cat} onChange={setCat} />
-      </div>
-      <ItemRows items={list} meta={i => i.category} />
+      <GroupedIndex groups={groups} meta={i => i.category} placeholder="Search the instruments" noun="instruments" />
       <div style={{ height: '4rem' }} />
     </div>
   );

@@ -1,7 +1,9 @@
-import { useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import clubs from '@/components/clubsData';
-import { PageHead, Filters, SearchField, ItemRows } from '@/components/Editorial';
+import { PageHead } from '@/components/Editorial';
+import GroupedIndex from '@/components/GroupedIndex';
+import { groupByTags } from '@/lib/groupBy';
 
 const THEMES = [
   { key: 'all', label: 'All', tags: [] },
@@ -13,22 +15,17 @@ const THEMES = [
   { key: 'lifestyle', label: 'Lifestyle & Home', tags: ['Food','Cooking','Farming','Household','Maintenance','Habits','Productivity'] },
   { key: 'society', label: 'Society & Philosophy', tags: ['Philosophy','Ethics','Leadership','Economics','Consciousness','Metaphysics','Psychology'] },
 ];
+// eslint-disable-next-line no-unused-vars
 const inTheme = (c, t) => !t.tags.length || t.tags.some(tt => (c.tags || []).some(ct => ct.toLowerCase().includes(tt.toLowerCase()) || tt.toLowerCase().includes(ct.toLowerCase())));
 const hit = (c, q) => !q || [c.title, c.summary, ...(c.tags || [])].join(' ').toLowerCase().includes(q.toLowerCase());
 
 export default function Clubs() {
-  const [theme, setTheme] = useState('all');
-  const [q, setQ] = useState('');
-  const list = useMemo(() => clubs.filter(c => inTheme(c, THEMES.find(t => t.key === theme)) && hit(c, q)), [theme, q]);
+  const groups = useMemo(() => groupByTags(clubs, ['wellness','community','tech','media','knowledge','lifestyle','society'].map(k => THEMES.find(t => t.key === k)), 'tags', { key: 'other', label: 'Singular Orders' }), []);
   return (
     <div className="page">
       <PageHead kicker="The Societies" title="Every club is a world."
         lede={`Every member, a builder. ${clubs.length} standing societies, each one a discipline, a duty and a place to belong.`} />
-      <div className="ed-tools">
-        <SearchField value={q} onChange={setQ} placeholder="Search the societies" />
-        <Filters items={THEMES.map(t => ({ ...t, count: clubs.filter(c => inTheme(c, t)).length }))} active={theme} onChange={setTheme} />
-      </div>
-      <ItemRows items={list} />
+      <GroupedIndex groups={groups} meta={c => (c.tags || [])[0]} placeholder="Search the societies" noun="societies" />
       <p className="ed-body" style={{ margin: '4rem 0' }}>Societies keep their rites. <Link className="link" to="/Traditions">Read the Living Traditions</Link></p>
     </div>
   );
