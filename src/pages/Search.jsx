@@ -11,13 +11,13 @@ import series from '@/data/series.json';
 
 const TYPES = [
   { key: 'all', label: 'All' },
-  { key: 'series', label: 'Series', accent: '#f5c66b' },
-  { key: 'library', label: 'The Library', accent: '#6ee7b7' },
-  { key: 'ideas', label: 'Ideas', accent: '#f59e0b' },
-  { key: 'software', label: 'Software', accent: '#22d3ee' },
-  { key: 'clubs', label: 'Clubs', accent: '#5eead4' },
-  { key: 'traditions', label: 'Traditions', accent: '#fb923c' },
-  { key: 'publicDomain', label: 'Public Domain', accent: '#f0abfc' },
+  { key: 'series', label: 'Series', accent: '#c8a45a' },
+  { key: 'library', label: 'The Library', accent: '#7ab494' },
+  { key: 'ideas', label: 'Ideas', accent: '#c8a45a' },
+  { key: 'software', label: 'Software', accent: '#a9c4c0' },
+  { key: 'clubs', label: 'Clubs', accent: '#c8a45a' },
+  { key: 'traditions', label: 'Traditions', accent: '#b4845a' },
+  { key: 'publicDomain', label: 'Public Domain', accent: '#9a8fb8' },
 ];
 const ACC = Object.fromEntries(TYPES.map(t => [t.key, t.accent]));
 
@@ -47,9 +47,9 @@ export default function Search() {
       <h1 className="font-display text-5xl md:text-7xl font-semibold text-white mb-8">Search</h1>
       <label className="relative block mb-6">
         <span className="sr-only">Search</span>
-        <SearchIcon className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-teal-300" />
+        <SearchIcon className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-[#c8a45a]" />
         <input autoFocus value={q} onChange={e => set('q', e.target.value)} type="search"
-          className="w-full rounded-full pl-14 pr-12 py-4 text-[16px] text-white placeholder-white/30 glass outline-none focus:ring-2 focus:ring-teal-300/50" placeholder="…" />
+          className="w-full rounded-full pl-14 pr-12 py-4 text-[16px] text-white placeholder-white/30 glass outline-none focus:ring-2 focus:ring-[#c8a45a]/50" placeholder="…" />
         {q && <button onClick={() => set('q', '')} aria-label="Clear" className="absolute right-5 top-1/2 -translate-y-1/2 text-white/40 hover:text-white"><X className="w-4 h-4" /></button>}
       </label>
       <div className="flex gap-2 overflow-x-auto hide-scrollbar pb-2 mb-10">
@@ -58,7 +58,7 @@ export default function Search() {
           return (
             <button key={t.key} onClick={() => set('type', t.key)}
               className="flex-shrink-0 px-4 py-2 rounded-full text-[13px] font-medium transition-colors"
-              style={on ? { background: `${t.accent || '#5eead4'}22`, border: `1px solid ${t.accent || '#5eead4'}66`, color: t.accent || '#5eead4' } : { background: 'rgba(255,255,255,0.03)', border: '1px solid var(--line)', color: 'rgba(232,238,245,0.6)' }}>
+              style={on ? { background: `${t.accent || '#c8a45a'}22`, border: `1px solid ${t.accent || '#c8a45a'}66`, color: t.accent || '#c8a45a' } : { background: 'rgba(255,255,255,0.03)', border: '1px solid var(--line)', color: 'rgba(232,238,245,0.6)' }}>
               {t.label} <span className="opacity-50 ml-1">{counts[t.key] || 0}</span>
             </button>
           );

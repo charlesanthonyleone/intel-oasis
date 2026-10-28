@@ -92,14 +92,14 @@ export default function FinishedSection() {
       {/* Header */}
       <div className="px-5 py-4 flex items-center gap-4" style={{ borderBottom: '1px solid rgba(134,239,172,0.1)' }}>
         <div className="flex items-center gap-3 flex-1">
-          <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+          <div className="w-2 h-2 rounded-full bg-[#c8a45a] animate-pulse" />
           <div>
             <h3 className="text-[14px] font-semibold tracking-tight" style={{ color: 'rgba(255,255,255,0.85)' }}>Finished & Live</h3>
             <p className="text-[11px] mt-0.5" style={{ color: 'rgba(255,255,255,0.28)' }}>Completed Leone University projects — open to the world</p>
           </div>
         </div>
         <span className="text-[12px] font-semibold px-2.5 py-1 rounded-full"
-          style={{ background: 'rgba(134,239,172,0.15)', color: '#86efac' }}>
+          style={{ background: 'rgba(134,239,172,0.15)', color: '#7ab494' }}>
           {finished.length}
         </span>
       </div>

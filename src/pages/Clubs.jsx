@@ -4,17 +4,17 @@ import { Search, X, ChevronDown, Users, ArrowUpRight, Flame, ChevronLeft } from 
 import clubs, { traditions } from '@/components/clubsData';
 import { Link } from 'react-router-dom';
 
-const CLUB_ACCENTS = ['#f59e0b','#22d3ee','#fb7185','#c084fc','#6ee7b7','#fb923c','#5eead4','#67e8f9','#f9a8d4','#86efac'];
+const CLUB_ACCENTS = ['#c8a45a','#a9c4c0','#b48a8a','#9a8fb8','#7ab494','#b4845a','#c8a45a','#a9c4c0','#b48a8a','#7ab494'];
 
 // Theme groups using tag-based matching
 const THEMES = [
-  { key: 'media',     label: 'Media & Culture',     accent: '#fb7185', tags: ['News','Film','Music','Sports','Entertainment','Cinema','Television','Wrestling'] },
-  { key: 'knowledge', label: 'Knowledge & Learning', accent: '#67e8f9', tags: ['Law','History','Learning','Mastery','Knowledge','Archive','Archaeology','Education'] },
-  { key: 'community', label: 'Community & Safety',   accent: '#6ee7b7', tags: ['Community Safety','Child Safety','Accountability','Protection','Guardian'] },
-  { key: 'wellness',  label: 'Health & Wellness',    accent: '#5eead4', tags: ['Health','Fitness','Biohacking','Cannabis','Wellness','Performance'] },
-  { key: 'tech',      label: 'Tech & Code',          accent: '#22d3ee', tags: ['Code','Development','AI','Open Source','Bots','Automation','Games','Simulation'] },
-  { key: 'lifestyle', label: 'Lifestyle & Home',     accent: '#fcd34d', tags: ['Food','Cooking','Farming','Household','Maintenance','Habits','Productivity','Covenant'] },
-  { key: 'society',   label: 'Society & Philosophy', accent: '#c084fc', tags: ['Philosophy','Ethics','Leadership','Economics','Consciousness','Metaphysics','Psychology'] },
+  { key: 'media',     label: 'Media & Culture',     accent: '#b48a8a', tags: ['News','Film','Music','Sports','Entertainment','Cinema','Television','Wrestling'] },
+  { key: 'knowledge', label: 'Knowledge & Learning', accent: '#a9c4c0', tags: ['Law','History','Learning','Mastery','Knowledge','Archive','Archaeology','Education'] },
+  { key: 'community', label: 'Community & Safety',   accent: '#7ab494', tags: ['Community Safety','Child Safety','Accountability','Protection','Guardian'] },
+  { key: 'wellness',  label: 'Health & Wellness',    accent: '#c8a45a', tags: ['Health','Fitness','Biohacking','Cannabis','Wellness','Performance'] },
+  { key: 'tech',      label: 'Tech & Code',          accent: '#a9c4c0', tags: ['Code','Development','AI','Open Source','Bots','Automation','Games','Simulation'] },
+  { key: 'lifestyle', label: 'Lifestyle & Home',     accent: '#e8cc8a', tags: ['Food','Cooking','Farming','Household','Maintenance','Habits','Productivity','Covenant'] },
+  { key: 'society',   label: 'Society & Philosophy', accent: '#9a8fb8', tags: ['Philosophy','Ethics','Leadership','Economics','Consciousness','Metaphysics','Psychology'] },
 ];
 
 function matchesTheme(club, theme) {
@@ -96,11 +96,11 @@ function TraditionCard({ item, index }) {
         <button onClick={() => setExpanded(!expanded)} className="w-full text-left px-4 py-4 flex items-start gap-3">
           <div className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center"
             style={{ background: 'rgba(251,146,60,0.12)', border: '1px solid rgba(251,146,60,0.25)' }}>
-            <Flame style={{ width: 14, height: 14, color: '#fb923c' }} />
+            <Flame style={{ width: 14, height: 14, color: '#b4845a' }} />
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="text-[14px] font-semibold leading-snug mb-0.5" style={{ color: 'rgba(255,255,255,0.88)' }}>{item.title}</h3>
-            {item.tagline && <p className="text-[11px] font-medium mb-1" style={{ color: '#fb923c' }}>{item.tagline}</p>}
+            {item.tagline && <p className="text-[11px] font-medium mb-1" style={{ color: '#b4845a' }}>{item.tagline}</p>}
             <p className="text-[12px] font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.28)' }}>{item.summary.slice(0,120)}{item.summary.length > 120 ? '…' : ''}</p>
           </div>
           <motion.div animate={{ rotate: expanded ? 180 : 0 }} transition={{ duration: 0.25 }} className="flex-shrink-0 mt-1">
@@ -114,13 +114,13 @@ function TraditionCard({ item, index }) {
                 <div className="pt-3 space-y-4" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
                   {item.sections?.map((s, i) => (
                     <div key={i}>
-                      {s.heading && <h4 className="text-[10px] font-bold tracking-widest uppercase mb-1.5" style={{ color: '#fb923c' }}>{s.heading}</h4>}
+                      {s.heading && <h4 className="text-[10px] font-bold tracking-widest uppercase mb-1.5" style={{ color: '#b4845a' }}>{s.heading}</h4>}
                       <p className="text-[12px] font-light leading-relaxed whitespace-pre-line" style={{ color: 'rgba(255,255,255,0.32)' }}>{s.content}</p>
                     </div>
                   ))}
                   {item.vision && (
                     <div className="px-3 py-2.5 rounded-lg" style={{ background: 'rgba(251,146,60,0.08)', border: '1px solid rgba(251,146,60,0.2)' }}>
-                      <p className="text-[12px] italic font-light leading-relaxed" style={{ color: '#fb923c', opacity: 0.85 }}>"{item.vision}"</p>
+                      <p className="text-[12px] italic font-light leading-relaxed" style={{ color: '#b4845a', opacity: 0.85 }}>"{item.vision}"</p>
                     </div>
                   )}
                 </div>
@@ -168,14 +168,14 @@ export default function Clubs() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-14 pb-10 text-center">
           <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-6 text-[10px] font-semibold tracking-[0.15em] uppercase"
-            style={{ background: 'rgba(192,132,252,0.08)', border: '1px solid rgba(192,132,252,0.18)', color: '#c084fc' }}>
+            style={{ background: 'rgba(192,132,252,0.08)', border: '1px solid rgba(192,132,252,0.18)', color: '#9a8fb8' }}>
             <Users className="w-3 h-3" />
             Leone University · Official Clubs
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl md:text-7xl font-black tracking-[-0.04em] leading-[1] mb-3"
             style={{ color: 'rgba(255,255,255,0.88)' }}>
-            LU<span style={{ color: '#c084fc' }}>Clubs</span>
+            LU<span style={{ color: '#9a8fb8' }}>Clubs</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}
             className="text-[14px] font-light max-w-sm mx-auto leading-relaxed mb-6"
@@ -185,7 +185,7 @@ export default function Clubs() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="flex justify-center gap-2">
             <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl"
               style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
-              <span className="text-lg font-bold" style={{ color: '#c084fc' }}>{clubs.length}</span>
+              <span className="text-lg font-bold" style={{ color: '#9a8fb8' }}>{clubs.length}</span>
               <span className="text-[10px] uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.22)' }}>Active Clubs</span>
             </div>
           </motion.div>
@@ -199,7 +199,7 @@ export default function Clubs() {
             {activeTheme && (
               <button onClick={() => { setActiveTheme(null); setSearchQuery(''); setShowSearch(false); }}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-medium"
-                style={{ background: 'rgba(192,132,252,0.1)', border: '1px solid rgba(192,132,252,0.25)', color: '#c084fc' }}>
+                style={{ background: 'rgba(192,132,252,0.1)', border: '1px solid rgba(192,132,252,0.25)', color: '#9a8fb8' }}>
                 <ChevronLeft className="w-3 h-3" />
                 Themes
               </button>
@@ -271,7 +271,7 @@ export default function Clubs() {
                 </button>
                 <button onClick={() => setShowTraditions(true)}
                   className="px-4 py-3 rounded-xl text-[12px] font-medium transition-all flex items-center gap-2"
-                  style={{ background: 'rgba(251,146,60,0.06)', border: '1px solid rgba(251,146,60,0.18)', color: '#fb923c' }}
+                  style={{ background: 'rgba(251,146,60,0.06)', border: '1px solid rgba(251,146,60,0.18)', color: '#b4845a' }}
                   onMouseEnter={e => e.currentTarget.style.background = 'rgba(251,146,60,0.12)'}
                   onMouseLeave={e => e.currentTarget.style.background = 'rgba(251,146,60,0.06)'}>
                   <Flame className="w-3.5 h-3.5" />
@@ -302,7 +302,7 @@ export default function Clubs() {
               <div className="flex items-center gap-3 mb-6">
                 <button onClick={() => setShowTraditions(false)}
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-medium"
-                  style={{ background: 'rgba(251,146,60,0.1)', border: '1px solid rgba(251,146,60,0.25)', color: '#fb923c' }}>
+                  style={{ background: 'rgba(251,146,60,0.1)', border: '1px solid rgba(251,146,60,0.25)', color: '#b4845a' }}>
                   <ChevronLeft className="w-3 h-3" />
                   Back
                 </button>
@@ -321,7 +321,7 @@ export default function Clubs() {
 
       <footer className="py-8" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
         <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">
-          <span className="text-sm font-light" style={{ color: 'rgba(255,255,255,0.3)' }}>LU<span style={{ color: '#c084fc', fontWeight: 900 }}>Clubs</span></span>
+          <span className="text-sm font-light" style={{ color: 'rgba(255,255,255,0.3)' }}>LU<span style={{ color: '#9a8fb8', fontWeight: 900 }}>Clubs</span></span>
           <p className="text-[10px] tracking-[0.2em] uppercase" style={{ color: 'rgba(255,255,255,0.1)' }}>Build Your World</p>
         </div>
       </footer>

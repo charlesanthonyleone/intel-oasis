@@ -6,19 +6,19 @@ import SuggestionBox from '@/components/SuggestionBox';
 import ideas from '@/components/ideasData';
 
 const CATEGORIES = [
-  { key: 'all',         label: 'All',             icon: Globe,         accent: '#f59e0b', tags: [] },
-  { key: 'ai',          label: 'AI & Tech',        icon: Cpu,           accent: '#22d3ee', tags: ['AI','LLM','Technology','Automation','Wearables'] },
-  { key: 'gaming',      label: 'Gaming',           icon: Gamepad2,      accent: '#5eead4', tags: ['Gaming','Simulation','ARG','Game','MMORPG','Gamification'] },
-  { key: 'health',      label: 'Health',           icon: HeartPulse,    accent: '#6ee7b7', tags: ['Health','Neuroscience','Mental Health','Sleep','Medicine'] },
-  { key: 'environment', label: 'Environment',      icon: Leaf,          accent: '#34d399', tags: ['Climate','Environment','Ecology','Sustainability','Biodiversity'] },
-  { key: 'governance',  label: 'Governance',       icon: Scale,         accent: '#fb923c', tags: ['Governance','Policy','Democracy','Law','Justice'] },
-  { key: 'social',      label: 'Social',           icon: Users,         accent: '#f9a8d4', tags: ['Community','Social','Culture','Wellbeing','Heritage'] },
-  { key: 'food',        label: 'Food',             icon: Utensils,      accent: '#fbbf24', tags: ['Food','Agriculture','Farming'] },
-  { key: 'education',   label: 'Education',        icon: GraduationCap, accent: '#67e8f9', tags: ['Education','Learning','Knowledge'] },
-  { key: 'philosophy',  label: 'Philosophy',       icon: BookOpen,      accent: '#c084fc', tags: ['Philosophy','Ethics','Consciousness','Metaphysics'] },
-  { key: 'art',         label: 'Art & Media',      icon: Palette,       accent: '#fb7185', tags: ['Art','Culture','Music','Media','Literature'] },
-  { key: 'science',     label: 'Science',          icon: FlaskConical,  accent: '#86efac', tags: ['Science','Space','Biology','Physics','Research'] },
-  { key: 'economy',     label: 'Economy',          icon: Zap,           accent: '#fde68a', tags: ['Economy','Commerce','Finance','Decentralized'] },
+  { key: 'all',         label: 'All',             icon: Globe,         accent: '#c8a45a', tags: [] },
+  { key: 'ai',          label: 'AI & Tech',        icon: Cpu,           accent: '#a9c4c0', tags: ['AI','LLM','Technology','Automation','Wearables'] },
+  { key: 'gaming',      label: 'Gaming',           icon: Gamepad2,      accent: '#c8a45a', tags: ['Gaming','Simulation','ARG','Game','MMORPG','Gamification'] },
+  { key: 'health',      label: 'Health',           icon: HeartPulse,    accent: '#7ab494', tags: ['Health','Neuroscience','Mental Health','Sleep','Medicine'] },
+  { key: 'environment', label: 'Environment',      icon: Leaf,          accent: '#7ab494', tags: ['Climate','Environment','Ecology','Sustainability','Biodiversity'] },
+  { key: 'governance',  label: 'Governance',       icon: Scale,         accent: '#b4845a', tags: ['Governance','Policy','Democracy','Law','Justice'] },
+  { key: 'social',      label: 'Social',           icon: Users,         accent: '#b48a8a', tags: ['Community','Social','Culture','Wellbeing','Heritage'] },
+  { key: 'food',        label: 'Food',             icon: Utensils,      accent: '#c8a45a', tags: ['Food','Agriculture','Farming'] },
+  { key: 'education',   label: 'Education',        icon: GraduationCap, accent: '#a9c4c0', tags: ['Education','Learning','Knowledge'] },
+  { key: 'philosophy',  label: 'Philosophy',       icon: BookOpen,      accent: '#9a8fb8', tags: ['Philosophy','Ethics','Consciousness','Metaphysics'] },
+  { key: 'art',         label: 'Art & Media',      icon: Palette,       accent: '#b48a8a', tags: ['Art','Culture','Music','Media','Literature'] },
+  { key: 'science',     label: 'Science',          icon: FlaskConical,  accent: '#7ab494', tags: ['Science','Space','Biology','Physics','Research'] },
+  { key: 'economy',     label: 'Economy',          icon: Zap,           accent: '#e8cc8a', tags: ['Economy','Commerce','Finance','Decentralized'] },
 ];
 
 function matchesCat(item, cat) {
@@ -33,7 +33,7 @@ function matchesQ(item, q) {
   return item.title.toLowerCase().includes(lq) || item.summary.toLowerCase().includes(lq) || (item.tags||[]).some(t=>t.toLowerCase().includes(lq));
 }
 
-const STATUS_DOT = { 'in-progress': '#fcd34d', open: '#6ee7b7', claimed: '#c084fc' };
+const STATUS_DOT = { 'in-progress': '#e8cc8a', open: '#7ab494', claimed: '#9a8fb8' };
 const STATUS_LABEL = { 'in-progress': 'Building', open: 'Open', claimed: 'Claimed' };
 
 export default function IdeasPage() {
@@ -60,14 +60,14 @@ export default function IdeasPage() {
           <div className="flex items-center justify-between mb-4">
             <div>
               <div className="flex items-center gap-2 mb-1">
-                <Lightbulb className="w-4 h-4" style={{ color: '#f59e0b' }} />
+                <Lightbulb className="w-4 h-4" style={{ color: '#c8a45a' }} />
                 <span className="text-[11px] font-bold tracking-[0.18em] uppercase" style={{ color: 'rgba(255,255,255,0.3)' }}>IntelOasis</span>
               </div>
               <p className="text-[10px] italic mb-1" style={{ color: 'rgba(255,255,255,0.2)', fontFamily: 'Georgia, serif' }}>
                 All ideas are formed via relationship. Jesus said: love God, love people — every idea worth building flows from one of those two.
               </p>
               <h1 className="text-4xl md:text-5xl font-black tracking-tight" style={{ color: 'rgba(255,255,255,0.92)' }}>
-                Open Source <span style={{ color: '#f59e0b' }}>Ideas</span>
+                Open Source <span style={{ color: '#c8a45a' }}>Ideas</span>
               </h1>
               <p className="text-[13px] font-light mt-1" style={{ color: 'rgba(255,255,255,0.3)' }}>
                 {ideas.length} ideas · take any one, build it, change the world
@@ -150,7 +150,7 @@ export default function IdeasPage() {
                         <h3 className="text-[14px] font-semibold leading-snug" style={{ color: 'rgba(255,255,255,0.88)' }}>
                           {idea.title}
                         </h3>
-                        <ArrowUpRight className="w-4 h-4 flex-shrink-0 opacity-0 group-hover:opacity-50 transition-opacity mt-0.5" style={{ color: '#f59e0b' }} />
+                        <ArrowUpRight className="w-4 h-4 flex-shrink-0 opacity-0 group-hover:opacity-50 transition-opacity mt-0.5" style={{ color: '#c8a45a' }} />
                       </div>
                       <p className="text-[12px] font-light leading-relaxed mb-2" style={{ color: 'rgba(255,255,255,0.35)' }}>
                         {idea.summary.slice(0, 160)}{idea.summary.length > 160 ? '…' : ''}

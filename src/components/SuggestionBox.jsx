@@ -6,7 +6,7 @@ export default function SuggestionBox() {
     <a href="https://github.com/charlesanthonyleone/intel-oasis/issues/new?title=Idea%20suggestion&labels=suggestion"
       target="_blank" rel="noopener noreferrer"
       className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-[12px] font-medium transition-all"
-      style={{ background: 'rgba(45,212,191,0.1)', border: '1px solid rgba(45,212,191,0.25)', color: '#5eead4' }}>
+      style={{ background: 'rgba(200,164,90,0.1)', border: '1px solid rgba(200,164,90,0.25)', color: '#c8a45a' }}>
       <Lightbulb className="w-3.5 h-3.5" /> Suggest an idea <Github className="w-3.5 h-3.5 opacity-60" />
     </a>
   );

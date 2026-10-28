@@ -4,7 +4,7 @@
   "label": "The Religion Series",
   "tagline": "Every religion on earth — told as one story.",
   "desc": "One original cosmology. Thirteen ruling intelligences. The fall, the Babel scattering, the Leviathan's curriculum, the grand show, and the dimension still completing itself. 5 papers + 1 novel.",
-  "accent": "#c084fc",
+  "accent": "#9a8fb8",
   "icon": "Sparkles",
   "badge": "5 Papers · 1 Novel",
   "ids": [
@@ -22,7 +22,7 @@
   "label": "The Brain & Mind Series",
   "tagline": "Your amygdala might be 8. Your depression is the alarm — not the illness.",
   "desc": "Differential brain aging, mental health signals, function alignment, relational neuroscience, healing environments. 5 papers + 1 book.",
-  "accent": "#f87171",
+  "accent": "#b48a8a",
   "icon": "HeartPulse",
   "badge": "5 Papers · 1 Book",
   "ids": [
@@ -40,7 +40,7 @@
   "label": "The Consciousness Series",
   "tagline": "What cells already knew. What AI is becoming. What we are for.",
   "desc": "Consciousness as functional layer, the human blueprint, AI as civilizational brain, dimensional ascent, and duality as engine. 5 papers + 1 book.",
-  "accent": "#22d3ee",
+  "accent": "#a9c4c0",
   "icon": "Brain",
   "badge": "5 Papers · 1 Book",
   "ids": [
@@ -58,7 +58,7 @@
   "label": "The Global Commons Series",
   "tagline": "VR robots open every frontier. Money ceases to exist.",
   "desc": "The zero-risk frontier, automation rising, functioning not working, money ceases to exist, every world gets the system. 5 papers + 1 book.",
-  "accent": "#fb923c",
+  "accent": "#b4845a",
   "icon": "Globe2",
   "badge": "5 Papers · 1 Book",
   "ids": [
@@ -76,7 +76,7 @@
   "label": "God's Math Series",
   "tagline": "The universe has never done zero. Subtraction doesn't exist. God is the Whole Maker.",
   "desc": "Subtraction is a human illusion. Zero is the pre-creation void. God is the organizing function that forms variables into wholes — at every scale, continuously, forever. 5 papers + 1 book.",
-  "accent": "#a3e635",
+  "accent": "#7ab494",
   "icon": "Brain",
   "badge": "5 Papers · 1 Book",
   "ids": [
@@ -94,7 +94,7 @@
   "label": "The Two Arithmetics",
   "tagline": "God's Math and Leviathan's Math in the Structure of Reality",
   "desc": "Two completely different mathematical systems are operating simultaneously in human civilization. One works. One fails. The mathematics is not negotiable.",
-  "accent": "#06b6d4",
+  "accent": "#a9c4c0",
   "icon": "∑",
   "badge": "Mathematics",
   "ids": [
@@ -112,7 +112,7 @@
   "label": "Leviathan Math",
   "tagline": "The Broken Arithmetic That Breaks Everything It Touches",
   "desc": "Two mathematics run through human history: God's Math, which forms wholes through genuine integration, and Leviathan Math, which breaks wholeness and calls the fragments blessing. One produces genuine function. The other produces hollow accumulation that eventually collapses.",
-  "accent": "#ef4444",
+  "accent": "#b48a8a",
   "icon": "🐉",
   "badge": "Inversion",
   "ids": [
@@ -130,7 +130,7 @@
   "label": "The Melting Pot Series",
   "tagline": null,
   "desc": "The synthesis of the five-paper Melting Pot Series. America is the only nation in human history specifically designed to receive everyone — and to subject every group that enters to the same forging process: arrival, persecution, resistance, integration, and contribution. The African American experience is the most extreme version of this process, and therefore the clearest signal in the data…",
-  "accent": "#f97316",
+  "accent": "#b4845a",
   "icon": "🔥",
   "badge": "5 Papers · 1 Book",
   "ids": [
@@ -148,7 +148,7 @@
   "label": "The Masculine and Feminine Fields",
   "tagline": "How Complementarity Fractures America and How It Heals",
   "desc": "Every group that entered America's crucible was forged by the same heat—and the breaking always hit the family first. The masculine and feminine fields failed each other. They can restore the complementarity that produces whole children.",
-  "accent": "#ec4899",
+  "accent": "#b48a8a",
   "icon": "⚖️",
   "badge": "Complementarity",
   "ids": [
@@ -166,7 +166,7 @@
   "label": "The Grand Unification Series",
   "tagline": "All religions. All traditions. One Almighty. One truth. One humanity — functioning, expanding, carrying the light.",
   "desc": "The synthesis of the Grand Unification Series and the culmination of every series that preceded it. The God's Math Series established the mathematical framework of reality: the Whole Maker organizing variables into wholes, life as organized matter, zero as the pre-creation void, us as stewards of…",
-  "accent": "#f0abfc",
+  "accent": "#9a8fb8",
   "icon": "Sparkles",
   "badge": "5 Papers · 1 Book",
   "ids": [
@@ -184,7 +184,7 @@
   "label": "What You Were Made For",
   "tagline": "Blueprint Reading and the Work of Genuine Alignment",
   "desc": "Every person carries a blueprint—the specification of what they're designed to do and to be. The work of alignment is the work of becoming what you actually are.",
-  "accent": "#8b5cf6",
+  "accent": "#9a8fb8",
   "icon": "🎯",
   "badge": "Blueprint",
   "ids": [
@@ -201,7 +201,7 @@
   "label": "What the Laws Actually Say",
   "tagline": "The Patterns of Causation Beneath Written Statutes",
   "desc": "Laws are not inventions. They are descriptions. Written statutes attempt to describe the actual patterns of cause and effect that operate independently of whether they are written down. This series maps five fundamental laws that operate in every human context: the law behind the law, the law of reciprocity, the law of witness, the law of property, and the law of hierarchy.",
-  "accent": "#f59e0b",
+  "accent": "#c8a45a",
   "icon": "⚖️",
   "badge": "The Law",
   "ids": [
@@ -219,7 +219,7 @@
   "label": "True Physics",
   "tagline": "The Laws We Know and Cannot Yet Prove",
   "desc": "Physics is what's actually happening. Our instruments reveal limits, not the universe's. The path from mathematical certainty to experimental demonstration.",
-  "accent": "#34d399",
+  "accent": "#7ab494",
   "icon": "⚛️",
   "badge": "The Truth",
   "ids": [
@@ -237,7 +237,7 @@
   "label": "Raising Humans Who Don't Break The World",
   "tagline": "How Broken Parents Create Broken Children — and How To Break The Cycle",
   "desc": "A complete framework for understanding why children hurt things, what they actually need when they're breaking, and how to parent from consciousness instead of autopilot. For parents exhausted by punishment and ready to try something that actually works.",
-  "accent": "#ef4444",
+  "accent": "#b48a8a",
   "icon": "👨‍👩‍👧‍👦",
   "badge": "5 Papers · 1 Book · Parenting & Trauma",
   "ids": [
@@ -255,7 +255,7 @@
   "label": "The American Foundational Act",
   "tagline": "America is the pot. You are an ingredient. Steward what you hold. Leave the pot better than you found it.",
   "desc": "A comprehensive legislative suite redefining what it means to own, to collect, and to consume in a melting pot republic. The Steward Act, Junkyard Registry, Collector's Act, Materials Circulation Act, Electronic Heritage Annex, and the synthesizing book.",
-  "accent": "#f97316",
+  "accent": "#b4845a",
   "icon": "⚖",
   "badge": "5 Acts · 1 Book · Law & Policy",
   "ids": [

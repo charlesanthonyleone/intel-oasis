@@ -81,7 +81,7 @@ export default function OasisScene({ variant = 'hero', className = '' }) {
       s.fillStyle = mb; s.fillRect(0, 0, w, horizon);
       // horizon glow
       const hg = s.createRadialGradient(w * 0.5, horizon, 0, w * 0.5, horizon, w * 0.6);
-      hg.addColorStop(0, 'rgba(245,198,107,0.14)'); hg.addColorStop(1, 'rgba(245,198,107,0)');
+      hg.addColorStop(0, 'rgba(200,164,90,0.14)'); hg.addColorStop(1, 'rgba(200,164,90,0)');
       s.fillStyle = hg; s.fillRect(0, 0, w, h);
 
       // static land (dunes + palms), lake hole drawn later in frame
@@ -189,7 +189,7 @@ export default function OasisScene({ variant = 'hero', className = '' }) {
       ctx.globalAlpha = 1;
       // teal sheen at the far edge
       const sh = ctx.createLinearGradient(0, cy - ry, 0, cy - ry * 0.5);
-      sh.addColorStop(0, 'rgba(94,234,212,0.22)'); sh.addColorStop(1, 'rgba(94,234,212,0)');
+      sh.addColorStop(0, 'rgba(200,164,90,0.22)'); sh.addColorStop(1, 'rgba(200,164,90,0)');
       ctx.fillStyle = sh; ctx.fillRect(cx - rx, cy - ry, rx * 2, ry * 0.5);
       ctx.restore();
       ctx.strokeStyle = 'rgba(245,214,150,0.18)'; ctx.lineWidth = 1;

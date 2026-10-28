@@ -10,7 +10,7 @@ export default function Starfield({ className = '', density = 1, warm = false })
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2), raf = 0, visible = true, t = 0;
     let stars = [], motes = [];
-    const palette = warm ? ['255,200,140', '255,120,90', '255,235,200'] : ['153,246,228', '245,198,107', '186,230,253', '255,255,255'];
+    const palette = warm ? ['255,200,140', '255,120,90', '255,235,200'] : ['153,246,228', '200,164,90', '186,230,253', '255,255,255'];
     function init() {
       const r = canvas.getBoundingClientRect(); w = r.width; h = r.height;
       canvas.width = w * dpr; canvas.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -28,7 +28,7 @@ export default function Starfield({ className = '', density = 1, warm = false })
       const by = h * 0.82;
       for (let i = 0; i < 3; i++) {
         const g = ctx.createLinearGradient(0, by - 40, 0, by + 60);
-        g.addColorStop(0, 'rgba(45,212,191,0)'); g.addColorStop(0.5, `rgba(45,212,191,${0.05 + 0.03 * Math.sin(t * 0.6 + i)})`); g.addColorStop(1, 'rgba(45,212,191,0)');
+        g.addColorStop(0, 'rgba(200,164,90,0)'); g.addColorStop(0.5, `rgba(200,164,90,${0.05 + 0.03 * Math.sin(t * 0.6 + i)})`); g.addColorStop(1, 'rgba(200,164,90,0)');
         ctx.fillStyle = g; ctx.beginPath(); ctx.moveTo(0, by + 60);
         for (let x = 0; x <= w; x += 24) ctx.lineTo(x, by + Math.sin(x * 0.008 + t * (0.5 + i * 0.2) + i * 2) * (10 + i * 6));
         ctx.lineTo(w, by + 60); ctx.closePath(); ctx.fill();

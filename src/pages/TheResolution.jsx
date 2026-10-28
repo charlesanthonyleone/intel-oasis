@@ -6,7 +6,7 @@ const RESOLUTION_IDEAS = [
   {
     id: 99,
     num: '99',
-    color: '#fcd34d',
+    color: '#e8cc8a',
     bg: 'rgba(252,211,77,0.05)',
     border: 'rgba(252,211,77,0.16)',
     hoverBg: 'rgba(252,211,77,0.09)',
@@ -24,11 +24,11 @@ const RESOLUTION_IDEAS = [
   {
     id: 97,
     num: '97',
-    color: '#5eead4',
-    bg: 'rgba(45,212,191,0.06)',
-    border: 'rgba(45,212,191,0.18)',
-    hoverBg: 'rgba(45,212,191,0.1)',
-    hoverBorder: 'rgba(45,212,191,0.35)',
+    color: '#c8a45a',
+    bg: 'rgba(200,164,90,0.06)',
+    border: 'rgba(200,164,90,0.18)',
+    hoverBg: 'rgba(200,164,90,0.1)',
+    hoverBorder: 'rgba(200,164,90,0.35)',
     title: 'The Gnostic Resolution',
     tagline: 'Not escape. Not overthrow. Completion.',
     summary: 'A proposed resolution to the two central problems of Gnostic cosmology — the nature of the Demiurge, and the destiny of the sparks — resolved not by esoteric doctrine, but by love, as taught by Christ.',
@@ -42,7 +42,7 @@ const RESOLUTION_IDEAS = [
   {
     id: 98,
     num: '98',
-    color: '#6ee7b7',
+    color: '#7ab494',
     bg: 'rgba(110,231,183,0.06)',
     border: 'rgba(110,231,183,0.18)',
     hoverBg: 'rgba(110,231,183,0.1)',
@@ -92,7 +92,7 @@ export default function TheResolution() {
       {/* Ambient */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px]"
-          style={{ background: 'radial-gradient(ellipse at center, rgba(45,212,191,0.07) 0%, transparent 65%)', filter: 'blur(50px)' }} />
+          style={{ background: 'radial-gradient(ellipse at center, rgba(200,164,90,0.07) 0%, transparent 65%)', filter: 'blur(50px)' }} />
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px]"
           style={{ background: 'radial-gradient(ellipse, rgba(110,231,183,0.04) 0%, transparent 70%)', filter: 'blur(40px)' }} />
       </div>
@@ -113,13 +113,13 @@ export default function TheResolution() {
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-5 text-[10px] font-semibold tracking-[0.15em] uppercase"
-            style={{ background: 'rgba(45,212,191,0.08)', border: '1px solid rgba(45,212,191,0.2)', color: '#5eead4' }}>
+            style={{ background: 'rgba(200,164,90,0.08)', border: '1px solid rgba(200,164,90,0.2)', color: '#c8a45a' }}>
             ✝️ &nbsp;Resolved Under Christ
           </div>
           <h1 className="text-4xl md:text-6xl font-black tracking-[-0.04em] leading-[1.05] mb-4"
             style={{ color: 'rgba(255,255,255,0.92)' }}>
             The Gnostic Questions.<br />
-            <span style={{ color: '#5eead4' }}>The Christian Answers.</span>
+            <span style={{ color: '#c8a45a' }}>The Christian Answers.</span>
           </h1>
           <p className="text-[15px] font-light leading-relaxed max-w-xl" style={{ color: 'rgba(255,255,255,0.35)' }}>
             Gnosticism asks the hardest questions about creation, suffering, and purpose. These two ideas take those questions
@@ -127,7 +127,7 @@ export default function TheResolution() {
             It is to fill it with love, order, and life.
           </p>
 
-          <div className="mt-6 p-4 rounded-xl" style={{ background: 'rgba(45,212,191,0.05)', border: '1px solid rgba(45,212,191,0.15)' }}>
+          <div className="mt-6 p-4 rounded-xl" style={{ background: 'rgba(200,164,90,0.05)', border: '1px solid rgba(200,164,90,0.15)' }}>
             <p className="text-[13px] italic font-light leading-relaxed text-center" style={{ color: 'rgba(255,255,255,0.45)' }}>
               "Love the Lord your God with all your heart, soul, and mind. And love your neighbor as yourself."
             </p>
@@ -177,7 +177,7 @@ export default function TheResolution() {
         </div>
 
         {/* Divider */}
-        <div className="h-px mb-12" style={{ background: 'linear-gradient(90deg, transparent, rgba(45,212,191,0.25), transparent)' }} />
+        <div className="h-px mb-12" style={{ background: 'linear-gradient(90deg, transparent, rgba(200,164,90,0.25), transparent)' }} />
 
         {/* Principles */}
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -198,7 +198,7 @@ export default function TheResolution() {
         {/* Closing */}
         <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           transition={{ duration: 0.6 }} className="mt-14 rounded-2xl p-6 text-center"
-          style={{ background: 'rgba(45,212,191,0.04)', border: '1px solid rgba(45,212,191,0.15)' }}>
+          style={{ background: 'rgba(200,164,90,0.04)', border: '1px solid rgba(200,164,90,0.15)' }}>
           <p className="text-[22px] font-black tracking-tight mb-2" style={{ color: 'rgba(255,255,255,0.88)' }}>
             The work is not escape.
           </p>
@@ -206,7 +206,7 @@ export default function TheResolution() {
             It is completion. Love your God in his ignorance as you love yourself in yours. Honor every spark — in every animal,
             every mountain, every system. Fill this dimension with ordered, conscious, loving life.
           </p>
-          <p className="text-[12px] italic" style={{ color: 'rgba(45,212,191,0.6)' }}>
+          <p className="text-[12px] italic" style={{ color: 'rgba(200,164,90,0.6)' }}>
             "Be fruitful and multiply and fill the earth." — Genesis 1:28
           </p>
         </motion.div>

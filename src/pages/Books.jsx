@@ -12,17 +12,17 @@ const SERIES = SERIES_DATA.map(s => ({ ...s, icon: seriesIcon(s.icon) }));
 // ── Category Config ─────────────────────────────────────────────────────────
 const SECTIONS = [
   { key: 'all',     label: 'All Works',        icon: Feather,      accent: '#e2e8f0' },
-  { key: 'book',    label: 'Books',             icon: BookOpen,     accent: '#fb7185' },
-  { key: 'fiction', label: 'Fiction',           icon: Sparkles,     accent: '#c084fc' },
-  { key: 'medical', label: 'Research & Papers', icon: Brain,        accent: '#6ee7b7' },
-  { key: 'law',     label: 'Law & Policy',      icon: Scale,        accent: '#67e8f9' },
+  { key: 'book',    label: 'Books',             icon: BookOpen,     accent: '#b48a8a' },
+  { key: 'fiction', label: 'Fiction',           icon: Sparkles,     accent: '#9a8fb8' },
+  { key: 'medical', label: 'Research & Papers', icon: Brain,        accent: '#7ab494' },
+  { key: 'law',     label: 'Law & Policy',      icon: Scale,        accent: '#a9c4c0' },
 ];
 
 const CAT_META = {
-  book:    { accent: '#fb7185', icon: BookOpen,     label: 'Book' },
-  fiction: { accent: '#c084fc', icon: Sparkles,     label: 'Fiction' },
-  law:     { accent: '#67e8f9', icon: Scale,        label: 'Law & Policy' },
-  medical: { accent: '#6ee7b7', icon: FlaskConical, label: 'Research' },
+  book:    { accent: '#b48a8a', icon: BookOpen,     label: 'Book' },
+  fiction: { accent: '#9a8fb8', icon: Sparkles,     label: 'Fiction' },
+  law:     { accent: '#a9c4c0', icon: Scale,        label: 'Law & Policy' },
+  medical: { accent: '#7ab494', icon: FlaskConical, label: 'Research' },
 };
 
 function matchesSearch(item, q) {
@@ -119,11 +119,11 @@ export default function Books() {
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <div className="flex items-center gap-2 mb-1">
-            <Feather className="w-4 h-4" style={{ color: '#fb7185' }} />
+            <Feather className="w-4 h-4" style={{ color: '#b48a8a' }} />
             <span className="text-[11px] font-bold tracking-[0.18em] uppercase" style={{ color: 'rgba(255,255,255,0.3)' }}>Leone University</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-1" style={{ color: 'rgba(255,255,255,0.92)' }}>
-            Written<span style={{ color: '#fb7185' }}>Works</span>
+            Written<span style={{ color: '#b48a8a' }}>Works</span>
           </h1>
           <p className="text-[13px] font-light mb-5" style={{ color: 'rgba(255,255,255,0.3)' }}>
             {booksAndLaw.length} works · every word is a long argument with the world
@@ -149,7 +149,7 @@ export default function Books() {
               style={{
                 background: !activeSection && !activeSeries && !searchQuery ? 'rgba(251,113,133,0.2)' : 'rgba(255,255,255,0.04)',
                 border: `1px solid ${!activeSection && !activeSeries && !searchQuery ? 'rgba(251,113,133,0.5)' : 'rgba(255,255,255,0.08)'}`,
-                color: !activeSection && !activeSeries && !searchQuery ? '#fb7185' : 'rgba(255,255,255,0.4)',
+                color: !activeSection && !activeSeries && !searchQuery ? '#b48a8a' : 'rgba(255,255,255,0.4)',
               }}>
               Home
             </button>
@@ -216,12 +216,12 @@ export default function Books() {
                         onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.06)'; }}>
                         <div className="flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center mt-0.5"
                           style={{ background: 'rgba(251,113,133,0.1)', border: '1px solid rgba(251,113,133,0.2)' }}>
-                          <Icon style={{ width: 12, height: 12, color: '#fb7185' }} />
+                          <Icon style={{ width: 12, height: 12, color: '#b48a8a' }} />
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-start justify-between gap-2">
                             <h3 className="text-[13px] font-semibold leading-snug" style={{ color: 'rgba(255,255,255,0.85)' }}>{item.title}</h3>
-                            <ArrowUpRight className="w-3.5 h-3.5 flex-shrink-0 opacity-0 group-hover:opacity-50 transition-opacity mt-0.5" style={{ color: '#fb7185' }} />
+                            <ArrowUpRight className="w-3.5 h-3.5 flex-shrink-0 opacity-0 group-hover:opacity-50 transition-opacity mt-0.5" style={{ color: '#b48a8a' }} />
                           </div>
                           <p className="text-[11px] font-light mt-0.5 leading-relaxed" style={{ color: 'rgba(255,255,255,0.28)' }}>
                             {item.summary.slice(0, 100)}{item.summary.length > 100 ? '…' : ''}

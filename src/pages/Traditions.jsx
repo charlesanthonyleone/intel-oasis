@@ -30,7 +30,7 @@ function TraditionDetail({ item, index }) {
             className="flex-shrink-0 w-12 h-12 rounded-2xl flex items-center justify-center"
             style={{ background: 'rgba(251,146,60,0.12)', border: '1px solid rgba(251,146,60,0.28)' }}
           >
-            <Flame className="w-5 h-5" style={{ color: '#fb923c' }} />
+            <Flame className="w-5 h-5" style={{ color: '#b4845a' }} />
           </div>
 
           <div className="flex-1 min-w-0">
@@ -38,7 +38,7 @@ function TraditionDetail({ item, index }) {
               {item.title}
             </h2>
             {item.tagline && (
-              <p className="text-[12px] font-medium mb-2" style={{ color: '#fb923c' }}>{item.tagline}</p>
+              <p className="text-[12px] font-medium mb-2" style={{ color: '#b4845a' }}>{item.tagline}</p>
             )}
             <p className="text-[13px] font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.32)' }}>
               {item.summary}
@@ -78,7 +78,7 @@ function TraditionDetail({ item, index }) {
                       transition={{ duration: 0.35, delay: i * 0.06 }}
                     >
                       {s.heading && (
-                        <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase mb-3" style={{ color: '#fb923c' }}>
+                        <h4 className="text-[10px] font-bold tracking-[0.2em] uppercase mb-3" style={{ color: '#b4845a' }}>
                           {s.heading}
                         </h4>
                       )}
@@ -96,7 +96,7 @@ function TraditionDetail({ item, index }) {
                       className="px-6 py-5 rounded-2xl"
                       style={{ background: 'rgba(251,146,60,0.06)', border: '1px solid rgba(251,146,60,0.18)' }}
                     >
-                      <p className="text-[15px] italic font-light leading-relaxed" style={{ color: '#fb923c', opacity: 0.85 }}>
+                      <p className="text-[15px] italic font-light leading-relaxed" style={{ color: '#b4845a', opacity: 0.85 }}>
                         "{item.vision}"
                       </p>
                     </motion.div>
@@ -144,7 +144,7 @@ export default function Traditions() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-8 text-[10px] font-semibold tracking-[0.15em] uppercase"
-            style={{ background: 'rgba(251,146,60,0.08)', border: '1px solid rgba(251,146,60,0.2)', color: '#fb923c' }}
+            style={{ background: 'rgba(251,146,60,0.08)', border: '1px solid rgba(251,146,60,0.2)', color: '#b4845a' }}
           >
             <Flame className="w-3 h-3" />
             Leone University · Living Traditions
@@ -157,7 +157,7 @@ export default function Traditions() {
             className="font-extralight tracking-[-0.04em] leading-[0.9] mb-4"
             style={{ fontSize: 'clamp(52px, 11vw, 100px)', color: 'rgba(255,255,255,0.85)' }}
           >
-            Tradi<span className="font-black" style={{ color: '#fb923c' }}>tions</span>
+            Tradi<span className="font-black" style={{ color: '#b4845a' }}>tions</span>
           </motion.h1>
 
           <motion.div
@@ -187,7 +187,7 @@ export default function Traditions() {
           >
             <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl"
               style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
-              <span className="text-lg font-bold" style={{ color: '#fb923c' }}>{traditions.length}</span>
+              <span className="text-lg font-bold" style={{ color: '#b4845a' }}>{traditions.length}</span>
               <span className="text-[10px] uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.22)' }}>Traditions</span>
             </div>
             <Link
@@ -216,7 +216,7 @@ export default function Traditions() {
         <footer className="py-8" style={{ borderTop: '1px solid rgba(251,146,60,0.07)' }}>
           <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">
             <span className="text-sm font-light" style={{ color: 'rgba(255,255,255,0.3)' }}>
-              Tradi<span className="font-black" style={{ color: '#fb923c' }}>tions</span>
+              Tradi<span className="font-black" style={{ color: '#b4845a' }}>tions</span>
               <span className="ml-2" style={{ color: 'rgba(255,255,255,0.12)' }}>· Leone University</span>
             </span>
             <p className="text-[10px] tracking-[0.2em] uppercase" style={{ color: 'rgba(255,255,255,0.12)' }}>

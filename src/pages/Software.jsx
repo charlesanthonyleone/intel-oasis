@@ -5,21 +5,21 @@ import { Link } from 'react-router-dom';
 import softwareIdeas from '@/components/softwareData';
 
 const CATEGORY_COLORS = {
-  'Communication':   '#22d3ee',
-  'Child Safety':    '#fb7185',
-  'Enterprise AI':   '#c084fc',
-  'Commerce':        '#fcd34d',
-  'Platform Safety': '#fb923c',
-  'Infrastructure':  '#6ee7b7',
-  'Productivity':    '#5eead4',
-  'Relationships':   '#f9a8d4',
-  'Education':       '#67e8f9',
+  'Communication':   '#a9c4c0',
+  'Child Safety':    '#b48a8a',
+  'Enterprise AI':   '#9a8fb8',
+  'Commerce':        '#e8cc8a',
+  'Platform Safety': '#b4845a',
+  'Infrastructure':  '#7ab494',
+  'Productivity':    '#c8a45a',
+  'Relationships':   '#b48a8a',
+  'Education':       '#a9c4c0',
 };
 
 const STATUS = {
-  'in-progress': { label: 'Building', color: '#fcd34d' },
-  'concept':     { label: 'Concept',  color: '#67e8f9' },
-  'open':        { label: 'Open',     color: '#6ee7b7' },
+  'in-progress': { label: 'Building', color: '#e8cc8a' },
+  'concept':     { label: 'Concept',  color: '#a9c4c0' },
+  'open':        { label: 'Open',     color: '#7ab494' },
 };
 
 function matches(item, q) {
@@ -52,11 +52,11 @@ export default function Software() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-12 pb-6">
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <div className="flex items-center gap-2 mb-1">
-            <Code2 className="w-4 h-4" style={{ color: '#22d3ee' }} />
+            <Code2 className="w-4 h-4" style={{ color: '#a9c4c0' }} />
             <span className="text-[11px] font-bold tracking-[0.18em] uppercase" style={{ color: 'rgba(255,255,255,0.3)' }}>Leone University</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-1" style={{ color: 'rgba(255,255,255,0.92)' }}>
-            Software<span style={{ color: '#22d3ee' }}>Lab</span>
+            Software<span style={{ color: '#a9c4c0' }}>Lab</span>
           </h1>
           <p className="text-[13px] font-light mb-5" style={{ color: 'rgba(255,255,255,0.3)' }}>
             {softwareIdeas.length} platforms built for the problems that actually matter
@@ -78,7 +78,7 @@ export default function Software() {
           {/* Category pills */}
           <div className="flex gap-1.5 overflow-x-auto pb-1 hide-scrollbar">
             {allCategories.map(cat => {
-              const accent = cat === '__all__' ? '#22d3ee' : (CATEGORY_COLORS[cat] || '#94a3b8');
+              const accent = cat === '__all__' ? '#a9c4c0' : (CATEGORY_COLORS[cat] || '#94a3b8');
               const active = activeCategory === cat;
               return (
                 <button key={cat} onClick={() => setActiveCategory(cat)}

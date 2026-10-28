@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 
 const statusConfig = {
-  'in-progress': { label: 'In Progress', dot: '#fcd34d',   color: '#fcd34d' },
-  'open':        { label: 'Open',        dot: '#6ee7b7',   color: '#6ee7b7' },
-  'claimed':     { label: 'Claimed',     dot: '#c084fc',   color: '#c084fc' },
+  'in-progress': { label: 'In Progress', dot: '#e8cc8a',   color: '#e8cc8a' },
+  'open':        { label: 'Open',        dot: '#7ab494',   color: '#7ab494' },
+  'claimed':     { label: 'Claimed',     dot: '#9a8fb8',   color: '#9a8fb8' },
 };
 
 export default function IdeaCard({ idea, index }) {
@@ -78,7 +78,7 @@ export default function IdeaCard({ idea, index }) {
                   {idea.sections?.map((section, i) => (
                     <div key={i}>
                       {section.heading && (
-                        <h4 className="text-[10px] font-semibold tracking-widest uppercase mb-1.5" style={{ color: '#fcd34d' }}>
+                        <h4 className="text-[10px] font-semibold tracking-widest uppercase mb-1.5" style={{ color: '#e8cc8a' }}>
                           {section.heading}
                         </h4>
                       )}

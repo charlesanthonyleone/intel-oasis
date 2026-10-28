@@ -13,10 +13,10 @@ import softwareIdeas from '@/components/softwareData';
 const allIdeas = [...ideas, ...clubs, ...traditions, ...booksAndLaw, ...softwareIdeas, ...publicDomain];
 
 const statusConfig = {
-  'in-progress': { label: 'In Progress', color: 'bg-amber-500/10 text-amber-400 border-amber-500/20', icon: Clock },
-  open:          { label: 'Open',         color: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20', icon: Lightbulb },
-  concept:       { label: 'Concept',      color: 'bg-sky-500/10 text-sky-400 border-sky-500/20', icon: Lightbulb },
-  done:          { label: 'Complete',     color: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20', icon: CheckCircle },
+  'in-progress': { label: 'In Progress', color: 'bg-[#c8a45a]/10 text-[#c8a45a] border-[#c8a45a]/20', icon: Clock },
+  open:          { label: 'Open',         color: 'bg-[#c8a45a]/10 text-[#c8a45a] border-[#c8a45a]/20', icon: Lightbulb },
+  concept:       { label: 'Concept',      color: 'bg-[#c8a45a]/10 text-[#c8a45a] border-[#c8a45a]/20', icon: Lightbulb },
+  done:          { label: 'Complete',     color: 'bg-[#c8a45a]/10 text-[#c8a45a] border-[#c8a45a]/20', icon: CheckCircle },
 };
 
 
@@ -44,7 +44,7 @@ export default function IdeaDetail() {
   const id = isNaN(rawId) ? rawId : parseInt(rawId, 10);
   const idea = useMemo(() => allIdeas.find((i) => i.id === id || String(i.id) === String(id)), [id]);
   const inSeries = idea && idea.series ? allSeries.find(x => x.key === idea.series) : null;
-  const accent = inSeries?.accent || '#5eead4';
+  const accent = inSeries?.accent || '#c8a45a';
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 140, damping: 30, restDelta: 0.001 });
   const [active, setActive] = useState(0);
@@ -64,7 +64,7 @@ export default function IdeaDetail() {
     return (
       <div className="min-h-[70vh] flex flex-col items-center justify-center gap-4">
         <p className="text-white/50 text-lg font-light">Idea not found.</p>
-        <Link to={createPageUrl('Home')} className="text-teal-300 hover:text-teal-200 text-sm flex items-center gap-1 transition-colors">
+        <Link to={createPageUrl('Home')} className="text-[#c8a45a] hover:text-[#c8a45a] text-sm flex items-center gap-1 transition-colors">
           <ArrowLeft className="w-4 h-4" /> Back to IntelOasis
         </Link>
       </div>
@@ -85,7 +85,7 @@ export default function IdeaDetail() {
 
   return (
     <div className="relative">
-      <motion.div className="fixed top-0 left-0 right-0 h-[3px] z-[60] origin-left" style={{ scaleX: progress, background: `linear-gradient(90deg, ${accent}, #f5c66b)` }} />
+      <motion.div className="fixed top-0 left-0 right-0 h-[3px] z-[60] origin-left" style={{ scaleX: progress, background: `linear-gradient(90deg, ${accent}, #c8a45a)` }} />
 
       <header className="relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{ background: `radial-gradient(ellipse 60% 80% at 20% 0%, ${accent}26, transparent 70%)` }} />
@@ -157,8 +157,8 @@ export default function IdeaDetail() {
             )}
 
             {idea.vision && (
-              <div className="mt-14 p-8 rounded-2xl" style={{ background: 'rgba(245,198,107,0.06)', border: '1px solid rgba(245,198,107,0.22)' }}>
-                <Quote className="w-6 h-6 mb-3" style={{ color: 'rgba(245,198,107,0.6)' }} />
+              <div className="mt-14 p-8 rounded-2xl" style={{ background: 'rgba(200,164,90,0.06)', border: '1px solid rgba(200,164,90,0.22)' }}>
+                <Quote className="w-6 h-6 mb-3" style={{ color: 'rgba(200,164,90,0.6)' }} />
                 <p className="font-display italic text-2xl leading-snug" style={{ color: '#f8dca0' }}>{idea.vision}</p>
               </div>
             )}

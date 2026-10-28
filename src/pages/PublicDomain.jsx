@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Shield, ArrowUpRight, Flame, ChevronRight, ExternalLink } from 'lucide-react';
 
 import PUBLIC_DOMAIN_IDEAS from '@/data/publicDomain.json';
-const STATUS_DOT = { 'in-progress': '#fcd34d', open: '#6ee7b7', claimed: '#c084fc' };
+const STATUS_DOT = { 'in-progress': '#e8cc8a', open: '#7ab494', claimed: '#9a8fb8' };
 const STATUS_LABEL = { 'in-progress': 'Building', open: 'Open', claimed: 'Claimed' };
 
 export default function PublicDomain() {
@@ -25,12 +25,12 @@ export default function PublicDomain() {
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <div className="flex items-center gap-2 mb-3">
-            <Shield className="w-4 h-4" style={{ color: '#ef4444' }} />
+            <Shield className="w-4 h-4" style={{ color: '#b48a8a' }} />
             <span className="text-[11px] font-bold tracking-[0.18em] uppercase" style={{ color: 'rgba(255,255,255,0.3)' }}>IntelOasis</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-2" style={{ color: 'rgba(255,255,255,0.92)' }}>
-            Public <span style={{ color: '#ef4444' }}>Domain</span>
+            Public <span style={{ color: '#b48a8a' }}>Domain</span>
           </h1>
 
           {/* Manifesto block */}
@@ -49,7 +49,7 @@ export default function PublicDomain() {
 
           {/* Warning badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-8 text-[11px] font-bold"
-            style={{ background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.2)', color: '#ef4444' }}>
+            style={{ background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.2)', color: '#b48a8a' }}>
             <Flame className="w-3 h-3" />
             No laws exist here. No liability. No jurisdiction. Enter with full understanding.
           </div>
@@ -118,7 +118,7 @@ export default function PublicDomain() {
                           {idea.sections.map((section, si) => (
                             <div key={si}>
                               <h3 className="text-[12px] font-black tracking-widest uppercase mb-2"
-                                style={{ color: '#ef4444', opacity: 0.8 }}>
+                                style={{ color: '#b48a8a', opacity: 0.8 }}>
                                 {section.heading}
                               </h3>
                               <p className="text-[13px] font-light leading-relaxed whitespace-pre-line"
@@ -139,7 +139,7 @@ export default function PublicDomain() {
                           {idea.seriesLink && (
                             <Link to={idea.seriesLink}
                               className="inline-flex items-center gap-2 mt-4 text-[12px] font-semibold transition-opacity hover:opacity-100 opacity-60"
-                              style={{ color: '#ef4444' }}>
+                              style={{ color: '#b48a8a' }}>
                               {idea.seriesLabel} <ExternalLink className="w-3 h-3" />
                             </Link>
                           )}
