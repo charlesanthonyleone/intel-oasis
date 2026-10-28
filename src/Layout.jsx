@@ -31,6 +31,7 @@ export default function Layout({ children, currentPageName }) {
 
   return (
     <div className="min-h-screen relative" style={{ color: 'var(--ink)' }}>
+      <SiteBackdrop />
       
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] px-4 py-2 rounded-lg bg-[#c8a45a] text-black font-semibold">Skip to content</a>
 
