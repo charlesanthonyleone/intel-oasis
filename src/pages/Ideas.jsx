@@ -21,6 +21,7 @@ const CATEGORIES = [
   { key: 'economy',     label: 'Economy',          accent: '#e8cc8a', tags: ['Economy','Commerce','Finance','Decentralized'] },
 ];
 
+const IMG = { ai: [10, 7], gaming: [11, 27], health: [6, 20], environment: [12, 26], governance: [13, 4], social: [14, 28], food: [8], education: [15, 3], philosophy: [9, 24], art: [16, 1], science: [17, 22], economy: [18], other: [25] };
 const STATUS = { open: 'Open', 'in-progress': 'In progress', concept: 'Concept' };
 
 // eslint-disable-next-line no-unused-vars
@@ -39,7 +40,7 @@ function matchesQ(item, q) {
 
 export default function IdeasPage() {
   const groups = useMemo(() => groupByTags(ideas, CATEGORIES.filter(c => c.key !== 'all'), 'tags', { key: 'other', label: 'Uncharted' })
-    .map(g => ({ ...g, items: [...g.items].sort((a, b) => (b.status === 'in-progress') - (a.status === 'in-progress')) })), []);
+    .map(g => ({ ...g, imgs: IMG[g.key], items: [...g.items].sort((a, b) => (b.status === 'in-progress') - (a.status === 'in-progress')) })), []);
   return (
     <div className="page">
       <PageHead kicker="Open Source" title="Take any one. Build it."

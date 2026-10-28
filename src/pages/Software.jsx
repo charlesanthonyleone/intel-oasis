@@ -4,16 +4,16 @@ import { PageHead } from '@/components/Editorial';
 import GroupedIndex from '@/components/GroupedIndex';
 
 const PURPOSES = [
-  { key: 'protect', label: 'Protection & Trust', cats: ['Child Safety', 'Platform Safety'] },
-  { key: 'connect', label: 'Connection & Learning', cats: ['Communication', 'Relationships', 'Education'] },
-  { key: 'work', label: 'Intelligence & Enterprise', cats: ['Enterprise AI', 'Productivity', 'Infrastructure', 'Commerce'] },
+  { key: 'protect', imgs: [5, 22], label: 'Protection & Trust', cats: ['Child Safety', 'Platform Safety'] },
+  { key: 'connect', imgs: [14, 15], label: 'Connection & Learning', cats: ['Communication', 'Relationships', 'Education'] },
+  { key: 'work', imgs: [7, 10], label: 'Intelligence & Enterprise', cats: ['Enterprise AI', 'Productivity', 'Infrastructure', 'Commerce'] },
 ];
 
 export default function Software() {
   const groups = useMemo(() => {
     const g = PURPOSES.map(p => ({ ...p, items: softwareIdeas.filter(i => p.cats.includes(i.category)) }));
     const rest = softwareIdeas.filter(i => !PURPOSES.some(p => p.cats.includes(i.category)));
-    return [...g, { key: 'other', label: 'Further Instruments', items: rest }].filter(x => x.items.length);
+    return [...g, { key: 'other', label: 'Further Instruments', imgs: [24], items: rest }].filter(x => x.items.length);
   }, []);
   return (
     <div className="page">

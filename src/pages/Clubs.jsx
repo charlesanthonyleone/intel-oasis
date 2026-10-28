@@ -19,8 +19,10 @@ const THEMES = [
 const inTheme = (c, t) => !t.tags.length || t.tags.some(tt => (c.tags || []).some(ct => ct.toLowerCase().includes(tt.toLowerCase()) || tt.toLowerCase().includes(ct.toLowerCase())));
 const hit = (c, q) => !q || [c.title, c.summary, ...(c.tags || [])].join(' ').toLowerCase().includes(q.toLowerCase());
 
+const IMG = { media: [1, 2], knowledge: [3, 15], community: [5, 28], wellness: [6, 20], tech: [7, 10], lifestyle: [8, 26], society: [9, 13], other: [24] };
+
 export default function Clubs() {
-  const groups = useMemo(() => groupByTags(clubs, ['wellness','community','tech','media','knowledge','lifestyle','society'].map(k => THEMES.find(t => t.key === k)), 'tags', { key: 'other', label: 'Singular Orders' }), []);
+  const groups = useMemo(() => groupByTags(clubs, ['wellness','community','tech','media','knowledge','lifestyle','society'].map(k => THEMES.find(t => t.key === k)), 'tags', { key: 'other', label: 'Singular Orders' }).map(g => ({ ...g, imgs: IMG[g.key], items: g.items.map(c => (c.tags || []).includes('Music') ? { ...c, img: 1 } : c) })), []);
   return (
     <div className="page">
       <PageHead kicker="The Societies" title="Every club is a world."
