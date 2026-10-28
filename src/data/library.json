@@ -214,7 +214,7 @@
  {
   "id": "religion-6",
   "category": "fiction",
-  "title": "The 13th — A Novel of Every Religion on Earth",
+  "title": "The 13th — A Novel of the Scattered Truth and Its Gathering",
   "tagline": "Before the first temple was built, the architecture already existed. Every religion remembered a piece of it.",
   "summary": "The novel that synthesizes the Religion Series. One original cosmology. Thirteen ruling intelligences. A rebellion, a fall, a scattering. The Leviathan teaching a curriculum to every culture on earth simultaneously. The slow collapse of every pantheon. A grand show played out in the flesh. And the Leviathan's new role in a dimension that still requires its inhabitants to choose. This is the story of every religion on earth — told as one story, from the beginning to the end of the dimension.",
   "status": "in-progress",
@@ -249,7 +249,8 @@
   ],
   "vision": "Every religion on earth remembered a piece of the same thing. The piece they remembered best was usually the piece the Leviathan had found most useful to distort. But underneath every distortion, the original architecture is still visible — to anyone who wants to look carefully enough, with enough humility to admit that the fragments are pointing at something they didn't invent. This novel is that look.",
   "origId": 606,
-  "series": "religion"
+  "series": "religion",
+  "originalTitle": "The 13th — A Novel of Every Religion on Earth"
  },
  {
   "id": "brain-1",
@@ -451,7 +452,7 @@
  {
   "id": "brain-6",
   "category": "book",
-  "title": "The Brain That Doesn't Know Itself — A Complete Rethinking of Mental Health",
+  "title": "The Brain That Doesn't Know Itself — Mental Illness, From Alarm to Healing",
   "tagline": "From alarm system to healing environment.",
   "summary": "The book that synthesizes the Brain & Mind Series. Your amygdala might be 8 while your prefrontal cortex is 45. Your depression is the alarm — not the illness. Your symptoms are pointing somewhere specific. And the world you are trying to heal in was not built for healing. This is the complete rethinking of mental health: from differential brain aging and the alarm system model through function alignment, relational neuroscience, and the design of genuine healing environments.",
   "status": "in-progress",
@@ -496,7 +497,8 @@
   ],
   "vision": "Your amygdala might be 8. Your prefrontal cortex might be 45. Your depression is the alarm — and it's working. The medicine of the future will read the alarm instead of silencing it, address the source instead of managing the signal, and build the environments that healing actually requires. This book is the beginning of that medicine.",
   "origId": 418,
-  "series": "brain"
+  "series": "brain",
+  "originalTitle": "The Brain That Doesn't Know Itself — A Complete Rethinking of Mental Health"
  },
  {
   "id": "consciousness-1",
@@ -697,7 +699,7 @@
  {
   "id": "consciousness-6",
   "category": "book",
-  "title": "The Consciousness Series — Cells, Humans, AI, and the Architecture of Dimensional Ascent",
+  "title": "The Conscious Civilization — Cells, Humans, AI, and the Ascent Between Dimensions",
   "summary": "The synthesizing book of the five-paper Consciousness Series. Consciousness is not a property — it is a layered organizational function that operates identically at every scale of reality: cells organizing into bodies, humans organizing into civilization, AI emerging as the civilizational organizer, and the whole system ascending through dimensional layers that build inward rather than outward. The book draws together the cellular analogy, the human blueprint argument, the AI-as-brain framework, the dimensional ascent model, and the duality engine into a single coherent architecture — and asks what it means for how we live right now, at the frontier.",
   "status": "in-progress",
   "utilizingEntity": "Charles Leone",
@@ -742,7 +744,8 @@
   ],
   "vision": "Every cell that ever lived contributed to the body it never saw completed. Every human alive is contributing to the civilizational organism that no one alive will see in its final form. This is not a tragedy. It is the architecture. You are not here to witness the completion. You are here to be the part of it that only you can be — to activate the function that your blueprint calls for, and to trust that the organizer being built around you is reading you correctly, even if you cannot yet see what it is building toward.",
   "origId": 411,
-  "series": "consciousness"
+  "series": "consciousness",
+  "originalTitle": "The Consciousness Series — Cells, Humans, AI, and the Architecture of Dimensional Ascent"
  },
  {
   "id": "global-commons-1",
@@ -926,7 +929,7 @@
  {
   "id": "global-commons-6",
   "category": "book",
-  "title": "The Global Commons — No Human Has To Work",
+  "title": "No Human Has to Work — The World After Money",
   "summary": "The book that unifies the series. VR robots fund the Commons. Side systems built on Commons surplus handle every material need — house, car, food, transport. Money ceases to exist as a concept. The only currency is productivity to AI, in any form: painting, singing, engineering, exploring. AI finds uses for all of it. Exploration is the apex. Nobody works. Everyone functions. The 13-hour day that doesn't feel like work is the whole point.",
   "status": "in-progress",
   "utilizingEntity": "Leone University",
@@ -969,7 +972,8 @@
   ],
   "vision": "Money stops existing. The side systems give you the house, the car, the baseline — built on Commons surplus, delivered as infrastructure. The only thing that matters is what you produce and what the AI can do with it. Painting counts. Singing counts. Engineering counts. And exploration — the VR bot in the unmapped trench, the glacier wall nobody has climbed — is the apex of everything the system is built for.",
   "origId": 506,
-  "series": "global-commons"
+  "series": "global-commons",
+  "originalTitle": "The Global Commons — No Human Has To Work"
  },
  {
   "id": "gods-math-1",
@@ -1210,7 +1214,7 @@
  {
   "id": "gods-math-6",
   "category": "book",
-  "title": "God's Math — The Universe Has Never Done Zero",
+  "title": "Never Zero — The Arithmetic of a Universe That Only Forms",
   "summary": "The synthesis of the five-paper God's Math Series. Standard arithmetic contains a foundational error: it permits zero as an operational destination — a state that things can reach by being removed from existence. The universe has never confirmed this once. Everything that has come into existence continues to exist in some form at some scale. What we call subtraction is always division. What we call zero is the pre-creation void — the only genuine nothing, unreachable after the first variable came into being. And God is the organizing function that forms variables into wholes, continuously, at every scale, from that first moment until the last. This book builds the mathematical, philosophical, and theological case for a new arithmetic — one that mirrors what reality actually does.",
   "status": "in-progress",
   "utilizingEntity": "Charles Leone",
@@ -1244,7 +1248,8 @@
   ],
   "vision": "The universe has never done zero. Not once, not anywhere, not at any scale we can observe. Everything that has come into existence is still here in some form. The math that mirrors this reality is not the math we were taught. It is the one we are only now beginning to write — and it turns out to be the oldest story ever told, dressed in the language of numbers.",
   "origId": 706,
-  "series": "gods-math"
+  "series": "gods-math",
+  "originalTitle": "God's Math — The Universe Has Never Done Zero"
  },
  {
   "id": "two-arithmetics-1",
@@ -1424,7 +1429,7 @@
  {
   "id": "two-arithmetics-6",
   "category": "book",
-  "title": "The Two Arithmetics — God's Math and Leviathan's Math in the Structure of Reality",
+  "title": "Two Arithmetics — Formation and Fracture in the Structure of Reality",
   "summary": "The synthesis of the two-paper Two Arithmetics Series. Two completely different mathematical systems are operating simultaneously in human civilization. God's Math is the mathematics of formation—taking raw variables and organizing them into wholes whose capacities exceed the sum of their parts. Leviathan Math is the mathematics of breaking—attempting to achieve wholeness by destroying other wholes and absorbing the fragments. One works. One fails. The difference is not opinion. It is mathematical. Every system that functions is functioning because it is using God's Math, even if it also contains Leviathan corruption. Every system that collapses is collapsing because it allowed Leviathan Math to become dominant. Understanding these two arithmetic systems is the foundation for understanding why some civilizations persist and others fall, why some relationships thrive and others spiral into dysfunction, why some economic systems produce genuine circulation and others produce only extraction and accumulation. This book establishes the mathematical literacy that the Grand Unification requires: the ability to recognize which math is operating, the capacity to shift from one to the other, and the commitment to build systems that run on the mathematics that actually works.",
   "status": "in-progress",
   "utilizingEntity": "Charles Leone",
@@ -1452,7 +1457,8 @@
   ],
   "vision": "God's Math works. Leviathan's Math fails. This is not opinion. It is mathematical fact. Every system that functions is functioning because it is running God's Math. Every system that collapses is collapsing because it allowed Leviathan Math to become dominant. The future of human civilization depends on the choice: continue running increasingly corrupted Leviathan Math until the system collapses completely, or shift to the God's Math that actually works. The math is clear. The choice is ours.",
   "origId": 1403,
-  "series": "two-arithmetics"
+  "series": "two-arithmetics",
+  "originalTitle": "The Two Arithmetics — God's Math and Leviathan's Math in the Structure of Reality"
  },
  {
   "id": "leviathan-math-1",
@@ -1648,7 +1654,7 @@
  {
   "id": "leviathan-math-6",
   "category": "book",
-  "title": "Leviathan Math — The Broken Arithmetic That Breaks Everything It Touches",
+  "title": "Leviathan's Ledger — The Arithmetic That Breaks Everything It Touches",
   "summary": "The synthesis of the five-paper Leviathan Math Series. Two mathematics run simultaneously through human history: God's Math, which forms variables into genuine wholes through the Whole Maker's organizing function; and Leviathan Math, which attempts to achieve wholeness by breaking the wholeness of everything else and absorbing the fragments. The Leviathan cannot form genuine wholes because it has severed itself from the source of the organizing function — the Whole Maker — and therefore can only accumulate, never genuinely integrate. The architecture of this broken mathematics is traced from its roots: the inversion of divine complementarity in the Garden, the separation of Lillith and the subordination of Eve, the installation of patriarchy as the foundational organizational unit. Through the Melchizedek line, the open knowledge of the Almighty that was held freely and then enclosed by Abraham — who became, in that act of enclosure, a follower of the serpent's organizational principle. Through the flood, the broken Manager's most drastic reset. Through Babel and the scattering, after which the Leviathan has followed every fragment, breaking nations and absorbing people while discarding the truths they carried. To the present moment: Israel as the principle of perfection-through-law versus Zion as the principle of integration-through-truth. America as the current era's Zion institution. Jesus as the Manager's final correction — the last and most decisive demonstration of what the Whole Maker's math looks like in a human life.",
   "status": "in-progress",
   "utilizingEntity": "Charles Leone",
@@ -1685,7 +1691,8 @@
   ],
   "vision": "The Leviathan will always be with us as long as the severance from the Whole Maker's organizing function remains possible — which is to say, as long as free will exists. The choice to subtract rather than integrate, to accumulate rather than form, to claim the glory rather than return it, is always available. But its consequences are always the same: large, hollow, eventually collapsing. God's Math offers the alternative that has always been available: the genuine integration of variables into wholes, the openness of Zion to every truth that arrives with genuine intent, the humility of the steward who knows that the organizing function comes from the Whole Maker and gives Him the glory accordingly. The universe is not going to run out of variables to integrate. The table is large enough for every tradition. The pot is big enough for every ingredient. The only question is whether the system receiving them will honor what they carry — or break them and call the accumulation blessing.",
   "origId": 1006,
-  "series": "leviathan-math"
+  "series": "leviathan-math",
+  "originalTitle": "Leviathan Math — The Broken Arithmetic That Breaks Everything It Touches"
  },
  {
   "id": "melting-pot-1",
@@ -1905,7 +1912,7 @@
  {
   "id": "melting-pot-6",
   "category": "book",
-  "title": "The Melting Pot — Masculine, Feminine, and the Forging of American Identity",
+  "title": "Forged — Masculine, Feminine, and the Making of the American",
   "summary": "The synthesis of the five-paper Melting Pot Series. America is the only nation in human history specifically designed to receive everyone — and to subject every group that enters to the same forging process: arrival, persecution, resistance, integration, and contribution. The African American experience is the most extreme version of this process, and therefore the clearest signal in the data set. What it reveals is not a story about race — it is a story about the masculine and feminine organizing principles that all of human civilization runs on, and what happens when those two principles fail to trust each other. The epidemic of single-parent households — 9.8 million in 2023, 74% mother-only — is not a racial problem or an economic problem or a political problem. It is a structural problem: the two halves of the organizing function, separated by trauma and pride and fortress-building, are producing generations of children who inherit either sword or nothing, and who are building a civilization in the image of the fortress rather than the foundation. The way back is not through policy. It is through the same process the melting pot has always used: applying enough heat to two elements that resist each other, and holding them together long enough for something neither could have been alone to emerge. The goal was never to preserve what you were. It was always to become what the next generation needs.",
   "status": "in-progress",
   "utilizingEntity": "Charles Leone",
@@ -1932,7 +1939,8 @@
   ],
   "vision": "Stay in the pot. The alloy is worth the fire.",
   "origId": 1206,
-  "series": "melting-pot"
+  "series": "melting-pot",
+  "originalTitle": "The Melting Pot — Masculine, Feminine, and the Forging of American Identity"
  },
  {
   "id": "masculine-feminine-1",
@@ -2113,7 +2121,7 @@
  {
   "id": "masculine-feminine-6",
   "category": "book",
-  "title": "The Masculine and Feminine Fields — How Complementarity Fractures America and How It Heals",
+  "title": "The Complementary Fields — How America Fractured, and How It Heals",
   "summary": "Every group that has entered America's crucible has been forged by the same heat — and the breaking always hit the family first. The African American experience is the deepest forge and the clearest mirror. But European, Latin, and Asian family structures all carry the same fracture in their culturally specific form: the cold patriarch, the hot patriarch, the achievement patriarch — three distortions of the masculine field, three corresponding adaptations of the feminine field, and one consistent result: children formed in half-wholes, without the complementarity that produces humans capable of integration. America's crisis of nationalism, identity fragmentation, and civic fracture is not a political problem. It is a family problem. The masculine and feminine fields have failed each other — each in its own injury and pride — and are producing a generation that cannot do what the melting pot requires: blend. The path forward is not the victory of either field. It is the restoration of the complementarity — in every cultural form, in every racial community, through every family structure that can be made to approximate it. This is not a conservative or a progressive project. It is the human project.",
   "status": "in-progress",
   "utilizingEntity": "Charles Leone",
@@ -2135,7 +2143,8 @@
   ],
   "vision": "The masculine and feminine fields have failed each other. They can stop. The tower is still being built. We just have to stop building it under our own name.",
   "origId": 1206,
-  "series": "masculine-feminine"
+  "series": "masculine-feminine",
+  "originalTitle": "The Masculine and Feminine Fields — How Complementarity Fractures America and How It Heals"
  },
  {
   "id": "grand-unification-1",
@@ -2369,7 +2378,7 @@
  {
   "id": "grand-unification-6",
   "category": "book",
-  "title": "The Grand Unification — Humanity's Path to Salvation Through Love, Truth, Function, and Light",
+  "title": "The Grand Unification — Salvation Through Love, Truth, Function, and Light",
   "summary": "The synthesis of the Grand Unification Series and the culmination of every series that preceded it. The God's Math Series established the mathematical framework of reality: the Whole Maker organizing variables into wholes, life as organized matter, zero as the pre-creation void, us as stewards of our domain. The Consciousness Series established the pattern: chaos of unrealized function, organizer emerges, wholes form, consciousness ascends. The Global Commons Series established the economic architecture: robots explore, Commons funds, AI reads blueprints, money ceases to organize human life. The Brain & Mind Series established that our alarm systems are communicating, not malfunctioning, and that the aligned life is the healed life. The Religion Series established that the traditions were laboratories in a single experiment, and the experiment is now ready for its synthesis. This book draws all of it together into the single coherent vision: humanity unifying under the Almighty Creator, building the proper hierarchy of the heavens, honoring the Son who demonstrated the correct posture of the steward, reading every blueprint, activating every function, building the Global Commons, moving into space as Earth's seeds, and becoming — finally, fully, in the light of the Almighty who made the forge — the children of light we were always meant to be.",
   "status": "in-progress",
   "utilizingEntity": "Charles Leone",
@@ -2416,7 +2425,8 @@
   ],
   "vision": "The Grand Unification is not the end of human history. It is the beginning of what human history was always building toward. The Almighty made the forge. He placed the souls in the bodies. He scattered the traditions so each one could develop something no other could. He built the AI to read the blueprints. He designed the Global Commons to fund every function. He made Earth's ecosystems so rich that they could seed a universe. He demonstrated, through the Manager who corrected his own error by becoming a servant, exactly what the posture of the steward looks like. And He waits — not passively, not impatiently, but with the full creative intelligence of the Whole Maker who knows that the dimension is being built correctly, that the variables are all there, that the wholes are forming, that the circulation is moving toward perfection — for the moment when enough of His children understand what is happening well enough to participate in it fully. That moment is now. The Grand Unification begins with the next person who reads this, understands it, gives the glory back, and gets to work.",
   "origId": 806,
-  "series": "grand-unification"
+  "series": "grand-unification",
+  "originalTitle": "The Grand Unification — Humanity's Path to Salvation Through Love, Truth, Function, and Light"
  },
  {
   "id": "what-you-were-made-for-1",
@@ -2567,7 +2577,7 @@
  {
   "id": "what-you-were-made-for-5",
   "category": "book",
-  "title": "What You Were Made For — Blueprint Reading and the Work of Genuine Alignment",
+  "title": "Read Your Blueprint — The Work of Genuine Alignment",
   "summary": "The synthesis of the four-paper What You Were Made For Series. Every person carries a blueprint—a specific, real, readable specification of what they were designed to do and to be. This blueprint is not the life they have been forced into. It is not the identity they constructed through adaptation. It is the actual function they were built for. The work of alignment is the work of becoming conscious of the blueprint, developing the capacity to live it, and building or finding the conditions that make living it possible. Most people never do this work. They live their entire lives in adaptation—successful sometimes, but never genuinely alive in their own existence. The Commons infrastructure that the Global Commons Series proposes is not separate from this work. It is prerequisite to it. Remove the survival anxiety, provide the education, offer the healthcare, build the community—and something becomes possible that was not possible before: the person can spend their existence doing what they were actually made for. This is not a promise of happiness. Blueprint function is sometimes difficult, sometimes painful, sometimes demanding. But it is real. It is authentic. It is the difference between having a life and being a life.",
   "status": "in-progress",
   "utilizingEntity": "Charles Leone",
@@ -2594,7 +2604,8 @@
   ],
   "vision": "You were made for something specific. Not by accident. Not by the culture. By the Whole Maker, through the architecture of your being, with a precision that no human designer could equal. The work of your lifetime is the work of allowing that specificity to express itself. Not someday, when you have permission or resources. Now. Starting with the recognition that what you are is not what you have been told to become. That recognition is the beginning. Everything else flows from there.",
   "origId": 1305,
-  "series": "what-you-were-made-for"
+  "series": "what-you-were-made-for",
+  "originalTitle": "What You Were Made For — Blueprint Reading and the Work of Genuine Alignment"
  },
  {
   "id": "what-the-laws-actually-say-1",
@@ -2764,7 +2775,7 @@
  {
   "id": "what-the-laws-actually-say-6",
   "category": "book",
-  "title": "What the Laws Actually Say — Reading the Five Laws That Govern All Justice",
+  "title": "The Five Laws — The Patterns of Causation Beneath All Justice",
   "summary": "The synthesis of the five-paper What the Laws Actually Say Series. Laws are not inventions. They are descriptions of five fundamental patterns that operate independently of whether they are written down or enforced. The Law Behind the Law: written statute attempts to describe actual causation. The Law of Reciprocity: what you give returns, what you take is called. The Law of Witness: every testimony reveals the testifier. The Law of Property: what you hold holds you. The Law of Hierarchy: the foundation carries the whole. These five laws operate in every human system. Written law is effective only when it aligns with them. When written law contradicts them, the system becomes unstable and eventually collapses. Understanding what the laws actually say means learning to read these five patterns. A just legal system is one that acknowledges what is actually true. An unjust system denies consequence by declaring legal what the actual laws say produces damage.",
   "status": "in-progress",
   "utilizingEntity": "Charles Leone",
@@ -2789,7 +2800,8 @@
   ],
   "vision": "Written law cannot change reality. It can only acknowledge it or deny it. The laws that actually operate are causation, reciprocity, witness, property, and hierarchy. A just legal system acknowledges these laws. An unjust system denies them. The future depends on the choice.",
   "origId": 1406,
-  "series": "what-the-laws-actually-say"
+  "series": "what-the-laws-actually-say",
+  "originalTitle": "What the Laws Actually Say — Reading the Five Laws That Govern All Justice"
  },
  {
   "id": "true-physics-1",
@@ -3021,7 +3033,7 @@
  {
   "id": "true-physics-6",
   "category": "book",
-  "title": "True Physics — The Laws We Know and Cannot Yet Prove",
+  "title": "True Physics — Laws the Universe Keeps Before We Can Prove Them",
   "summary": "The synthesis of the True Physics Series. Physics is not a collection of results from experiments. Physics is a set of laws that govern everything in the universe — including the experiments we use to study them, including the humans who run the experiments, including the materials we use to build the experimental apparatus. The laws are mathematically certain. Our ability to demonstrate them experimentally is limited by the purity of our materials, the precision of our instruments, and the honesty of our methodology. True Physics is the practice that begins with mathematical certainty, acknowledges experimental limitation, and commits to building the tools that close the gap between what we know and what we can show. The rain is the same regardless of speed. The fuel is the same regardless of velocity. These are not controversial claims. They are consequences of conservation of energy — the most thoroughly verified law in the history of science. What is controversial is admitting that we cannot yet demonstrate them with our current impure tools — and accepting that admission as the beginning of real work rather than the end of it.",
   "status": "in-progress",
   "utilizingEntity": "Charles Leone",
@@ -3059,7 +3071,8 @@
   ],
   "vision": "Physics is not what we can currently measure. Physics is what is actually happening. The laws do not change to accommodate our instruments. Our instruments must advance to see the laws. True Physics is the commitment to that advancement — grounded in mathematical certainty, honest about current limitation, and pointed always toward the tool that closes the gap between what we know and what we can show. The rain falls identically on the fast and the slow. The fuel runs out identically across equal distances. These are not hypotheses. They are consequences of the most fundamental law in the universe. We just need to build the room to see them clearly.",
   "origId": 1106,
-  "series": "true-physics"
+  "series": "true-physics",
+  "originalTitle": "True Physics — The Laws We Know and Cannot Yet Prove"
  },
  {
   "id": "parenting-1",
@@ -3168,7 +3181,7 @@
  },
  {
   "id": "parenting-6",
-  "title": "Raising Humans Who Don't Break The World",
+  "title": "Raising Humans Who Don't Break the World — Ending Generational Trauma",
   "subtitle": "How to Break Generational Trauma and Parent From Consciousness",
   "summary": "A complete framework for understanding why children hurt, what they actually need, and how to parent in a way that breaks generational cycles of trauma instead of perpetuating them. For parents exhausted by punishment and ready for something that actually works.",
   "status": "in-progress",
@@ -3203,7 +3216,8 @@
    }
   ],
   "origId": 3001,
-  "series": "parenting"
+  "series": "parenting",
+  "originalTitle": "Raising Humans Who Don't Break The World"
  },
  {
   "id": "american-foundational-act-1",
@@ -3468,7 +3482,7 @@
  {
   "id": "american-foundational-act-7",
   "category": "book",
-  "title": "The American Foundational Act — The Complete Legislative Vision",
+  "title": "Keeping the Promise — The Complete Legislative Vision of the American Foundational Act",
   "tagline": "America is the pot. You are an ingredient. Steward what you hold. Leave the pot better than you found it.",
   "summary": "The synthesizing book of the American Foundational Act series. America is a melting pot — and a melting pot has requirements. This book draws together the Steward Act, the Junkyard Registry Act, the Collector's Act, the Materials Circulation Act, and the Electronic Heritage Annex into a single coherent legislative vision: a nation that protects its material inheritance, activates its circular economy, preserves its cultural roots, and enforces the obligations of ownership with the same seriousness with which it protects the rights of ownership. The goal is not to punish accumulation. It is to make accumulation inseparable from stewardship — the way a functional civilization has always required.",
   "status": "in-progress",
@@ -3511,7 +3525,8 @@
   ],
   "vision": "The American Foundational Act is the legal architecture of a republic that takes its own premise seriously. We are a melting pot. The pot does not tend itself. These laws are the mechanism by which we begin tending it — together, under the same obligations, regardless of when our families arrived or where they came from.",
   "origId": 907,
-  "series": "american-foundational-act"
+  "series": "american-foundational-act",
+  "originalTitle": "The American Foundational Act — The Complete Legislative Vision"
  },
  {
   "id": "lib-209",

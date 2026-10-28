@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import Layout from './Layout.jsx';
@@ -14,13 +14,9 @@ import PublicDomain from './pages/PublicDomain';
 import Series from './pages/Series';
 import Search from './pages/Search';
 import Warning from './pages/Warning';
-import SupremeWarning from './pages/SupremeWarning';
-import SupremeWarningPage from './pages/SupremeWarningPage';
-import InteractiveWarning from './pages/InteractiveWarning';
-import InteractiveWarningMap from './pages/InteractiveWarningMap';
 import PageNotFound from './pages/PageNotFound';
 
-const PAGES = { Home, Books, Ideas, IdeaDetail, Clubs, Traditions, Software, TheResolution, PublicDomain, Search, Warning, SupremeWarning, InteractiveWarning, InteractiveWarningMap };
+const PAGES = { Home, Books, Ideas, IdeaDetail, Clubs, Traditions, Software, TheResolution, PublicDomain, Search, Warning };
 const WARNING_PAGES = ['Warning', 'SupremeWarning', 'InteractiveWarning', 'InteractiveWarningMap', 'supreme-warning', 'interactive-warning'];
 
 function pageName(pathname) {
@@ -46,8 +42,7 @@ function Shell() {
           <Routes location={location}>
             <Route path="/" element={<Home />} />
             {Object.entries(PAGES).map(([name, Page]) => <Route key={name} path={`/${name}`} element={<Page />} />)}
-            <Route path="/supreme-warning" element={<SupremeWarningPage />} />
-            <Route path="/interactive-warning" element={<InteractiveWarningMap />} />
+            {['SupremeWarning', 'supreme-warning', 'InteractiveWarning', 'InteractiveWarningMap', 'interactive-warning'].map(p => <Route key={p} path={`/${p}`} element={<Navigate to="/Warning" replace />} />)}
             <Route path="/series/:key" element={<Series />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>

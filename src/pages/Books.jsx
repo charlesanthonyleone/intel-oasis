@@ -40,49 +40,25 @@ function matchesSeries(item, seriesKey) {
 
 // ── Sub-components ──────────────────────────────────────────────────────────
 function SeriesCard({ series, index }) {
-  const Icon = series.icon;
-  const isStringIcon = typeof Icon === 'string';
   const items = series.ids.map(id => booksAndLaw.find(i => i.id === id));
   return (
-    <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: index * 0.07 }}>
-      <div className="rounded-2xl overflow-hidden"
-        style={{ background: `${series.accent}06`, border: `1px solid ${series.accent}20` }}>
-        {/* Header */}
-        <div className="px-5 pt-5 pb-4">
-          <div className="flex items-start justify-between mb-3">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-xl flex items-center justify-center"
-                style={{ background: `${series.accent}15`, border: `1px solid ${series.accent}28` }}>
-                {isStringIcon ? <span style={{ fontSize: 13 }}>{Icon}</span> : <Icon style={{ width: 14, height: 14, color: series.accent }} />}
-              </div>
-              <span className="text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded-full"
-                style={{ background: `${series.accent}12`, color: series.accent, border: `1px solid ${series.accent}22` }}>
-                {series.badge}
-              </span>
-            </div>
-          </div>
-          <Link to={`/series/${series.key}`} className="hover:underline"><h2 className="text-[17px] font-black tracking-tight mb-1" style={{ color: 'rgba(255,255,255,0.92)' }}>{series.label}</h2></Link>
-          <p className="text-[12px] italic font-medium mb-2" style={{ color: series.accent, opacity: 0.9 }}>{series.tagline}</p>
-          <p className="text-[12px] font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.32)' }}>{series.desc}</p>
-        </div>
-        {/* Items */}
-        <div style={{ borderTop: `1px solid ${series.accent}12` }}>
-          {items.map((item, i) => (
-            <Link key={item.id} to={`/IdeaDetail?id=${item.id}`}
-              className="flex items-center gap-3 px-5 py-2.5 group transition-all"
-              style={{ borderBottom: i < items.length - 1 ? `1px solid ${series.accent}08` : 'none' }}
-              onMouseEnter={e => e.currentTarget.style.background = `${series.accent}08`}
-              onMouseLeave={e => e.currentTarget.style.background = 'transparent'}>
-              <span className="text-[10px] font-black w-4 flex-shrink-0 text-center" style={{ color: `${series.accent}70` }}>
-                {i + 1}
-              </span>
-              <span className="flex-1 text-[12px] font-medium truncate" style={{ color: 'rgba(255,255,255,0.72)' }}>{item.title}</span>
-              <ChevronRight className="w-3 h-3 flex-shrink-0 opacity-0 group-hover:opacity-50 transition-opacity" style={{ color: series.accent }} />
-            </Link>
-          ))}
+    <section className="lib-series">
+      <div className="lib-series-head">
+        <span className="toc-num">{String(index + 1).padStart(2, '0')}</span>
+        <div>
+          <Link to={`/series/${series.key}`} className="toc-title link">{series.label}</Link>
+          {series.tagline && <p className="toc-desc mt-2">{series.tagline}</p>}
         </div>
       </div>
-    </motion.div>
+      <ol className="rows lib-items">
+        {items.map((item, i) => (
+          <li key={item.id}><Link to={`/IdeaDetail?id=${item.id}`} className="row group">
+            <span className="row-num">{i + 1}</span>
+            <span className="row-body"><span className="row-title sm">{item.title}</span></span>
+          </Link></li>
+        ))}
+      </ol>
+    </section>
   );
 }
 
@@ -115,18 +91,16 @@ export default function Books() {
           style={{ background: 'radial-gradient(ellipse, rgba(192,132,252,0.04) 0%, transparent 70%)', filter: 'blur(60px)' }} />
       </div>
 
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-12 pb-6">
+      <div className="max-w-6xl mx-auto px-6 md:px-10 pt-16 pb-6">
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <div className="flex items-center gap-2 mb-1">
             <Feather className="w-4 h-4" style={{ color: '#b48a8a' }} />
-            <span className="text-[11px] font-bold tracking-[0.18em] uppercase" style={{ color: 'rgba(255,255,255,0.3)' }}>Leone University</span>
+            
           </div>
-          <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-1" style={{ color: 'rgba(255,255,255,0.92)' }}>
-            Written<span style={{ color: '#b48a8a' }}>Works</span>
-          </h1>
+          <h1 className="h-page">The Library</h1>
           <p className="text-[13px] font-light mb-5" style={{ color: 'rgba(255,255,255,0.3)' }}>
-            {booksAndLaw.length} works · every word is a long argument with the world
+            <span className="lede not-italic block mb-10" style={{fontStyle:"normal"}}>Fifteen series and {booksAndLaw.length} works. Each one asks what is actually happening, and refuses the easy answer.</span>
           </p>
 
           {/* Search */}
@@ -177,7 +151,7 @@ export default function Books() {
 
       <div className="h-px mx-4" style={{ background: 'rgba(255,255,255,0.05)' }} />
 
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-6">
+      <div className="max-w-6xl mx-auto px-6 md:px-10 py-6">
 
         {/* ── HOMEPAGE VIEW ── */}
         {!isListView && (
@@ -186,7 +160,7 @@ export default function Books() {
             {/* Series spotlight */}
             <div className="mb-8">
               <p className="text-[10px] font-bold tracking-[0.2em] uppercase mb-4" style={{ color: 'rgba(255,255,255,0.2)' }}>Series</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
                 {SERIES.map((s, i) => <SeriesCard key={s.key} series={s} index={i} />)}
               </div>
             </div>

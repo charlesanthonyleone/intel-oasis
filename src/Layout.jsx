@@ -9,7 +9,7 @@ import Logo from './components/Logo';
 const NAV = [
   { label: 'Home', page: 'Home', to: '/' },
   { label: 'Ideas', page: 'Ideas', to: '/Ideas' },
-  { label: 'Books', page: 'Books', to: '/Books' },
+  { label: 'Library', page: 'Books', to: '/Books' },
   { label: 'Software', page: 'Software', to: '/Software' },
   { label: 'Clubs', page: 'Clubs', to: '/Clubs' },
   { label: 'Traditions', page: 'Traditions', to: '/Traditions' },
@@ -30,75 +30,33 @@ export default function Layout({ children, currentPageName }) {
   const isWarning = currentPageName === 'Warning';
 
   return (
-    <div className="min-h-screen relative grain" style={{ color: 'var(--ink)' }}>
-      <SiteBackdrop />
+    <div className="min-h-screen relative" style={{ color: 'var(--ink)' }}>
+      
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] px-4 py-2 rounded-lg bg-[#c8a45a] text-black font-semibold">Skip to content</a>
 
-      <header className="fixed top-0 inset-x-0 z-50 transition-all duration-500"
-        style={{
-          background: scrolled || open ? 'rgba(7,8,13,0.86)' : 'transparent',
-          backdropFilter: scrolled || open ? 'blur(20px)' : 'none',
-          WebkitBackdropFilter: scrolled || open ? 'blur(20px)' : 'none',
-          borderBottom: `1px solid ${scrolled ? 'var(--line)' : 'transparent'}`,
-        }}>
-        <nav className="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between gap-4" aria-label="Primary">
-          <Link to="/" aria-label="IntelOasis home"><Logo /></Link>
-
-          <div className="hidden xl:flex items-center gap-7">
-            {NAV.map(n => {
-              const active = currentPageName === n.page;
-              return (
-                <Link key={n.page} to={n.to} aria-current={active ? 'page' : undefined}
-                  className={`relative py-2 text-[11px] tracking-[0.18em] uppercase transition-colors duration-500 ${active ? 'text-[#e8cc8a]' : 'text-white/50 hover:text-white/90'}`}>
-                  {n.label}
-                  {active && <motion.span layoutId="nav-dot" className="absolute inset-x-0 -bottom-0.5 h-px bg-[#c8a45a]/60" />}
-                </Link>
-              );
-            })}
+      <header className="site-head">
+        <nav className="max-w-6xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between gap-6" aria-label="Primary">
+          <Link to="/" aria-label="IntelOasis home" className="wordmark">IntelOasis</Link>
+          <div className="hidden lg:flex items-center gap-7">
+            {[...NAV.slice(1), { label: 'The Warning', page: 'Warning', to: '/Warning' }, { label: 'Search', page: 'Search', to: '/Search' }].map(n => (
+              <Link key={n.page} to={n.to} aria-current={currentPageName === n.page ? 'page' : undefined} className="nav-link">{n.label}</Link>
+            ))}
           </div>
-
-          <div className="flex items-center gap-5">
-            <Link to="/Warning" className={`hidden sm:inline text-[11px] tracking-[0.18em] uppercase transition-colors duration-500 ${isWarning ? 'text-red-300' : 'text-red-300/70 hover:text-red-300'}`}>
-              The Warning
-            </Link>
-            <a href={LEONE_URL} target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex items-center gap-1 text-[11px] tracking-[0.18em] uppercase text-white/50 hover:text-[#e8cc8a] transition-colors duration-500">
-              Leone University <ArrowUpRight className="w-3 h-3" />
-            </a>
-            <Link to="/Search" aria-label="Search the library and ideas"
-              className="inline-flex items-center gap-2 h-9 px-4 rounded-full text-[11px] tracking-[0.18em] uppercase border border-white/10 hover:border-[#c8a45a]/40 text-white/60 hover:text-white transition-colors duration-500">
-              <Search className="w-3.5 h-3.5" /><span className="hidden md:inline">Search</span>
-            </Link>
-            <button className="xl:hidden inline-flex items-center justify-center w-9 h-9 rounded-full border border-white/10 text-white/70"
-              aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} onClick={() => setOpen(o => !o)}>
-              {open ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
-            </button>
-          </div>
+          <button className="lg:hidden nav-link" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} onClick={() => setOpen(o => !o)}>
+            {open ? 'Close' : 'Menu'}
+          </button>
         </nav>
-
-        <AnimatePresence>
-          {open && (
-            <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: '100dvh' }} exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.35, ease: [0.2, 0.7, 0.2, 1] }}
-              className="xl:hidden overflow-hidden" style={{ background: 'rgba(7,8,13,0.98)' }}>
-              <div className="px-6 pt-6 pb-24 flex flex-col gap-1">
-                {[...NAV, { label: 'The Warning', page: 'Warning', to: '/Warning' }, { label: 'Search', page: 'Search', to: '/Search' }, { label: 'Leone University', page: 'Leone', href: LEONE_URL }].map((n, i) => {
-                  const cls = 'flex items-center justify-between py-4 border-b border-white/[0.05] font-display font-light text-[26px]';
-                  const col = { color: currentPageName === n.page ? '#e8cc8a' : n.page === 'Warning' ? '#fca5a5' : 'rgba(255,255,255,0.85)' };
-                  const inner = <>{n.label}<span className="text-[10px] tracking-[0.3em] font-sans text-white/25">{String(i + 1).padStart(2, '0')}</span></>;
-                  return (
-                  <motion.div key={n.page} initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.05 + i * 0.035 }}>
-                    {n.href ? <a href={n.href} target="_blank" rel="noopener noreferrer" className={cls} style={col}>{inner}</a>
-                      : <Link to={n.to} className={cls} style={col}>{inner}</Link>}
-                  </motion.div>
-                  );
-                })}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {open && (
+          <div className="lg:hidden mobile-menu">
+            {[...NAV, { label: 'The Warning', page: 'Warning', to: '/Warning' }, { label: 'Search', page: 'Search', to: '/Search' }].map(n => (
+              <Link key={n.page} to={n.to} className="mobile-link" aria-current={currentPageName === n.page ? 'page' : undefined}>{n.label}</Link>
+            ))}
+            <a href={LEONE_URL} target="_blank" rel="noopener noreferrer" className="mobile-link">Leone University</a>
+          </div>
+        )}
       </header>
 
-      <main id="main" className="relative z-[2] pt-20">
+      <main id="main" className="relative z-[2] pt-16">
         {children}
       </main>
       <div className="relative z-[2]"><Footer /></div>

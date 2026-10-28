@@ -43,19 +43,12 @@ export default function SupremeWarning() {
         .hover-rise:hover { transform: translateY(-2px); }
       `}</style>
 
-      <CosmicBg />
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 py-14">
 
         {/* Nav */}
         <motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
           className="flex items-center justify-between mb-10">
-          <Link to="/" className="inline-flex items-center gap-2 text-[12px] transition-colors"
-            style={{ color: 'rgba(255,255,255,0.25)' }}
-            onMouseEnter={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
-            onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.25)'}>
-            <ArrowLeft className="w-3.5 h-3.5" /> Back to Home
-          </Link>
           <button onClick={handleShare}
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-[11px] font-semibold transition-all hover-rise"
             style={{ background: 'rgba(220,38,38,0.1)', border: '1px solid rgba(220,38,38,0.25)', color: copied ? '#4ade80' : 'rgba(220,38,38,0.8)' }}>
@@ -193,11 +186,6 @@ export default function SupremeWarning() {
                   style={{ background: copied ? 'rgba(34,197,94,0.1)' : 'rgba(220,38,38,0.1)', border: `1px solid ${copied ? 'rgba(34,197,94,0.3)' : 'rgba(220,38,38,0.3)'}`, color: copied ? '#4ade80' : 'rgba(220,38,38,0.85)' }}>
                   <Share2 className="w-3.5 h-3.5" />{copied ? 'Link copied!' : 'Share this warning'}
                 </button>
-                <Link to="/interactive-warning"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-[13px] font-bold hover-rise transition-all"
-                  style={{ background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.3)', color: 'rgba(245,158,11,0.9)' }}>
-                  <Map className="w-4 h-4" /> Experience the Interactive Map →
-                </Link>
               </div>
 
             </div>

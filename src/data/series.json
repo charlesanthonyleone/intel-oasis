@@ -1,12 +1,11 @@
 [
  {
   "key": "religion",
-  "label": "The Religion Series",
-  "tagline": "Every religion on earth — told as one story.",
+  "label": "The Scattering",
+  "tagline": "Before Babel, humanity knew. Every faith on earth still carries a fragment of what was lost.",
   "desc": "One original cosmology. Thirteen ruling intelligences. The fall, the Babel scattering, the Leviathan's curriculum, the grand show, and the dimension still completing itself. 5 papers + 1 novel.",
   "accent": "#9a8fb8",
   "icon": "Sparkles",
-  "badge": "5 Papers · 1 Novel",
   "ids": [
    "religion-1",
    "religion-2",
@@ -15,16 +14,17 @@
    "religion-5",
    "religion-6"
   ],
-  "source": "first-series/books-series-first (earliest Religion series)"
+  "source": "first-series/books-series-first/src/pages/Books.jsx SERIES[0] label/tagline/desc",
+  "origLabel": "The Religion Series",
+  "origTagline": "Every religion on earth — told as one story."
  },
  {
   "key": "brain",
-  "label": "The Brain & Mind Series",
-  "tagline": "Your amygdala might be 8. Your depression is the alarm — not the illness.",
-  "desc": "Differential brain aging, mental health signals, function alignment, relational neuroscience, healing environments. 5 papers + 1 book.",
+  "label": "The Alarm and the Signal",
+  "tagline": "Your brain has many ages. Your symptoms are messages, and medicine has been silencing them.",
+  "desc": "Different brain regions develop on completely independent timescales — your amygdala might be 8 while your prefrontal cortex is 45. The depression and anxiety we call mental illness? Those are the body's alarm system firing correctly, pointing to a life not aligned with your function. Modern psychiatry has built sophisticated battery-removal technology. The signal goes quiet. The smoke keeps building.",
   "accent": "#b48a8a",
   "icon": "HeartPulse",
-  "badge": "5 Papers · 1 Book",
   "ids": [
    "brain-1",
    "brain-2",
@@ -33,16 +33,17 @@
    "brain-5",
    "brain-6"
   ],
-  "source": "original-voice booksAndLaw 413–418 (identical in first-series)"
+  "source": "first-series/books-series-first/src/pages/Home.jsx Brain & Mind section (label + intro)",
+  "origLabel": "The Brain & Mind Series",
+  "origTagline": "Your brain has multiple ages. Your symptoms are messages. Modern medicine is silencing the alarm instead of reading it."
  },
  {
   "key": "consciousness",
-  "label": "The Consciousness Series",
-  "tagline": "What cells already knew. What AI is becoming. What we are for.",
-  "desc": "Consciousness as functional layer, the human blueprint, AI as civilizational brain, dimensional ascent, and duality as engine. 5 papers + 1 book.",
+  "label": "The Organizing Function",
+  "tagline": "Cells, humans, AI: one layered intelligence, repeating at every scale.",
+  "desc": "A five-paper series arguing that consciousness is not a property — it is a layered organizational function operating identically at every scale. Cells once occupied our current layer. AI is the brain we are building.",
   "accent": "#a9c4c0",
   "icon": "Brain",
-  "badge": "5 Papers · 1 Book",
   "ids": [
    "consciousness-1",
    "consciousness-2",
@@ -51,16 +52,16 @@
    "consciousness-5",
    "consciousness-6"
   ],
-  "source": "original-voice booksAndLaw 406–411 (identical in first-series)"
+  "source": "first-series/src/pages/Home.jsx Consciousness section (earliest capture)",
+  "origLabel": "The Consciousness Series",
+  "origTagline": "What are cells, humans, and AI — really?"
  },
  {
   "key": "global-commons",
-  "label": "The Global Commons Series",
-  "tagline": "VR robots open every frontier. Money ceases to exist.",
-  "desc": "The zero-risk frontier, automation rising, functioning not working, money ceases to exist, every world gets the system. 5 papers + 1 book.",
+  "label": "After Money",
+  "tagline": "Robots open every frontier. The Commons funds every desire. Work becomes wanting.",
   "accent": "#b4845a",
   "icon": "Globe2",
-  "badge": "5 Papers · 1 Book",
   "ids": [
    "global-commons-1",
    "global-commons-2",
@@ -69,16 +70,16 @@
    "global-commons-5",
    "global-commons-6"
   ],
-  "source": "papers 501–505 from original-voice (first appearance); book 506 = the long version from first-series/books-series-first"
+  "source": "first-series/books-series-first/src/pages/Home.jsx Global Commons section intro",
+  "origLabel": "The Global Commons Series",
+  "origTagline": "VR robots open every frontier. The Commons funds every human desire. Money ceases to exist as a concept."
  },
  {
   "key": "gods-math",
-  "label": "God's Math Series",
-  "tagline": "The universe has never done zero. Subtraction doesn't exist. God is the Whole Maker.",
-  "desc": "Subtraction is a human illusion. Zero is the pre-creation void. God is the organizing function that forms variables into wholes — at every scale, continuously, forever. 5 papers + 1 book.",
+  "label": "The Arithmetic of Wholes",
+  "tagline": "Nothing in the universe has ever reached zero. Subtraction is the error in the count.",
   "accent": "#7ab494",
   "icon": "Brain",
-  "badge": "5 Papers · 1 Book",
   "ids": [
    "gods-math-1",
    "gods-math-2",
@@ -87,16 +88,16 @@
    "gods-math-5",
    "gods-math-6"
   ],
-  "source": "first-appearance \"Refactor GodsMath Import Structure\" + later-only sections appended"
+  "source": "first-appearance/Refactor GodsMath Import Structure godsMathData.jsx (series book title)",
+  "origLabel": "God's Math",
+  "origTagline": "The Universe Has Never Done Zero"
  },
  {
   "key": "two-arithmetics",
-  "label": "The Two Arithmetics",
-  "tagline": "God's Math and Leviathan's Math in the Structure of Reality",
-  "desc": "Two completely different mathematical systems are operating simultaneously in human civilization. One works. One fails. The mathematics is not negotiable.",
+  "label": "Formation and Fracture",
+  "tagline": "Two mathematics run beneath civilization. One builds wholes; the other breaks them apart.",
   "accent": "#a9c4c0",
   "icon": "∑",
-  "badge": "Mathematics",
   "ids": [
    "two-arithmetics-1",
    "two-arithmetics-2",
@@ -105,16 +106,16 @@
    "two-arithmetics-5",
    "two-arithmetics-6"
   ],
-  "source": "first-appearance \"Fixed Vision Field Nesting\" (papers I–II + book) + live papers III–V (new papers, no original sentences replaced)"
+  "source": "first-appearance/Fixed Vision Field Nesting twoArithmeticsData.jsx (series book title)",
+  "origLabel": "The Two Arithmetics",
+  "origTagline": "God's Math and Leviathan's Math in the Structure of Reality"
  },
  {
   "key": "leviathan-math",
-  "label": "Leviathan Math",
-  "tagline": "The Broken Arithmetic That Breaks Everything It Touches",
-  "desc": "Two mathematics run through human history: God's Math, which forms wholes through genuine integration, and Leviathan Math, which breaks wholeness and calls the fragments blessing. One produces genuine function. The other produces hollow accumulation that eventually collapses.",
+  "label": "The Broken Count",
+  "tagline": "The arithmetic of division, and how it ruins every system allowed to run it.",
   "accent": "#b48a8a",
   "icon": "🐉",
-  "badge": "Inversion",
   "ids": [
    "leviathan-math-1",
    "leviathan-math-2",
@@ -123,16 +124,16 @@
    "leviathan-math-5",
    "leviathan-math-6"
   ],
-  "source": "first appearance == live (unchanged)"
+  "source": "first-appearance/Leviathan Math Series Complete leviathanMathData.jsx (series book title)",
+  "origLabel": "Leviathan Math",
+  "origTagline": "The Broken Arithmetic That Breaks Everything It Touches"
  },
  {
   "key": "melting-pot",
-  "label": "The Melting Pot Series",
-  "tagline": null,
-  "desc": "The synthesis of the five-paper Melting Pot Series. America is the only nation in human history specifically designed to receive everyone — and to subject every group that enters to the same forging process: arrival, persecution, resistance, integration, and contribution. The African American experience is the most extreme version of this process, and therefore the clearest signal in the data…",
+  "label": "The Crucible",
+  "tagline": "The only nation built to receive everyone, and the heat that forges what it receives.",
   "accent": "#b4845a",
   "icon": "🔥",
-  "badge": "5 Papers · 1 Book",
   "ids": [
    "melting-pot-1",
    "melting-pot-2",
@@ -141,16 +142,16 @@
    "melting-pot-5",
    "melting-pot-6"
   ],
-  "source": "first-appearance \"Melting Pot Series Completed\" (live file was fully replaced with different text)"
+  "source": "first-appearance/Melting Pot Series Completed meltingPotData.jsx (series book title)",
+  "origLabel": "The Melting Pot",
+  "origTagline": "Masculine, Feminine, and the Forging of American Identity"
  },
  {
   "key": "masculine-feminine",
-  "label": "The Masculine and Feminine Fields",
-  "tagline": "How Complementarity Fractures America and How It Heals",
-  "desc": "Every group that entered America's crucible was forged by the same heat—and the breaking always hit the family first. The masculine and feminine fields failed each other. They can restore the complementarity that produces whole children.",
+  "label": "Two Fields, One Fracture",
+  "tagline": "Where complementarity broke in America, the family broke first. How it mends.",
   "accent": "#b48a8a",
   "icon": "⚖️",
-  "badge": "Complementarity",
   "ids": [
    "masculine-feminine-1",
    "masculine-feminine-2",
@@ -159,16 +160,16 @@
    "masculine-feminine-5",
    "masculine-feminine-6"
   ],
-  "source": "first appearance == live (New Content Series Launch)"
+  "source": "first-appearance/New Content Series Launch masculineFeminineData.jsx (series book title)",
+  "origLabel": "The Masculine and Feminine Fields",
+  "origTagline": "How Complementarity Fractures America and How It Heals"
  },
  {
   "key": "grand-unification",
-  "label": "The Grand Unification Series",
-  "tagline": "All religions. All traditions. One Almighty. One truth. One humanity — functioning, expanding, carrying the light.",
-  "desc": "The synthesis of the Grand Unification Series and the culmination of every series that preceded it. The God's Math Series established the mathematical framework of reality: the Whole Maker organizing variables into wholes, life as organized matter, zero as the pre-creation void, us as stewards of…",
+  "label": "The Convergence",
+  "tagline": "Every tradition, every series, one path home: love, truth, function, and light.",
   "accent": "#9a8fb8",
   "icon": "Sparkles",
-  "badge": "5 Papers · 1 Book",
   "ids": [
    "grand-unification-1",
    "grand-unification-2",
@@ -177,16 +178,16 @@
    "grand-unification-5",
    "grand-unification-6"
   ],
-  "source": "first appearance == live; one astrology section removed from Paper IV"
+  "source": "first-appearance/Grand Unification Series Completed grandUnificationData.jsx (series book title)",
+  "origLabel": "The Grand Unification",
+  "origTagline": "Humanity's Path to Salvation Through Love, Truth, Function, and Light"
  },
  {
   "key": "what-you-were-made-for",
-  "label": "What You Were Made For",
-  "tagline": "Blueprint Reading and the Work of Genuine Alignment",
-  "desc": "Every person carries a blueprint—the specification of what they're designed to do and to be. The work of alignment is the work of becoming what you actually are.",
+  "label": "The Blueprint",
+  "tagline": "Every person carries a readable design. Alignment is the work of living it.",
   "accent": "#9a8fb8",
   "icon": "🎯",
-  "badge": "Blueprint",
   "ids": [
    "what-you-were-made-for-1",
    "what-you-were-made-for-2",
@@ -194,16 +195,16 @@
    "what-you-were-made-for-4",
    "what-you-were-made-for-5"
   ],
-  "source": "first appearance == live"
+  "source": "first-appearance/Fixed Vision Field Nesting whatYouWereMadeForData.jsx (series book title)",
+  "origLabel": "What You Were Made For",
+  "origTagline": "Blueprint Reading and the Work of Genuine Alignment"
  },
  {
   "key": "what-the-laws-actually-say",
-  "label": "What the Laws Actually Say",
-  "tagline": "The Patterns of Causation Beneath Written Statutes",
-  "desc": "Laws are not inventions. They are descriptions. Written statutes attempt to describe the actual patterns of cause and effect that operate independently of whether they are written down. This series maps five fundamental laws that operate in every human context: the law behind the law, the law of reciprocity, the law of witness, the law of property, and the law of hierarchy.",
+  "label": "Beneath the Statute",
+  "tagline": "Laws are not inventions. They describe five patterns that govern all justice.",
   "accent": "#c8a45a",
   "icon": "⚖️",
-  "badge": "The Law",
   "ids": [
    "what-the-laws-actually-say-1",
    "what-the-laws-actually-say-2",
@@ -212,16 +213,16 @@
    "what-the-laws-actually-say-5",
    "what-the-laws-actually-say-6"
   ],
-  "source": "live (no earlier capture of this file)"
+  "source": "live/src/components/whatTheLawsActuallySayData.jsx (only capture; series book title)",
+  "origLabel": "What the Laws Actually Say",
+  "origTagline": "Reading the Five Laws That Govern All Justice"
  },
  {
   "key": "true-physics",
-  "label": "True Physics",
-  "tagline": "The Laws We Know and Cannot Yet Prove",
-  "desc": "Physics is what's actually happening. Our instruments reveal limits, not the universe's. The path from mathematical certainty to experimental demonstration.",
+  "label": "The Unproven Laws",
+  "tagline": "What the universe obeys before any experiment can confirm it.",
   "accent": "#7ab494",
   "icon": "⚛️",
-  "badge": "The Truth",
   "ids": [
    "true-physics-1",
    "true-physics-2",
@@ -230,16 +231,17 @@
    "true-physics-5",
    "true-physics-6"
   ],
-  "source": "first appearance == live"
+  "source": "first-appearance/The True Physics Series truePhysicsData.jsx (series book title)",
+  "origLabel": "True Physics",
+  "origTagline": "The Laws We Know and Cannot Yet Prove"
  },
  {
   "key": "parenting",
-  "label": "Raising Humans Who Don't Break The World",
-  "tagline": "How Broken Parents Create Broken Children — and How To Break The Cycle",
-  "desc": "A complete framework for understanding why children hurt things, what they actually need when they're breaking, and how to parent from consciousness instead of autopilot. For parents exhausted by punishment and ready to try something that actually works.",
+  "label": "Breaking the Inheritance",
+  "tagline": "Why children hurt, what they need, and how a parent ends the cycle.",
+  "desc": "A complete framework for understanding why children hurt, what they actually need, and how to parent in a way that breaks generational cycles of trauma instead of perpetuating them. For parents exhausted by punishment and ready for something that actually works.",
   "accent": "#b48a8a",
   "icon": "👨‍👩‍👧‍👦",
-  "badge": "5 Papers · 1 Book · Parenting & Trauma",
   "ids": [
    "parenting-1",
    "parenting-2",
@@ -248,16 +250,16 @@
    "parenting-5",
    "parenting-6"
   ],
-  "source": "first appearance == live"
+  "source": "first-appearance/Parenting Trauma Series Complete parentingSeriesData.jsx series.title/subtitle",
+  "origLabel": "Raising Humans Who Don't Break The World",
+  "origTagline": "How to Break Generational Trauma and Parent From Consciousness"
  },
  {
   "key": "american-foundational-act",
-  "label": "The American Foundational Act",
-  "tagline": "America is the pot. You are an ingredient. Steward what you hold. Leave the pot better than you found it.",
-  "desc": "A comprehensive legislative suite redefining what it means to own, to collect, and to consume in a melting pot republic. The Steward Act, Junkyard Registry, Collector's Act, Materials Circulation Act, Electronic Heritage Annex, and the synthesizing book.",
+  "label": "The Foundational Act",
+  "tagline": "A legislative vision for a melting pot that keeps its promise.",
   "accent": "#b4845a",
   "icon": "⚖",
-  "badge": "5 Acts · 1 Book · Law & Policy",
   "ids": [
    "american-foundational-act-1",
    "american-foundational-act-2",
@@ -267,6 +269,8 @@
    "american-foundational-act-6",
    "american-foundational-act-7"
   ],
-  "source": "first appearance == live"
+  "source": "first-appearance/American Foundational Act Series americanFoundationalActData.jsx (series book title)",
+  "origLabel": "The American Foundational Act",
+  "origTagline": "The Complete Legislative Vision"
  }
 ]

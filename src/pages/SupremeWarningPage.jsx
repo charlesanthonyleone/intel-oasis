@@ -34,15 +34,11 @@ export default function SupremeWarningPage() {
 
   return (
     <div className="min-h-screen relative" style={{ color: '#e2e2e2' }}>
-      <CosmicBg />
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 py-14">
 
         {/* Nav */}
         <motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
           className="flex items-center justify-between mb-10">
-          <Link to="/" className="inline-flex items-center gap-2 text-[12px] transition-colors glowing-text-white opacity-50 hover:opacity-100">
-            <ArrowLeft className="w-3.5 h-3.5" /> Back to Home
-          </Link>
           <button onClick={handleShare}
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-[11px] font-semibold transition-all"
             style={{ background: 'rgba(220,38,38,0.1)', border: '1px solid rgba(220,38,38,0.25)', color: copied ? '#4ade80' : 'rgba(220,38,38,0.8)' }}>
