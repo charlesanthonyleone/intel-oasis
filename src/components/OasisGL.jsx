@@ -10,8 +10,8 @@ float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
 float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}
 float n1(float x){return n(vec2(x,.5));}
 vec2 rot(vec2 u,float a){vec2 asp=vec2(uSize.x/uSize.y,1.);vec2 d=(u-uPole)*asp;float c=cos(a),s=sin(a);return uPole+vec2(c*d.x-s*d.y,s*d.x+c*d.y)/asp;}
-vec3 met(vec2 px){vec3 c=vec3(0.);
-  for(int i=0;i<7;i++){vec4 m=uM[i];if(m.w<=0.)continue;vec4 d=uMD[i];
+vec3 met(vec2 px,int top){vec3 c=vec3(0.);
+  for(int i=0;i<7;i++){vec4 m=uM[i];if(m.w<=0.||(i==6)!=(top==1))continue;vec4 d=uMD[i];
     vec2 hp=uOff+m.xy*uSize;vec2 r=px-hp;vec2 dir=normalize(d.xy+1e-5);
     float along=-dot(r,dir);float perp=abs(r.x*dir.y-r.y*dir.x);float sz=max(m.z,.35);
     float head=exp(-dot(r,r)/(sz*sz*1.2));
@@ -51,7 +51,7 @@ void main(){vec2 px=v*uRes;vec2 u=(px-uOff)/uSize;
   col+=aur(u,t)*sky*uA;
   if(lake>.01){ vec2 m=vec2(uu.x,2.*uHz-uu.y); col+=aur(m,t)*lake*.38*smoothstep(0.,.02,uu.y-uHz); }
   col*=1.+rip*.5;col+=vec3(.55,.55,.7)*max(rip,0.)*.06;
-  col+=met(px)*max(sky,lake);
+  col+=met(px,0)*max(sky,lake);col+=met(px,1); // impact star (slot 6) drawn unmasked, on top until it hits the water
   if(lake>.01&&uR.w>0.){float age=t-uR.z;vec2 dd=(u-uR.xy)*uSize*vec2(1.,3.2);col+=vec3(1.,.93,.85)*exp(-age*3.)*exp(-dot(dd,dd)/(uR.w*uR.w*55.))*1.8*smoothstep(-.01,.03,age);}
   col=pow(col,vec3(1.02,1.02,.98));col*=vec3(.98,.97,1.03);
   float g=h(floor(px*uDpr)+fract(t*24.)*91.)-.5; col+=g*.035;
