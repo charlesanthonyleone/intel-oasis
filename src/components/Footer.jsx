@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export const LEONE_URL = 'https://charlesanthonyleone.github.io/leone-university/';
+export const LEONE_URL = 'https://leoneuniversity.org/';
 
 const LINKS = [['Ideas', '/Ideas'], ['Library', '/Books'], ['Software', '/Software'], ['Clubs', '/Clubs'], ['Traditions', '/Traditions'], ['The Resolution', '/TheResolution'], ['Public Domain', '/PublicDomain'], ['The Warning', '/Warning'], ['Search', '/Search']];
 
